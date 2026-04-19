@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.1.10.7. Force-Based Beam Column Element &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3.1.10.8. Modified Elastic Beam Column Element" href="ModElasticBeam.html" />
+    <link rel="prev" title="3.1.10.6. Displacement-Based Beam Column Element" href="dispBeamColumn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">2. Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../userManual.html">3. Command Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../modelCommands.html">3.1. Model Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../model.html">3.1.1. model Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node.html">3.1.2. node Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spConstraints.html">3.1.3. SP_Constraint Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mpConstraints.html">3.1.4. MP_Constraint Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../material/uniaxialMaterial.html">3.1.5. uniaxialMaterial Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../material/ndMaterial.html">3.1.6. nDMaterial Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../section.html">3.1.7. section Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geomTransf.html">3.1.8. Geometric Transformation Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../beamIntegration.html">3.1.9. Beam Integration Command</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../element.html">3.1.10. Element Command</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="zeroLength.html">3.1.10.1. ZeroLength Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zeroLengthSection.html">3.1.10.2. ZeroLength Section Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zeroLengthND.html">3.1.10.3. ZeroLengthND Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="zeroLengthContactASDimplex.html">3.1.10.4. ZeroLengthContactASDimplex Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elasticBeamColumn.html">3.1.10.5. Elastic Beam Column Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dispBeamColumn.html">3.1.10.6. Displacement-Based Beam Column Element</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.1.10.7. Force-Based Beam Column Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ModElasticBeam.html">3.1.10.8. Modified Elastic Beam Column Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gradientInelasticBeamColumn.html">3.1.10.9. Gradient Inelastic (GI) Beam-Column Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MVLEM_3D.html">3.1.10.10. MVLEM_3D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SFI_MVLEM_3D.html">3.1.10.11. SFI-MVLEM-3D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="E_SFI_MVLEM_3D.html">3.1.10.12. E-SFI-MVLEM-3D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dispBeamColumnAsym.html">3.1.10.13. Displacement-Based Beam Element (Asymmetric Sections)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mixedBeamColumnAsym.html">3.1.10.14. Mixed Beam Element (Asymmetric Sections)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="E_SFI.html">3.1.10.15. E-SFI Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDShellQ4.html">3.1.10.16. ASDShellQ4 Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Quad.html">3.1.10.17. Quadrilateral Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SSPquad.html">3.1.10.18. SSPquad Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MEFI.html">3.1.10.19. MEFI Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDShellT3.html">3.1.10.20. ASDShellT3 Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stdBrick.html">3.1.10.21. stdBrick Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bbarBrick.html">3.1.10.22. bbarBrick Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SSPbrick.html">3.1.10.23. SSPbrick Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FourNodeTetrahedron.html">3.1.10.24. FourNodeTetrahedron Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TenNodeTetrahedron.html">3.1.10.25. TenNodeTetrahedron Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BeamColumnJoint.html">3.1.10.26. BeamColumnJoint Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ElasticTubularJoint.html">3.1.10.27. ElasticTubularJoint Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Joint2D.html">3.1.10.28. Joint2D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Inno3DPnPJoint.html">3.1.10.29. Inno3DPnPJoint Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LehighJoint2D.html">3.1.10.30. LehighJoint2D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TripleFrictionPendulumX.html">3.1.10.31. TripleFrictionPendulumX Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PML.html">3.1.10.32. PML Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDEmbeddedNodeElement.html">3.1.10.33. ASDEmbeddedNode Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDAbsorbingBoundary.html">3.1.10.34. ASDAbsorbingBoundary Element (2D and 3D)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RockingBC.html">3.1.10.35. RockingBC Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FSIFluidBoundaryElement2D.html">3.1.10.36. FSIFluidBoundaryElement2D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FSIFluidElement2D.html">3.1.10.37. FSIFluidElement2D Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FSIInterfaceElement2D.html">3.1.10.38. FSIInterfaceElement2D Element</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../timeSeries.html">3.1.11. Time Series Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pattern.html">3.1.12. Pattern Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../damping.html">3.1.13. Damping Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysisCommands.html">3.2. Analysis Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputCommands.html">3.3. Output Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../miscCommands.html">3.4. Misc. Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userExamples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messageBoard.html">5. Questions, Bugs &amp; Feature Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/license.html">6. Copyright and License</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework for Developer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/sourceCode.html">1. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/build.html">2. Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/references.html">3. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/extend.html">4. Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/contribute.html">5. Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OpenSees Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../modelCommands.html"><span class="section-number">3.1. </span>Model Commands</a></li>
+          <li class="breadcrumb-item"><a href="../element.html"><span class="section-number">3.1.10. </span>Element Command</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.1.10.7. </span>Force-Based Beam Column Element</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/user/manual/model/elements/forceBeamColumn.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="force-based-beam-column-element">
+<span id="forcebeamcolumn"></span><h1><span class="section-number">3.1.10.7. </span>Force-Based Beam Column Element<a class="headerlink" href="#force-based-beam-column-element" title="Link to this heading"></a></h1>
+<p>This command is used to construct a forceBeamColumn element object, which is based on the iterative force-based formulation. A variety of numerical integration options are available for the element state determination and encompass both distributed plasticity and plastic hinge integration, see <a class="reference internal" href="../beamIntegration.html#beamintegration"><span class="std std-ref">Beam Integration Command</span></a> options. The element if formulated in a basic system, given by its end rotations and axial deformation. The geometric transformation between this basic system and the 2d or 3d system comprisomg nodal displacements and rotations, is provided by the geometric transformation, see <a class="reference internal" href="../geomTransf.html#geomtransf"><span class="std std-ref">Geometric Transformation Command</span></a> options.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Force based elements use known equilibrium along the element length to determine section forces. As a consequence, in a finite element setting the element must iterate given nodal displacements at each trial step to determine the section deformations at the integration points to cause such. For a discussion of differences between this <strong>force</strong> based beam column element and the <strong>displacement</strong> based element see <a class="reference external" href="https://portwooddigital.com/2020/02/23/a-tale-of-two-element-formulations/">this post on portwooddigital</a></p>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Tcl</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">OpenSeesPy</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">element</span> <span class="pre">forceBeamCoumn</span> <span class="pre">$eleTag</span> <span class="pre">$iNode</span> <span class="pre">$jNode</span> <span class="pre">$transfTag</span> <span class="pre">$integrationTag</span> <span class="pre">&lt;-iter</span> <span class="pre">$maxIter</span> <span class="pre">$tol&gt;</span>&#160; <span class="pre">&lt;-mass</span> <span class="pre">$mass&gt;</span></span></dt>
+<dd></dd></dl>
+
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$eleTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique element object tag</p></td>
+</tr>
+<tr class="row-odd"><td><p>$iNode</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>tag of the iNode</p></td>
+</tr>
+<tr class="row-even"><td><p>$jNode</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>tag of the jNode</p></td>
+</tr>
+<tr class="row-odd"><td><p>$transfTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>tag of the geometric transformation object</p></td>
+</tr>
+<tr class="row-even"><td><p>$integrationTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>tag of the beam integration object</p></td>
+</tr>
+<tr class="row-odd"><td><p>$maxIter</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>max number of iterations, default = 10</p></td>
+</tr>
+<tr class="row-even"><td><p>$tol</p></td>
+<td><p><em>float</em></p></td>
+<td><p>tolerance, default = 1.0e-12</p></td>
+</tr>
+<tr class="row-odd"><td><p>$mass</p></td>
+<td><p><em>float</em></p></td>
+<td><p>Element mass per unit length, default = 0.0</p></td>
+</tr>
+</tbody>
+</table>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><dl class="py function">
+<dt class="sig sig-object py" id="element">
+<span class="sig-name descname"><span class="pre">element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">'forceBeamColumn'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eleTag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*eleNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transfTag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrationTag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">'-iter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxIter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">'-mass'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#element" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">eleTag</span></code> <a href="#id6"><span class="problematic" id="id7">|int|</span></a></p></td>
+<td><p>tag of the element</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">eleNodes</span></code> <a href="#id8"><span class="problematic" id="id9">|listi|</span></a></p></td>
+<td><p>a list of two element nodes</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">transfTag</span></code> <a href="#id10"><span class="problematic" id="id11">|int|</span></a></p></td>
+<td><p>tag of transformation</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">integrationTag</span></code> <a href="#id12"><span class="problematic" id="id13">|int|</span></a></p></td>
+<td><p>tag of <a class="reference internal" href="../beamIntegrations/ConcentratedPlasticity.html#beamIntegration" title="beamIntegration"><code class="xref py py-func docutils literal notranslate"><span class="pre">beamIntegration()</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">maxIter</span></code> <a href="#id14"><span class="problematic" id="id15">|int|</span></a></p></td>
+<td><p>maximum number of iterations to undertake to satisfy element compatibility (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tol</span></code> <em>float</em></p></td>
+<td><p>tolerance for satisfaction of element compatibility (optional)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mass</span></code> <em>float</em></p></td>
+<td><p>element mass density (per unit length), from which a lumped-mass matrix is formed (optional)</p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The valid queries to an elastic beam-column element when creating an ElementRecorder object are:</p>
+<ol class="arabic simple">
+<li><p>force or globalForce</p></li>
+<li><p>localForce</p></li>
+<li><p>basicForce</p></li>
+<li><p>section $sectionNumber $arg1 $arg2 … (note: $sectionNumer is integer 1 through $numIntegrPts)</p></li>
+<li><p>basicDeformation</p></li>
+<li><p>plasticDeformation</p></li>
+<li><p>inflectionPoint</p></li>
+<li><p>tangentDrift</p></li>
+<li><p>integrationPoints</p></li>
+<li><p>integrationWeights</p></li>
+</ol>
+</div>
+<section id="references">
+<h2><span class="section-number">3.1.10.7.1. </span>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p>Neuenhofer, Ansgar, FC Filippou. Geometrically Nonlinear Flexibility-Based Frame Finite Element. ASCE Journal of Structural Engineering, Vol. 124, No. 6, June, 1998. ISSN 0733-9445/98/0006-0704-0711. Paper 16537. pp. 704-711.</p>
+</aside>
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<p>Neuenhofer, Ansgar, FC Filippou. Evaluation of Nonlinear Frame Finite-Element Models. ASCE Journal of Structural Engineering, Vol. 123, No. 7, July, 1997. ISSN 0733-9445/97/0007-0958-0966. Paper No. 14157. pp. 958-966.</p>
+</aside>
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<p>Neuenhofer, Ansgar, FC Filippou. ERRATA – Geometrically Nonlinear Flexibility-Based Frame Finite Element. ASCE Journal of Structural Engineering, Vol. 124, No. 6, June, 1998. ISSN 0733-9445/98/0006-0704-0711. Paper 16537. pp. 704-711.</p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<p>Taucer, Fabio F, E Spacone, FC Filippou. A Fiber Beam-Column Element for Seismic Response Analysis of Reinforced Concrete Structures. Report No. UCB/EERC-91/17. Earthquake Engineering Research Center, College of Engineering, University of California, Berkeley. December 1991.</p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<p>Spacone, Enrico, V Ciampi, FC Filippou. A Beam Element for Seismic Damage Analysis. Report No. UCB/EERC-92/07. Earthquake Engineering Research Center, College of Engineering, University of California, Berkeley. August 1992.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

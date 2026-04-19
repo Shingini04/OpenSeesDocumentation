@@ -1,99 +1,52 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>2. Building Application &mdash; OpenSees Documentation  documentation</title>
-  
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=224b24c6" />
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. References" href="references.html" />
     <link rel="prev" title="1. Source Code" href="sourceCode.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html">
           
-
-          
+          <a href="../index.html">
             
-            <img src="../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
-          
+              <img src="../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user/interpreters.html">1. OpenSees Interpreters</a></li>
@@ -107,22 +60,38 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="sourceCode.html">1. Source Code</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Building Application</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#windows-10">2.1. Windows 10</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#software-requirements">2.1.1. Software Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#obtaining-opensees-source-code">2.1.2. Obtaining OpenSees Source Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-the-opensees-applications-and-python-module">2.1.3. Building the OpenSees Applications and Python module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-opensees-source-code">2.1. Obtaining OpenSees Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-10">2.2. Windows 10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#software-requirements">2.2.1. Software Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">CMake</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git">Git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#microsoft-visual-studio">Microsoft Visual Studio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intel-oneapi-basic-hpc-toolkits">Intel oneAPI Basic &amp; HPC Toolkits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-3-11">Python 3.11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conan-1-x">conan 1.x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mumps">MUMPS</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#macos">2.2. MacOS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">2.2.1. Software Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#obtaining-the-source-code">2.2.2. Obtaining the Source Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-the-opensees-tcl-application">2.2.3. Building the OpenSees Tcl Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-opensees-applications-and-python-module">2.2.2. Building the OpenSees Applications and Python module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#ubuntu">2.3. Ubuntu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">2.3.1. Software Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">2.3.2. Obtaining the Source Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-the-opensees-applications">2.3.3. Building the OpenSees Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">2.3. MacOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.3.1. Software Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#xcode-command-line-tools">XCode Command Line Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-other-dependencies-via-homebrew">Install other dependencies via Homebrew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">MUMPS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.3.2. Building the OpenSees Applications and Python module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu">2.4. Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.4.1. Software Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#needed-applications-and-libraries">Needed Applications and Libraries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Conan 1.x</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.4.2. Building the OpenSees Applications and Python module</a></li>
 </ul>
 </li>
 </ul>
@@ -133,186 +102,247 @@
 <li class="toctree-l1"><a class="reference internal" href="issues.html">6. Issues</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">OpenSees Documentation</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li><span class="section-number">2. </span>Building Application</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Building Application</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/developer/build.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="building-application">
-<span id="build"></span><h1><span class="section-number">2. </span>Building Application<a class="headerlink" href="#building-application" title="Permalink to this heading">¶</a></h1>
-<p>The OpenSees applications are built using <a class="reference external" href="https://cmake.org/">CMake</a>, an extensible open-source system that manages the build system. It provides a uniform build process across a range of operating systems: Windows, MacOS and different version of Linux. CMake needs to be installed on your system. For it to work, other applications such as C, C++ and Fortran compilers need to be also installed.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Most code instructions below are run from a <strong>Terminal</strong> application. Type <strong>cmd</strong> in the Windows search or <strong>terminal</strong> in MacOS spotlight to start the application. If you are on a Unix machine this note may cause you some amusement!</p>
-</div>
-<div class="section" id="windows-10">
-<h2><span class="section-number">2.1. </span>Windows 10<a class="headerlink" href="#windows-10" title="Permalink to this heading">¶</a></h2>
-<div class="section" id="software-requirements">
-<h3><span class="section-number">2.1.1. </span>Software Requirements<a class="headerlink" href="#software-requirements" title="Permalink to this heading">¶</a></h3>
-<p>For Windows 10 the user must have the following applications installed on their computer: CMake, VisualStudio Basic, Intel One Basic and HPC Toolkits, and MUMPS, and conan:</p>
-<ol class="arabic simple">
-<li><p><strong>CMake</strong>: We use <a class="reference external" href="https://cmake.org/download/">CMake</a> for managing the build process. Version 3.20 or later is recommended.</p></li>
-<li><p><strong>Visual Studio</strong>: <a class="reference external" href="https://visualstudio.microsoft.com/vs/">Visual Studio (Community Edition)</a> can be used. Some extensions of Visual Studio are also needed: Open Visual Studio Installer, go to Installed / More / Modify, under the Workloads tab, check Desktop development with C++ and Visual Studio extension development;</p></li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The very latest release of MSVC,  2022.2, does not currently work with Intel OneAPI. Install the version 2022.1 or the 2019 version of MSCV.</p>
-</div>
-<ol class="arabic simple" start="3">
-<li><p><strong>IntelOne Basic &amp; HPC Toolkits</strong>: Intel’s <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html">oneAPI</a> toolkits. To install the Fortran compiler you need to install TWO toolkits, the <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html">base toolkit</a> and the <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit-download.html">HPC toolkit</a>.  One advantage of installing the HPC one to obtain the Fortran compiler is that it comes with <strong>MPI</strong> for building and running the parallel OpenSees applications.</p></li>
-</ol>
+             
+  <section id="building-application">
+<span id="build"></span><h1><span class="section-number">2. </span>Building Application<a class="headerlink" href="#building-application" title="Link to this heading"></a></h1>
+<p>This chapter is geared to provide information about building OpenSees applications and its Python Modules. Besides this document, there are Github Action workflows for Windows, Mac OS, and Ubuntu, which is located in <code class="docutils literal notranslate"><span class="pre">.github/workflows/build_cmake.yml</span></code>. They will be good samples to build, though there are some differences between your computer and remote runner hosted by Github Actions because they are pre-installed many applications used for building applications.</p>
+<p>The OpenSees applications are built using <a class="reference external" href="https://cmake.org/">CMake</a>, an extensible open-source system that manages the build system. It provides a uniform build process across a range of operating systems: Windows, MacOS and different version of Linux. Thus, following applications need to be installed:</p>
+<ul>
+<li><p>CMake</p>
 <blockquote>
-<div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<blockquote>
-<div><p>When downloading, you do not need to sign up with Intel. After you select the Download button a new window pops up titled ‘Get Your Download’. In bottom left had corner you can select the ‘Continue as Guest’ link to start a download without logging in.</p>
-</div></blockquote>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<ol class="arabic simple">
-<li><p>The install of the latest version of the base toolkit may fail due to issues installing Python. The error pops up right at the end. To overcome the problem, choose to install the selected components option and choose every package BUT Python.</p></li>
-<li><p>On windows order matters, the Intel compilers come after Visual Studio. If you reverse the order or if the install was not successfullm cmake when running below will give an error message about failing to find a fortran compiler.</p></li>
-</ol>
-</div>
-</div>
-</div></blockquote>
-<ol class="arabic" start="4">
-<li><p><strong>MUMPS &amp; conan</strong>: MUMPS is a parallel solver used in OpenSees. Conan is a package build manager for C/C++ applications, that is used to install Tcl and HDF5. They are both installed via the command line, i.e. a DOS terminal.
-Mumps is one of the defaults solvers used in OpenSessMP and OpenSeesMP. Like OpenSees it  must be installed using <strong>cmake</strong>. Open a terminal window and type the following to set the intel env variables, download and then build the MUMPS library.</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files (x86)\Intel\oneAPI\setVars&quot;</span> <span class="n">intel64</span> <span class="n">mod</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">mumps</span>
-<span class="n">mkdir</span> <span class="n">build</span>
-<span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">Darith</span><span class="o">=</span><span class="n">d</span> <span class="o">-</span><span class="n">DCMAKE_MSVC_RUNTIME_LIBRARY</span><span class="o">=</span><span class="s2">&quot;MultiThreaded&quot;</span> <span class="o">-</span><span class="n">G</span> <span class="n">Ninja</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
-<span class="n">cd</span> <span class="o">..</span>\<span class="o">..</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">conan</span><span class="o">==</span><span class="mf">1.59.0</span>
-</pre></div>
-</div>
+<div><ul class="simple">
+<li><p>Version 3.20 or later is recommended.</p></li>
+</ul>
 </div></blockquote>
 </li>
-</ol>
-</div>
-<div class="section" id="obtaining-opensees-source-code">
-<h3><span class="section-number">2.1.2. </span>Obtaining OpenSees Source Code<a class="headerlink" href="#obtaining-opensees-source-code" title="Permalink to this heading">¶</a></h3>
-<p>To obtain the source code, from a terminal <strong>cd</strong> to the directory you want to place OpenSees and then type the following:</p>
+<li><p>Git</p></li>
+<li><p>C, C++, Fortran Compiler</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Microsoft Visual Studio and Intel oneAPI Fortran Compiler (for Windows)</p></li>
+<li><p>AppleClang in XCode Command Developer Tools and gfortran (for Mac)</p></li>
+<li><p>gcc, g++, and gfortran (for Linux)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Python 3.11</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It’s necessary to OpenSeesPy and also required to install conan with PyPI.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Package Manager</p>
+<blockquote>
+<div><ul>
+<li><p>Conan 1.x (for Windows, Linux)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A package build manager for C/C++ applications.</p></li>
+<li><p>Conan 2.0 and beyond have been already released but currently we don’t catch up with that. Thus, you should install Conan <strong>1.64.1</strong>, which is the last version of Conan 1.x</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Homebrew (for Mac)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>MUMPS</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A parallel solver used in OpenSees</p></li>
+<li><p>This should be cloned from GitHub and built.</p></li>
+<li><p>Following procedure specifies its location with relative location and assumes mumps and opensees foldera are located in a same directory.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Libraries</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>eigen</p></li>
+<li><p>hdf5</p></li>
+<li><p>tcl (for Windows)</p></li>
+<li><p>zlib (for Windows)</p></li>
+<li><p>Intel MPI Libray (for Windows)</p></li>
+<li><p>open-mpi (for Mac, Linux)</p></li>
+<li><p>scalapack (for Mac, Linux)</p></li>
+<li><p>lapack (for Linux)</p></li>
+<li><p>Intel oneAPI Math Kernel Library (for Windows)</p></li>
+<li><p>mkl (for Linux)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<section id="obtaining-opensees-source-code">
+<h2><span class="section-number">2.1. </span>Obtaining OpenSees Source Code<a class="headerlink" href="#obtaining-opensees-source-code" title="Link to this heading"></a></h2>
+<p>Source codes will be obtained by Git and its command is same across different OSs.
+From a terminal <strong>cd</strong> to the directory you want to place OpenSees. Then type the following and you’ll get the source codes in the directory named <code class="docutils literal notranslate"><span class="pre">OpenSees</span></code>.:</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic">
-<li><p>If you plan on contributing source code to the OpenSees effort, you should fork the OpenSees github repo and clone your own fork. To clone your own fork, replace OpenSees in above with your github username.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USER_NAME</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="section" id="building-the-opensees-applications-and-python-module">
-<h3><span class="section-number">2.1.3. </span>Building the OpenSees Applications and Python module<a class="headerlink" href="#building-the-opensees-applications-and-python-module" title="Permalink to this heading">¶</a></h3>
-<p>With everything installed the build process is somewhat simple! From a terminal window move to the folder that contains the OpenSees folder and issue the following:</p>
+<p>If you plan on contributing source code to the OpenSees effort, you should fork the OpenSees repository on GitHub and clone your own fork. To clone your own fork, replace OpenSees in above with your github username.</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files (x86)\Intel\oneAPI\setVars&quot;</span> <span class="n">intel64</span> <span class="n">mod</span>
-<span class="n">cd</span> <span class="n">OpenSees</span>
-<span class="n">git</span> <span class="n">pull</span>
-<span class="n">mkdir</span> <span class="n">build</span>
-<span class="n">cd</span> <span class="n">build</span>
-<span class="n">conan</span> <span class="n">install</span> <span class="o">..</span> <span class="o">--</span><span class="n">build</span> <span class="n">missing</span> <span class="o">--</span><span class="n">settings</span> <span class="n">compiler</span><span class="o">.</span><span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;MT&quot;</span>
-<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">DBLA_STATIC</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DMKL_LINK</span><span class="o">=</span><span class="n">static</span> <span class="o">-</span><span class="n">DMKL_INTERFACE_FULL</span><span class="o">=</span><span class="n">intel_lp64</span> <span class="o">-</span><span class="n">DMUMPS_DIR</span><span class="o">=</span><span class="s2">&quot;..\..\mumps</span><span class="se">\b</span><span class="s2">uild&quot;</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="n">OpenSees</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="n">OpenSeesPy</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="n">OpenSeesMP</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="n">OpenSeesSP</span>
-<span class="n">cd</span> <span class="n">lib</span>
-<span class="n">copy</span> <span class="n">OpenSeesPy</span><span class="o">.</span><span class="n">dll</span> <span class="n">opensees</span><span class="o">.</span><span class="n">pyd</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USER_NAME</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>When completed the executables (OpenSees, OpenSeesMP, and OpenSeesMP) are located in the build/bin folder and the python module (opensees.pyd) is located in the build/lib folder.</p>
+<p>Once the repository is forked, you can catch up with <code class="docutils literal notranslate"><span class="pre">OpenSees/OpenSees</span></code> by <code class="docutils literal notranslate"><span class="pre">Sync</span> <span class="pre">fork</span></code> on GitHub. Once the repository is cloned, you can get updates on GitHub to type:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>The –parallel option is used to compile the code in parallel. Change the <strong>4</strong> to how many cores is at your disposal.</p></li>
-<li><p>The above assumes the OpenSees and mumps folders are located in the same folder.</p></li>
-<li><p>The last copy is needed as the OpenSeesPy.dll module at present actually needs to load from a file named <strong>opensees.pyd</strong>. To import this module in a python script you can do one of 2 things:</p></li>
-</ol>
+<p>Most code instructions below are run from a <strong>Terminal</strong> application. Type <strong>cmd</strong> in the Windows search or <strong>terminal</strong> in MacOS spotlight to start the application. If you are on a Unix machine this note may cause you some amusement!</p>
+</div>
+</section>
+<section id="windows-10">
+<h2><span class="section-number">2.2. </span>Windows 10<a class="headerlink" href="#windows-10" title="Link to this heading"></a></h2>
+<section id="software-requirements">
+<h3><span class="section-number">2.2.1. </span>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading"></a></h3>
+<p>For Windows 10 the user must have the following applications installed on their computer:</p>
+<ul class="simple">
+<li><p>CMake</p></li>
+<li><p>Git</p></li>
+<li><p>Microsoft VisualStudio</p></li>
+<li><p>Intel oneAPI Basic and HPC Toolkits</p></li>
+<li><p>Python 3.11</p></li>
+<li><p>conan 1.64.1</p></li>
+<li><p>MUMPS</p></li>
+</ul>
+<p>Other applications will be installed by conan in the building section.</p>
+<section id="id1">
+<h4>CMake<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Install from <a class="reference external" href="https://cmake.org/download/">https://cmake.org/download/</a>. Version 3.20 or later is recommended.</p>
+</div></blockquote>
+</section>
+<section id="git">
+<h4>Git<a class="headerlink" href="#git" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Install from <a class="reference external" href="https://gitforwindows.org/">https://gitforwindows.org/</a>.</p>
+</div></blockquote>
+</section>
+<section id="microsoft-visual-studio">
+<h4>Microsoft Visual Studio<a class="headerlink" href="#microsoft-visual-studio" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p><a class="reference external" href="https://visualstudio.microsoft.com/vs/">Visual Studio (Community Edition)</a> can be used. Some extensions of Visual Studio are also needed: Open Visual Studio Installer, go to Installed / More / Modify, under the Workloads tab, check Desktop development with C++ and Visual Studio extension development;</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The very latest release of MSVC, 2022.2, does not currently work with Intel OneAPI. Install the version 2022.1 or the 2019 version of MSVC.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="intel-oneapi-basic-hpc-toolkits">
+<h4>Intel oneAPI Basic &amp; HPC Toolkits<a class="headerlink" href="#intel-oneapi-basic-hpc-toolkits" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Intel’s <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html">oneAPI</a> toolkits. You need to install <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">oneAPI</span> <span class="pre">Math</span> <span class="pre">Kernel</span> <span class="pre">Library</span></code> from <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html">Base Toolkit</a> and <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">MPI</span> <span class="pre">Library</span></code> and <code class="docutils literal notranslate"><span class="pre">Intel</span> <span class="pre">Fortran</span> <span class="pre">Comipler</span> <span class="pre">&amp;</span> <span class="pre">Intel</span> <span class="pre">Fortran</span> <span class="pre">Compiler</span> <span class="pre">Classic</span></code> from <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit-download.html">HPC Toolkit</a>. One advantage of installing the HPC one to obtain the Fortran compiler is that it comes with <strong>MPI</strong> for building and running the parallel OpenSees applications.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When downloading, you do not need to sign up with Intel. After you select the Download button a new window pops up titled ‘Get Your Download’. In bottom left had corner you can select the ‘Continue as Guest’ link to start a download without logging in.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You should install these toolkits after Microsoft Visual Studio is installed and the integration with Microsoft Visual Studio should be enabled. If you reverse the order or if the install was not successfull, cmake when running below will give an error message about failing to find a fortran compiler.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="python-3-11">
+<h4>Python 3.11<a class="headerlink" href="#python-3-11" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Install from <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a>. Python <strong>3.12</strong> or newer is not supported by OpenSeesPy currently. Python 3.10 or older version may work. Of course you can install from other channels, i.e. Anaconda, Microsoft Stores.</p>
+</div></blockquote>
+</section>
+<section id="conan-1-x">
+<h4>conan 1.x<a class="headerlink" href="#conan-1-x" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Conan is used to install Eigen, HDF5, Tcl and Zlib. Type the following to install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">conan</span><span class="o">&lt;</span><span class="mf">2.0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="mumps">
+<h4>MUMPS<a class="headerlink" href="#mumps" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Mumps is one of the defaults solvers used in OpenSessMP and OpenSeesMP. Like OpenSees it  must be installed using <strong>cmake</strong>. Open a terminal window and type the following to set the intel env variables, download and then build the MUMPS library.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">mumps</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">call</span> <span class="s2">&quot;C:\Program Files (x86)\Intel\oneAPI\setVars.bat&quot;</span> <span class="n">intel64</span> <span class="n">mod</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">Darith</span><span class="o">=</span><span class="n">d</span> <span class="o">-</span><span class="n">DCMAKE_MSVC_RUNTIME_LIBRARY</span><span class="o">=</span><span class="s2">&quot;MultiThreaded&quot;</span> <span class="o">-</span><span class="n">G</span> <span class="n">Ninja</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Environment variables set by <code class="docutils literal notranslate"><span class="pre">&quot;C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\Intel\oneAPI\setVars&quot;</span></code> are only available in Command Prompt just after the batch file is called. That means you should call the batch file from Command Prompt and should not from Powershell.</p>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="building-the-opensees-applications-and-python-module">
+<h3><span class="section-number">2.2.2. </span>Building the OpenSees Applications and Python module<a class="headerlink" href="#building-the-opensees-applications-and-python-module" title="Link to this heading"></a></h3>
+<p>With everything installed the build process is somewhat simple! From a terminal window move to the folder that contains the OpenSees folder and issue the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">call</span> <span class="s2">&quot;C:\Program Files (x86)\Intel\oneAPI\setVars.bat&quot;</span> <span class="n">intel64</span> <span class="n">mod</span>
+<span class="n">conan</span> <span class="n">install</span> <span class="o">..</span> <span class="o">--</span><span class="n">build</span> <span class="n">missing</span> <span class="o">--</span><span class="n">settings</span> <span class="n">compiler</span><span class="o">.</span><span class="n">runtime</span><span class="o">=</span><span class="s2">&quot;MT&quot;</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">DBLA_STATIC</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DMKL_LINK</span><span class="o">=</span><span class="n">static</span> <span class="o">-</span><span class="n">DMKL_INTERFACE_FULL</span><span class="o">=</span><span class="n">intel_lp64</span> <span class="o">-</span><span class="n">DMUMPS_DIR</span><span class="o">=</span><span class="s2">&quot;..\..\mumps</span><span class="se">\b</span><span class="s2">uild&quot;</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="n">OpenSees</span> <span class="o">-</span><span class="n">j8</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">target</span> <span class="n">OpenSeesPy</span> <span class="o">-</span><span class="n">j8</span>
+<span class="n">move</span> <span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">OpenSeesPy</span><span class="o">.</span><span class="n">dll</span> <span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">opensees</span><span class="o">.</span><span class="n">pyd</span>
+<span class="n">copy</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)</span>\<span class="n">Intel</span>\<span class="n">oneAPI</span>\<span class="n">compiler</span>\<span class="mf">2024.1</span>\<span class="nb">bin</span>\<span class="n">libiomp5md</span><span class="o">.</span><span class="n">dll</span> <span class="o">./</span><span class="nb">bin</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>When completed the executables (OpenSees, OpenSeesMP, and OpenSeesMP) and the python module (opensees.pyd) are located in the build/bin directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic">
+<li><p>Environment variables set by <code class="docutils literal notranslate"><span class="pre">&quot;C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\Intel\oneAPI\setVars&quot;</span></code> are only available in Command Prompt just after the batch file is called. That means you should call the batch file from Command Prompt and should not from Powershell.</p></li>
+<li><p>The -j option is used to compile the code in parallel. Change the <strong>4</strong> to how many cores is at your disposal.</p></li>
+<li><p>The last copy is needed as the OpenSeesPy.dll module at present actually needs to load from a file named <strong>opensees.pyd</strong>. To import this module in a python script you can do one of 2 things:</p>
 <ol class="arabic">
 <li><p>If you have used pip to install openseespy, you can replace the opensees.pyd file in the site_package location with the opensees.pyd above. To find the location of this module, use the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span>
-<span class="kn">import</span> <span class="nn">opensees</span>
-<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">opensees</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
 <span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">opensees</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You may of course want to give the existing file a new name with the <strong>copy</strong> command before you overwrite it just in case! You can check the version of <strong>opensees</strong> installed by issuing :code: <cite>opensees.version()</cite> at the python command prompt above.</p>
+<p>You may of course want to give the existing file a new name with the <strong>copy</strong> command before you overwrite it just in case! You can check the version of <strong>opensees</strong> installed by issuing <code class="docutils literal notranslate"><span class="pre">opensees.version()</span></code> at the python command prompt above.</p>
 </li>
 <li><p>If you have not installed openseespy or you want to load the .pyd you built instead of the installed one you can add the path to opensees.pyd to your <strong>PYTHONPATH</strong> env variables. Search for <strong>env settings</strong> in search bar lower left. Add a line to the PYTHONPATH variable with your location of the <strong>bin</strong> folder. If you do this, you also need to copy the python39.dll (or the python310.dll is that is what was used INTO the bin folder). This is because of a security feature with python versions above 3.8 and the dll search path they now use.</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">libiomp5md.dll</span></code> should be located in a same folder as <code class="docutils literal notranslate"><span class="pre">opensees.pyd</span></code> or you’ll get <code class="docutils literal notranslate"><span class="pre">ImportError:</span> <span class="pre">DLL</span> <span class="pre">load</span> <span class="pre">failed</span> <span class="pre">while</span> <span class="pre">importing</span> <span class="pre">opensees:</span> <span class="pre">The</span> <span class="pre">specified</span> <span class="pre">module</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found.</span></code> when importing opensees on Python.</p></li>
 <li><p>Please note you will get a segmentation fault if you run with a different python exe than the one you build for. Look in output of <strong>cmake ..</strong> for the python library used.</p></li>
 <li><p><strong>conan install .. -build missing</strong> may fail. If it is related to a <strong>zlib</strong> mismatch error see below. If something else and you had installed conan before, it may be related to the version ypu are using. First try installing the latest  by issuing  <em>pip install conan –upgrade*</em>. Ty the build again. If it fails (and again it does not issue a warning about a zlib mismatch) try installing the bleeding head latest using the following commands issued at a terminal</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">conan</span><span class="o">-</span><span class="n">io</span><span class="o">/</span><span class="n">conan</span><span class="o">.</span><span class="n">git</span> <span class="n">conan</span><span class="o">-</span><span class="n">io</span>
@@ -326,117 +356,143 @@ Mumps is one of the defaults solvers used in OpenSessMP and OpenSeesMP. Like Ope
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="section" id="macos">
-<h2><span class="section-number">2.2. </span>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">¶</a></h2>
-<div class="section" id="id2">
-<h3><span class="section-number">2.2.1. </span>Software Requirements<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
-<p>For MacOS the user must have the following applications installed on their computer: xcode command line tools, brew, cmake, gcc, gfortran, python, and open-mpi. All the applications are installed via the command line. Some of these you can skip as you may already have them installed.</p>
-<ol class="arabic">
-<li><p><strong>XCODE Command Line Tools</strong>: To make Apple Clang and git available, type the following in a terminal application:</p>
+</section>
+</section>
+<section id="macos">
+<h2><span class="section-number">2.3. </span>MacOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">2.3.1. </span>Software Requirements<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>For MacOS the user must have the following applications installed on their computer:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>xcode command line tools</dt><dd><ul>
+<li><p>AppleClang</p></li>
+<li><p>Git</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>brew</dt><dd><ul>
+<li><p>cmake</p></li>
+<li><p>eigen</p></li>
+<li><p>gfortran</p></li>
+<li><p>hdf5</p></li>
+<li><p>open-mpi</p></li>
+<li><p>scalapack.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>mumps</p></li>
+</ul>
+<p>All the applications are installed via the command line. Some of these you can skip as you may already have them installed.</p>
+<section id="xcode-command-line-tools">
+<h4>XCode Command Line Tools<a class="headerlink" href="#xcode-command-line-tools" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>To make sure latest Xcode Command Line Tools installed, type the following in a terminal application. It’s required for AppleClang and git.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="n">install</span>
 </pre></div>
 </div>
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>if <cite>xcode-select: error: command line tools are already installed, use “Software Update” to install updates</cite> appears, skip because it’s already installed.</p></li>
-<li><p>if <cite>xcode-select: error: command line tools are already installed, use “Software Update” to install updates</cite> appears, skip because it’s already installed.</p></li>
-</ol>
-</div>
-<ol class="arabic" start="2">
-<li><p><strong>brew</strong>: To install the HomeBrew package manager, type the following in a terminal window:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>
+<ol class="arabic">
+<li><p>If <cite>xcode-select: error: command line tools are already installed, use “Software Update” to install updates</cite> appears, skip because it’s already installed.</p></li>
+<li><p>After update of OS, XCode Command Line Tools version may have a problem. To reinstall, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CommandLineTools</span>
+<span class="n">sudo</span> <span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
 </pre></div>
 </div>
 </li>
-<li><p><strong>cmake, gfortran, python &amp; open-mpi</strong>. Now we will use brew to install these applications. Again from the command line type:</p>
+</ol>
+</div>
+</div></blockquote>
+</section>
+<section id="install-other-dependencies-via-homebrew">
+<h4>Install other dependencies via Homebrew<a class="headerlink" href="#install-other-dependencies-via-homebrew" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>You can install HomeBrew package manager with typing the following in a terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>
+</pre></div>
+</div>
+<p>Then, you can install dependencies via Homebrew. Again from the command line type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">gcc</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">eigen</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">gfortran</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">hdf5</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="nb">open</span><span class="o">-</span><span class="n">mpi</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">scalapack</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">python</span><span class="o">@</span><span class="mf">3.9</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Eigen via <strong>brew</strong> is installed in <code class="docutils literal notranslate"><span class="pre">/usr/local/include/eigen3/Eigen</span></code> by default but <code class="docutils literal notranslate"><span class="pre">Eigen</span></code> should be found in <code class="docutils literal notranslate"><span class="pre">/usr/local/include</span></code>. Then, make link by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">eigen3</span><span class="o">/</span><span class="n">Eigen</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">Eigen</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The location where eigen is installed may differ. It can be <code class="docutils literal notranslate"><span class="pre">/opt/homebrew/include/eigen3/Eigen</span></code></p>
+</div>
+</div></blockquote>
+</section>
+<section id="id3">
+<h4>MUMPS<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>Mumps is one of the defaults solvers used in OpenSessMP and OpenSeesMP. Like OpenSees it  must be installed using <strong>cmake</strong>. Open a terminal window and type the following to set the intel env variables, download and then build the MUMPS library.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">mumps</span>
 <span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">Darith</span><span class="o">=</span><span class="n">d</span>
 <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
-<span class="n">cd</span> <span class="o">..</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
-<div class="section" id="obtaining-the-source-code">
-<h3><span class="section-number">2.2.2. </span>Obtaining the Source Code<a class="headerlink" href="#obtaining-the-source-code" title="Permalink to this heading">¶</a></h3>
-<p>To obtain the source code, from a terminal <strong>cd</strong> to the directory you want to place OpenSees and then type the following:</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic">
-<li><p>If you plan on contributing source code to the OpenSees effort, you should fork the OpenSees github repo and clone your own fork. To clone your own fork, replace OpenSees in above with your github username.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">YOUR_USER_NAME</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="section" id="building-the-opensees-tcl-application">
-<h3><span class="section-number">2.2.3. </span>Building the OpenSees Tcl Application<a class="headerlink" href="#building-the-opensees-tcl-application" title="Permalink to this heading">¶</a></h3>
+</section>
+</section>
+<section id="id4">
+<h3><span class="section-number">2.3.2. </span>Building the OpenSees Applications and Python module<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 <p>With everything installed the build process is somehwat simple! Again from a terminal window:</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd OpenSees
-git pull
-mkdir build
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir build
 cd build
-conan install .. --build missing
-cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
-cmake --build . --config Release --target OpenSees --parallel 4
-cmake --build . --config Release --target OpenSeesPy
-cmake --build . --config Release --target OpenSeesMP
-cmake --build . --config Release --target OpenSeesSP
-mv ./lib/OpenSeesPy.dylib ./lib/opensees.so
+cmake .. -DMUMPS_DIR=$PWD/../../mumps/build
+cmake --build . --target OpenSees -j8
+cmake --build . --target OpenSeesPy -j8
+mv ./OpenSeesPy.dylib ./opensees.so
 </pre></div>
 </div>
-</div></blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<ol class="arabic simple">
-<li><p>The path to scalapack might change depending on your Mac type, e.g. x86 or ARM cpu, and the version of scalapack. When using brew install scalapack, look to see what path the library is located in. USE THAT PATH IF DIFFERENT!</p></li>
-<li><p>This last copy is needed as the OpenSeesPy.dylib module at present actually needs to load from a file named <strong>opensees.so</strong> To import this module now in your code you must do one of 2 things:</p></li>
-</ol>
-<p>2.1 If you have used pip3 to install openseespy, you can replace the opensees.so file in the site_package location with the opensees.so above. To find the location of this module, use the following:</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span>
-<span class="kn">import</span> <span class="nn">opensees</span>
-<span class="kn">import</span> <span class="nn">inspect</span>
+<ol class="arabic">
+<li><p>The -j option is used to compile the code in parallel. Change the <strong>8</strong> to how many cores is at your disposal.</p></li>
+<li><p>Pre-installed python in <code class="docutils literal notranslate"><span class="pre">/usr/bin</span></code> may have problem especially on Apple Silicon Mac. It would be better to install <code class="docutils literal notranslate"><span class="pre">python&#64;3.11</span></code> via brew. It will be installed in <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> and called by <code class="docutils literal notranslate"><span class="pre">python3.11</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span> <span class="pre">.</span> <span class="pre">--target</span> <span class="pre">OpenSeesPy</span></code> yields <code class="docutils literal notranslate"><span class="pre">OpenSeesPy.dylib</span></code> as its target and this is exactly a python module. However, it can’t be loaded from Python unless it’s renamed to <strong>opensees.so</strong>.
+To import this module in your code, you have two options to do: 1. replacing a file of openseespy.opensees which is installed by pip3 and 2. set an environment variable <code class="docutils literal notranslate"><span class="pre">$PYTHONPATH</span></code>.</p>
+<ol class="arabic">
+<li><p>If you have used pip3 to install openseespy, you can replace the opensees.so file in the site_package location with the opensees.so above. To find the location of this module, use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">opensees</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
 <span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">opensees</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You may of course want to give the existing file a new name with the <strong>mv</strong> command. You can check the version of <strong>opensees</strong> installed by issuing :code: <cite>opensees.version()</cite> at the python command prompt above.</p>
-</div></blockquote>
-<p>2.2 If you have not installed openseespy or you want to load the .so you built instead of the installed one you can add the path to opensees.so to your <strong>PYTHONPATH</strong> env variables with export PYTHONPATH=$PWD or PYTHONPATH=$PWD:$PYTHONPATH depending on if PYTHONPATH exists when you type <strong>env</strong> in the terminal. NOTE: Using $PWD assumes you are in the directory containing the lib file, other put in the full path to the directory.</p>
-<ol class="arabic simple" start="3">
+<p>You may of course want to give the existing file a new name with the <strong>mv</strong> command. You can check the version of <strong>opensees</strong> installed by issuing <code class="docutils literal notranslate"><span class="pre">opensees.version()</span></code> at the python command prompt above.</p>
+</li>
+<li><p>If you have not installed openseespy or you want to load the .so you built instead of the installed one you can add the path to opensees.so to your <strong>PYTHONPATH</strong> env variables with <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PYTHONPATH=$PWD</span></code> or <code class="docutils literal notranslate"><span class="pre">PYTHONPATH=$PWD:$PYTHONPATH</span></code> depending on if PYTHONPATH exists when you type <strong>env</strong> in the terminal. NOTE: Using $PWD assumes you are in the directory containing the lib file, other put in the full path to the directory.</p></li>
+</ol>
+</li>
 <li><p>Finally plase note you will get a segmentation fault if you run with a different python exe than the one you build for. Look in output of <strong>cmake ..</strong> for the python library used.</p></li>
 </ol>
 </div>
-</div>
-</div>
-<div class="section" id="ubuntu">
-<h2><span class="section-number">2.3. </span>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this heading">¶</a></h2>
-<div class="section" id="id3">
-<h3><span class="section-number">2.3.1. </span>Software Requirements<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
-<ol class="arabic">
-<li><p><strong>Needed Applications and Libraries</strong>: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.</p>
+</section>
+</section>
+<section id="ubuntu">
+<h2><span class="section-number">2.4. </span>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h2>
+<section id="id5">
+<h3><span class="section-number">2.4.1. </span>Software Requirements<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<section id="needed-applications-and-libraries">
+<h4>Needed Applications and Libraries<a class="headerlink" href="#needed-applications-and-libraries" title="Link to this heading"></a></h4>
+<blockquote>
+<div><p>For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">cmake</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">gcc</span> <span class="n">g</span><span class="o">++</span> <span class="n">gfortran</span>
@@ -446,51 +502,30 @@ mv ./lib/OpenSeesPy.dylib ./lib/opensees.so
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">libmkl</span><span class="o">-</span><span class="n">rt</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">libmkl</span><span class="o">-</span><span class="n">blacs</span><span class="o">-</span><span class="n">openmpi</span><span class="o">-</span><span class="n">lp64</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">libscalapack</span><span class="o">-</span><span class="n">openmpi</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">mumps</span>
-<span class="n">mkdir</span> <span class="n">build</span>
-<span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">Darith</span><span class="o">=</span><span class="n">d</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
-<span class="n">cd</span> <span class="o">../..</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> <span class="o">--</span><span class="n">branch</span> <span class="n">hdf5</span><span class="o">-</span><span class="mi">1_12_2</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">HDFGroup</span><span class="o">/</span><span class="n">hdf5</span><span class="o">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">hdf5</span>
-<span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">hdf5</span>
-<span class="n">make</span>
-<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
-<span class="n">pip3</span> <span class="n">install</span> <span class="n">conan</span><span class="o">==</span><span class="mf">1.59.0</span>
-</pre></div>
-</div>
-</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Read the output from the last command. When building <strong>OpenSees</strong> below you will use the conan executable just installed, or find it using :code: <cite>whereis conan</cite> from the command line. If located in a different location to the path used below, you will get an error. Change the command below to path where conan was just installed.</p>
-</div>
-</div>
-<div class="section" id="id4">
-<h3><span class="section-number">2.3.2. </span>Obtaining the Source Code<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
-<p>You need to obtain the OpenSees source code from github. To obtain the source code, from a terminal <strong>cd</strong> to the directory you want to place OpenSees and then type the following:</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">/</span><span class="n">OpenSees</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="building-the-opensees-applications">
-<h3><span class="section-number">2.3.3. </span>Building the OpenSees Applications<a class="headerlink" href="#building-the-opensees-applications" title="Permalink to this heading">¶</a></h3>
-<p>With everything installed the build process is somehwat simple! Again from a terminal window enter the following commands:</p>
+</section>
+<section id="id6">
+<h4>Conan 1.x<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd OpenSees
-git pull
-mkdir build
+<div><p>Conan is used to install Eigen, HDF5, Tcl and Zlib. Type the following to install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">conan</span><span class="o">&lt;</span><span class="mf">2.0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="id7">
+<h3><span class="section-number">2.4.2. </span>Building the OpenSees Applications and Python module<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<p>With everything installed the build process is somewhat simple! Again from a terminal window enter the following commands:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir build
 cd build
 $HOME/.local/bin/conan install .. --build missing
-cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=&quot;/usr/lib/x86_64-linux-gnu/libmkl_blacs_openmpi_lp64.so;/usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1&quot;
-cmake --build . --config Release --target OpenSees --parallel 4
-cmake --build . --config Release --target OpenSeesPy
-cmake --build . --config Release --target OpenSeesMP
-cmake --build . --config Release --target OpenSeesSP
+cmake ..
+cmake --build . --target OpenSees -j8
+cmake --build . --target OpenSeesPy -j8
 mv ./lib/OpenSeesPy.so ./opensees.so
 </pre></div>
 </div>
@@ -503,83 +538,68 @@ mv ./lib/OpenSeesPy.so ./opensees.so
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This last copy is needed as the OpenSeesPy.dylib module at present actually needs to load from a file named <strong>opensees.so</strong> (go figure). Also to import this module now in your code you can do one of 2 things:</p>
+<ol class="arabic">
+<li><p>This last copy is needed as the OpenSeesPy.dylib module at present actually needs to load from a file named <strong>opensees.so</strong> (go figure). Also to import this module now in your code you can do one of 2 things:</p>
 <ol class="arabic">
 <li><p>If you have used pip3 to install openseespy, you can replace the opensees.so file in the site_package location with the opensees.so above. To find the location of this module, use the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span>
-<span class="kn">import</span> <span class="nn">opensees</span>
-<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">opensees</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
 <span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">opensees</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You may of course want to give the existing file a new name with the <strong>mv</strong> command. You can check the version of <strong>opensees</strong> installed by issuing :code: <cite>opensees.version()</cite> at the python command prompt above.</p>
+<p>You may of course want to give the existing file a new name with the <strong>mv</strong> command. You can check the version of <strong>opensees</strong> installed by issuing <code class="docutils literal notranslate"><span class="pre">opensees.version()</span></code> at the python command prompt above.</p>
 </li>
 <li><p>If you have not installed openseespy or you want to load the .so you built instead of the installed one you can add the path to opensees.so to your <strong>PYTHONPATH</strong> env variables with export PYTHONPATH=$PWD or PYTHONPATH=$PWD:$PYTHONPATH depending on if PYTHONPATH exists when you type <strong>env</strong> in the terminal. NOTE: Using $PWD assumes you are in the directory containg the lib file.</p></li>
+</ol>
+</li>
 <li><p>Finally please note you will get a segmentation fault if you run with a different python exe than the one you build with. Look in output of <strong>cmake ..</strong> for the python library used.</p></li>
 <li><p>The <strong>conan install .. –build missing</strong> step may fail. This is due to fact that the <strong>hdf5</strong> and <strong>tcl</strong> packages used to build OpenSees both rely on <strong>zlib</strong> and the hdf5 group are more apt to update their package to the lastest zlib package than the tcl group. This sometimes results in the <strong>conan</strong> step failing. There is a fix, but it requires you do edit a file in the <strong>tcl</strong> package!</p>
 <p>In your home directory there is a <strong>.conan</strong> folder and in that folder there are some more folders. You need to edit the file <strong>conanfile.py</strong> in the folder <strong>$HOME/.conan/data/tcl/8.6.10/_/_/export</strong>. Change line <strong>51</strong> to use the same zlib as the hdf5 package, currently zlib 1.2.13, i.e. self.requires(“zlib/1.2.13”). Now go back to OpenSees/build folder and try again.</p>
 </li>
 </ol>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, The Regents of the University of California.
-
-    </p>
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-2431545-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-    
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
 
   <style>
          .wy-nav-content { max-width: none; }

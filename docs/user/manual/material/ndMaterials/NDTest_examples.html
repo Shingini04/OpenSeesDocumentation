@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NDTest Examples &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userManual.html">3. Command Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userExamples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messageBoard.html">5. Questions, Bugs &amp; Feature Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/license.html">6. Copyright and License</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework for Developer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/sourceCode.html">1. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/build.html">2. Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/references.html">3. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/extend.html">4. Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/contribute.html">5. Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OpenSees Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NDTest Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/user/manual/material/ndMaterials/NDTest_examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ndtest-examples">
+<h1>NDTest Examples<a class="headerlink" href="#ndtest-examples" title="Link to this heading"></a></h1>
+<p>This document provides comprehensive examples of using the NDTest command for testing nDMaterial objects in OpenSees.</p>
+</section>
+<section id="basic-material-testing-example">
+<h1>Basic Material Testing Example<a class="headerlink" href="#basic-material-testing-example" title="Link to this heading"></a></h1>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 1: Basic Elastic Material Test</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># Create an elastic isotropic material</span>
+<span class="c"># E = 200 GPa, ν = 0.3</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Elastic Material Test ===&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Material Properties:&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  E = 200 GPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  ν = 0.3&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Test 1: Uniaxial tension</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Test 1: Uniaxial Tension&quot;</span>
+<span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="mf">0.001</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">$strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>stress11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Applied strain: $strain&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Resulting stress σ₁₁: $stress11 MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Expected stress: [expr {200000 * $strain}] MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Test 2: Get tangent stiffness</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Test 2: Tangent Stiffness&quot;</span>
+<span class="k">set</span><span class="w"> </span>tangent<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetTangentStiffness<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>C11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$tangent</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>C12<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$tangent</span><span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  C₁₁: $C11 MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  C₁₂: $C12 MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Expected C₁₁: [expr {200000}] MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Expected C₁₂: [expr {200000 * 0.3 / (1 - 0.3)}] MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Commit the state</span>
+<span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================</span>
+<span class="c1"># Example 1: Basic Elastic Material Test</span>
+<span class="c1"># =============================================</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+
+<span class="c1"># Create an elastic isotropic material</span>
+<span class="c1"># E = 200 GPa, ν = 0.3</span>
+<span class="n">op</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s2">&quot;ElasticIsotropic&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Elastic Material Test ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Material Properties:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  E = 200 GPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  ν = 0.3&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Test 1: Uniaxial tension</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 1: Uniaxial Tension&quot;</span><span class="p">)</span>
+<span class="n">strain</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">stress11</span> <span class="o">=</span> <span class="n">stresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Applied strain: </span><span class="si">{</span><span class="n">strain</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Resulting stress σ₁₁: </span><span class="si">{</span><span class="n">stress11</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Expected stress: </span><span class="si">{</span><span class="mi">200000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">strain</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Test 2: Get tangent stiffness</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 2: Tangent Stiffness&quot;</span><span class="p">)</span>
+<span class="n">tangent</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetTangentStiffness&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">C11</span> <span class="o">=</span> <span class="n">tangent</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">C12</span> <span class="o">=</span> <span class="n">tangent</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  C₁₁: </span><span class="si">{</span><span class="n">C11</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  C₁₂: </span><span class="si">{</span><span class="n">C12</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Expected C₁₁: </span><span class="si">{</span><span class="mi">200000</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Expected C₁₂: </span><span class="si">{</span><span class="mi">200000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.3</span><span class="p">)</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Commit the state</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="plasticity-material-testing">
+<h1>Plasticity Material Testing<a class="headerlink" href="#plasticity-material-testing" title="Link to this heading"></a></h1>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 2: J2 Plasticity Material Test</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># Create J2 plasticity material</span>
+<span class="c"># E = 200 GPa, ν = 0.3, yield stress = 300 MPa</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>J2Plasticity<span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mf">20.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== J2 Plasticity Test ===&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Material Properties:&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  E = 200 GPa, ν = 0.3&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Yield stress = 300 MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Isotropic hardening = 20.0 MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Monotonic loading beyond yield</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Monotonic Loading Test:&quot;</span>
+<span class="k">set</span><span class="w"> </span>maxStrain<span class="w"> </span><span class="mf">0.005</span>
+<span class="k">set</span><span class="w"> </span>numSteps<span class="w"> </span><span class="mi">50</span>
+<span class="k">set</span><span class="w"> </span>file<span class="w"> </span><span class="k">[</span><span class="nb">open</span><span class="w"> </span><span class="s2">&quot;j2_test_output.txt&quot;</span><span class="w"> </span>w<span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="s2">&quot;strain stress11&quot;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>i<span class="w"> </span><span class="mi">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">$numSteps</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>i<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$maxStrain</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">$numSteps</span><span class="k">}]</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nv">$strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">2</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stress11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="s2">&quot;$strain $stress11&quot;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nv">10</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Step $i: ε = $strain, σ₁₁ = $stress11 MPa&quot;</span>
+<span class="w">    </span><span class="k">}</span>
+<span class="k">}</span>
+
+<span class="nb">close</span><span class="w"> </span><span class="nv">$file</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Results saved to j2_test_output.txt&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Cyclic loading test</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Cyclic Loading Test:&quot;</span>
+<span class="k">set</span><span class="w"> </span>cycles<span class="w"> </span><span class="mi">3</span>
+<span class="k">set</span><span class="w"> </span>amplitude<span class="w"> </span><span class="mf">0.003</span>
+
+<span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>cycle<span class="w"> </span><span class="mi">1</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$cycle</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">$cycles</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>cycle<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Cycle $cycle:&quot;</span>
+
+<span class="w">    </span><span class="c"># Loading</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>i<span class="w"> </span><span class="mi">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">20</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>i<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$amplitude</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">20</span><span class="k">}]</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nv">$strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="c"># Unloading</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>i<span class="w"> </span><span class="mi">20</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nv">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>i<span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$amplitude</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">20</span><span class="k">}]</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nv">$strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">2</span><span class="k">]</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;    Final stress: [lindex $stresses 0] MPa&quot;</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================</span>
+<span class="c1"># Example 2: J2 Plasticity Material Test</span>
+<span class="c1"># =============================================</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+
+<span class="c1"># Create J2 plasticity material</span>
+<span class="c1"># E = 200 GPa, ν = 0.3, yield stress = 300 MPa</span>
+<span class="n">op</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s2">&quot;J2Plasticity&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== J2 Plasticity Test ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Material Properties:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  E = 200 GPa, ν = 0.3&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Yield stress = 300 MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  Isotropic hardening = 20.0 MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Monotonic loading beyond yield</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Monotonic Loading Test:&quot;</span><span class="p">)</span>
+<span class="n">max_strain</span> <span class="o">=</span> <span class="mf">0.005</span>
+<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;j2_test_output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;strain stress11</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">strain</span> <span class="o">=</span> <span class="n">max_strain</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="n">num_steps</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">stress11</span> <span class="o">=</span> <span class="n">stresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">strain</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">stress11</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Step </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: ε = </span><span class="si">{</span><span class="n">strain</span><span class="si">}</span><span class="s2">, σ₁₁ = </span><span class="si">{</span><span class="n">stress11</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Results saved to j2_test_output.txt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cyclic loading test</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cyclic Loading Test:&quot;</span><span class="p">)</span>
+<span class="n">cycles</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mf">0.003</span>
+
+<span class="k">for</span> <span class="n">cycle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">cycles</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Cycle </span><span class="si">{</span><span class="n">cycle</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Loading</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">):</span>
+        <span class="n">strain</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">20</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># Unloading</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">strain</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">20</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Final stress: </span><span class="si">{</span><span class="n">stresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-parameter-study">
+<h1>Advanced Parameter Study<a class="headerlink" href="#advanced-parameter-study" title="Link to this heading"></a></h1>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 3: Parameter Study with NDTest</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># Base material properties</span>
+<span class="k">set</span><span class="w"> </span>E_base<span class="w"> </span><span class="mi">30000</span>
+<span class="k">set</span><span class="w"> </span>nu_values<span class="w"> </span><span class="k">{</span><span class="nv">0.15</span><span class="w"> </span><span class="mf">0.20</span><span class="w"> </span><span class="mf">0.25</span><span class="w"> </span><span class="mf">0.30</span><span class="w"> </span><span class="mf">0.35</span><span class="w"> </span><span class="mf">0.40</span><span class="k">}</span>
+<span class="k">set</span><span class="w"> </span>test_strain<span class="w"> </span><span class="mf">0.001</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Poisson&#39;s Ratio Effect Study ===&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Applied strain: $test_strain&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Results file</span>
+<span class="k">set</span><span class="w"> </span>file<span class="w"> </span><span class="k">[</span><span class="nb">open</span><span class="w"> </span><span class="s2">&quot;poisson_study.txt&quot;</span><span class="w"> </span>w<span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="s2">&quot;poisson_ratio lateral_strain axial_stress&quot;</span>
+
+<span class="k">foreach</span><span class="w"> </span>nu<span class="w"> </span><span class="nv">$nu_values</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="c"># Create material with specific Poisson&#39;s ratio</span>
+<span class="w">    </span><span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="nv">$E_base</span><span class="w"> </span><span class="nv">$nu</span>
+
+<span class="w">    </span><span class="c"># Apply uniaxial strain</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="nv">$test_strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="w">    </span><span class="c"># Get results</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>strains<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="mi">10</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">10</span><span class="k">]</span>
+
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>lateral_strain<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$strains</span><span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>axial_stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="s2">&quot;$nu $lateral_strain $axial_stress&quot;</span>
+
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;ν = $nu:&quot;</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Lateral strain ε₂₂: $lateral_strain&quot;</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Expected: [expr {-$nu * $test_strain}]&quot;</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Axial stress σ₁₁: $axial_stress MPa&quot;</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">10</span>
+<span class="k">}</span>
+
+<span class="nb">close</span><span class="w"> </span><span class="nv">$file</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Parameter study results saved to poisson_study.txt&quot;</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># =============================================</span>
+<span class="c1"># Example 3: Parameter Study with NDTest</span>
+<span class="c1"># =============================================</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+
+<span class="c1"># Base material properties</span>
+<span class="n">E_base</span> <span class="o">=</span> <span class="mi">30000</span>
+<span class="n">nu_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.40</span><span class="p">]</span>
+<span class="n">test_strain</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Poisson&#39;s Ratio Effect Study ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Applied strain: </span><span class="si">{</span><span class="n">test_strain</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Results file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;poisson_study.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;poisson_ratio lateral_strain axial_stress</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">nu_values</span><span class="p">:</span>
+        <span class="c1"># Create material with specific Poisson&#39;s ratio</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s2">&quot;ElasticIsotropic&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">E_base</span><span class="p">,</span> <span class="n">nu</span><span class="p">)</span>
+
+        <span class="c1"># Apply uniaxial strain</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">test_strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+        <span class="c1"># Get results</span>
+        <span class="n">strains</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStrain&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">lateral_strain</span> <span class="o">=</span> <span class="n">strains</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">axial_stress</span> <span class="o">=</span> <span class="n">stresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nu</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">lateral_strain</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">axial_stress</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ν = </span><span class="si">{</span><span class="n">nu</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Lateral strain ε₂₂: </span><span class="si">{</span><span class="n">lateral_strain</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Expected: </span><span class="si">{</span><span class="o">-</span><span class="n">nu</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">test_strain</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Axial stress σ₁₁: </span><span class="si">{</span><span class="n">axial_stress</span><span class="si">}</span><span class="s2"> MPa&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parameter study results saved to poisson_study.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="shear-testing-example">
+<h1>Shear Testing Example<a class="headerlink" href="#shear-testing-example" title="Link to this heading"></a></h1>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 4: Pure Shear Test</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># Create material</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">70000</span><span class="w"> </span><span class="mf">0.2</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Pure Shear Test ===&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Material: Concrete-like (E = 70 GPa, ν = 0.2)&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Apply pure shear strain γ₁₂</span>
+<span class="k">set</span><span class="w"> </span>shear_strain<span class="w"> </span><span class="mf">0.002</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="nv">$shear_strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="c"># Get results</span>
+<span class="k">set</span><span class="w"> </span>strains<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="mi">4</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">4</span><span class="k">]</span>
+
+<span class="k">set</span><span class="w"> </span>shear_stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">3</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>shear_modulus<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$shear_stress</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">$shear_strain</span><span class="k">}]</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Applied shear strain γ₁₂: $shear_strain&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Resulting shear stress τ₁₂: $shear_stress MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Calculated shear modulus G: $shear_modulus MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Expected shear modulus: [expr {70000 / (2 * (1 + 0.2))}] MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c"># Test with multiple shear components</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Multiple Shear Components Test:&quot;</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0015</span><span class="w"> </span><span class="mf">0.0008</span>
+<span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">4</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  τ₁₂ = [lindex $stresses 3] MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  τ₂₃ = [lindex $stresses 4] MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  τ₃₁ = [lindex $stresses 5] MPa&quot;</span>
+
+<span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">4</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-response-testing">
+<h1>Custom Response Testing<a class="headerlink" href="#custom-response-testing" title="Link to this heading"></a></h1>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 5: Custom Material Responses</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># Create a material with custom responses</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>J2Plasticity<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mf">20.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Custom Response Testing ===&quot;</span>
+
+<span class="c"># Apply plastic deformation</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mf">0.002</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">5</span>
+
+<span class="c"># Get custom responses</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Available custom responses:&quot;</span>
+
+<span class="c"># Try to get plastic strain (if supported)</span>
+<span class="k">if</span><span class="w"> </span><span class="k">{[catch</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>plasticStrain<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="s2">&quot;plasticStrain&quot;</span><span class="k">]}]}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  plasticStrain response not available&quot;</span>
+<span class="k">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Plastic strain: $plasticStrain&quot;</span>
+<span class="k">}</span>
+
+<span class="c"># Try to get backstress (if supported)</span>
+<span class="k">if</span><span class="w"> </span><span class="k">{[catch</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>backstress<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="s2">&quot;backstress&quot;</span><span class="k">]}]}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  backstress response not available&quot;</span>
+<span class="k">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Backstress: $backstress&quot;</span>
+<span class="k">}</span>
+
+<span class="c"># Try to get yield function value</span>
+<span class="k">if</span><span class="w"> </span><span class="k">{[catch</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>yieldFunc<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="s2">&quot;yieldFunction&quot;</span><span class="k">]}]}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  yieldFunction response not available&quot;</span>
+<span class="k">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Yield function value: $yieldFunc&quot;</span>
+<span class="k">}</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Basic responses always available:&quot;</span>
+<span class="k">set</span><span class="w"> </span>stress<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="s2">&quot;stress&quot;</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="s2">&quot;strain&quot;</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Stress: $stress&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Strain: $strain&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="runtime-parameter-updates">
+<h1>Runtime Parameter Updates<a class="headerlink" href="#runtime-parameter-updates" title="Link to this heading"></a></h1>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 6: Runtime Parameter Updates</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># Create material</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Runtime Parameter Update Test ===&quot;</span>
+
+<span class="c"># Initial test</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="k">set</span><span class="w"> </span>initial_stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">6</span><span class="k">]</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Initial stress: $initial_stress MPa&quot;</span>
+
+<span class="c"># Update Young&#39;s modulus (assuming parameter ID 1 for E)</span>
+<span class="c"># Note: Parameter IDs are material-specific - check material documentation</span>
+<span class="k">set</span><span class="w"> </span>new_E<span class="w"> </span><span class="mi">150000</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Updating Young&#39;s modulus to: $new_E MPa&quot;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="k">{[catch</span><span class="w"> </span><span class="k">{</span><span class="nv">NDTest</span><span class="w"> </span>UpdateDoubleParameter<span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">$new_E</span><span class="k">}]}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Failed to update parameter (ID may be incorrect for this material)&quot;</span>
+<span class="k">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="c"># Test with updated parameter</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>updated_stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">6</span><span class="k">]</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Updated stress: $updated_stress MPa&quot;</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Expected stress: [expr {$new_E * 0.001}] MPa&quot;</span>
+<span class="k">}</span>
+
+<span class="c"># Update integer parameter example (if applicable)</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Attempting to update integer parameter...&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="k">{[catch</span><span class="w"> </span><span class="k">{</span><span class="nv">NDTest</span><span class="w"> </span>UpdateIntegerParameter<span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="k">}]}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Integer parameter update failed (not supported or incorrect ID)&quot;</span>
+<span class="k">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Integer parameter updated successfully&quot;</span>
+<span class="k">}</span>
+
+<span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">6</span>
+</pre></div>
+</div>
+</section>
+<section id="automated-testing-procedure">
+<h1>Automated Testing Procedure<a class="headerlink" href="#automated-testing-procedure" title="Link to this heading"></a></h1>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 7: Automated Material Testing Procedure</span>
+<span class="c"># =============================================</span>
+
+<span class="k">proc</span><span class="w"> </span>testMaterial<span class="w"> </span><span class="k">{</span><span class="nv">matTag</span><span class="w"> </span>testName<span class="w"> </span>testProcs<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== $testName ===&quot;</span>
+
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span>procName<span class="w"> </span><span class="nv">$testProcs</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Running $procName...&quot;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">{[catch</span><span class="w"> </span><span class="k">{</span><span class="nv">$procName</span><span class="w"> </span><span class="nv">$matTag</span><span class="k">}</span><span class="w"> </span>result<span class="k">]}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">            </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  ERROR: $result&quot;</span>
+<span class="w">        </span><span class="k">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">{</span>
+<span class="w">            </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  PASSED&quot;</span>
+<span class="w">        </span><span class="k">}</span>
+<span class="w">    </span><span class="k">}</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="k">}</span>
+
+<span class="k">proc</span><span class="w"> </span>testElasticResponse<span class="w"> </span><span class="k">{</span><span class="nv">matTag</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="c"># Test linear elastic response</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>testStrain<span class="w"> </span><span class="mf">0.001</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="nv">$testStrain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stress11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+
+<span class="w">    </span><span class="c"># Get tangent stiffness</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>tangent<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetTangentStiffness<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>C11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$tangent</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+
+<span class="w">    </span><span class="c"># Basic sanity checks</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">{</span><span class="nv">$C11</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Invalid tangent stiffness: $C11&quot;</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">{</span><span class="nv">abs</span><span class="k">(</span><span class="nv">$stress11</span><span class="k">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span>e-10<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;No stress response to applied strain&quot;</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="k">}</span>
+
+<span class="k">proc</span><span class="w"> </span>testSymmetry<span class="w"> </span><span class="k">{</span><span class="nv">matTag</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="c"># Test material symmetry for elastic materials</span>
+<span class="w">    </span><span class="c"># Apply strain in direction 1, check response in direction 2</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses1<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stress22_1<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses1</span><span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+
+<span class="w">    </span><span class="c"># Apply strain in direction 2, check response in direction 1</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses2<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stress11_2<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses2</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+
+<span class="w">    </span><span class="c"># For isotropic materials, these should be equal</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>tolerance<span class="w"> </span><span class="mi">1</span>e-6
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">{</span><span class="nv">abs</span><span class="k">(</span><span class="nv">$stress22_1</span><span class="w"> </span><span class="nv">-</span><span class="w"> </span><span class="nv">$stress11_2</span><span class="k">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">$tolerance</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Material symmetry violated: $stress22_1 != $stress11_2&quot;</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="k">}</span>
+
+<span class="k">proc</span><span class="w"> </span>testEnergyConservation<span class="w"> </span><span class="k">{</span><span class="nv">matTag</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="c"># Simple energy conservation test</span>
+<span class="w">    </span><span class="c"># Apply strain, get work done, remove strain, check work recovery</span>
+
+<span class="w">    </span><span class="c"># Loading</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stress11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+
+<span class="w">    </span><span class="c"># Unloading</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stresses_unload<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>stress11_unload<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses_unload</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+
+<span class="w">    </span><span class="c"># For elastic materials, stress should return to zero</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">{</span><span class="nv">abs</span><span class="k">(</span><span class="nv">$stress11_unload</span><span class="k">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span>e-10<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Elastic material not returning to zero stress: $stress11_unload&quot;</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span>
+<span class="k">}</span>
+
+<span class="c"># Run automated tests</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span>
+<span class="k">set</span><span class="w"> </span>testProcs<span class="w"> </span><span class="k">[</span><span class="nb">list</span><span class="w"> </span>testElasticResponse<span class="w"> </span>testSymmetry<span class="w"> </span>testEnergyConservation<span class="k">]</span>
+<span class="nv">testMaterial</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="s2">&quot;Elastic Material Validation&quot;</span><span class="w"> </span><span class="nv">$testProcs</span>
+</pre></div>
+</div>
+</section>
+<section id="integration-with-analysis-workflow">
+<h1>Integration with Analysis Workflow<a class="headerlink" href="#integration-with-analysis-workflow" title="Link to this heading"></a></h1>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># =============================================</span>
+<span class="c"># Example 8: Integration with Structural Analysis</span>
+<span class="c"># =============================================</span>
+
+<span class="c"># This example shows how to use NDTest for material calibration</span>
+<span class="c"># before running a full structural analysis</span>
+
+<span class="k">proc</span><span class="w"> </span>calibrateMaterial<span class="w"> </span><span class="k">{</span><span class="nv">targetModulus</span><span class="w"> </span>targetPoisson<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Material Calibration:&quot;</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Target: E = $targetModulus, ν = $targetPoisson&quot;</span>
+
+<span class="w">    </span><span class="c"># Start with initial guess</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>E_guess<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$targetModulus</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">0.8</span><span class="k">}]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>nu_guess<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$targetPoisson</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">0.9</span><span class="k">}]</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>iteration<span class="w"> </span><span class="mi">1</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$iteration</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">10</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>iteration<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Iteration $iteration: E = $E_guess, ν = $nu_guess&quot;</span>
+
+<span class="w">        </span><span class="c"># Create test material</span>
+<span class="w">        </span><span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">99</span><span class="w"> </span><span class="nv">$E_guess</span><span class="w"> </span><span class="nv">$nu_guess</span>
+
+<span class="w">        </span><span class="c"># Apply test strain</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">99</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="w">        </span><span class="c"># Measure response</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">99</span><span class="k">]</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>measured_stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$stresses</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>measured_modulus<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$measured_stress</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">0.001</span><span class="k">}]</span>
+
+<span class="w">        </span><span class="c"># Measure Poisson effect</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>strains<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="mi">99</span><span class="k">]</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>lateral_strain<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$strains</span><span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>measured_poisson<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">-$lateral_strain</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0.001</span><span class="k">}]</span>
+
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;  Measured: E = $measured_modulus, ν = $measured_poisson&quot;</span>
+
+<span class="w">        </span><span class="c"># Update guesses (simple proportional correction)</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>E_guess<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$E_guess</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$targetModulus</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">$measured_modulus</span><span class="k">}]</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>nu_guess<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$nu_guess</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$targetPoisson</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">$measured_poisson</span><span class="k">}]</span>
+
+<span class="w">        </span><span class="c"># Check convergence</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">{</span><span class="nv">abs</span><span class="k">(</span><span class="nv">$measured_modulus</span><span class="w"> </span><span class="nv">-</span><span class="w"> </span><span class="nv">$targetModulus</span><span class="k">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">            </span><span class="nv">abs</span><span class="k">(</span><span class="nv">$measured_poisson</span><span class="w"> </span><span class="nv">-</span><span class="w"> </span><span class="nv">$targetPoisson</span><span class="k">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.01</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">            </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Calibration converged!&quot;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">[</span><span class="nb">list</span><span class="w"> </span><span class="nv">$E_guess</span><span class="w"> </span><span class="nv">$nu_guess</span><span class="k">]</span>
+<span class="w">        </span><span class="k">}</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Calibration did not fully converge&quot;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">[</span><span class="nb">list</span><span class="w"> </span><span class="nv">$E_guess</span><span class="w"> </span><span class="nv">$nu_guess</span><span class="k">]</span>
+<span class="k">}</span>
+
+<span class="c"># Run calibration</span>
+<span class="k">set</span><span class="w"> </span>calibratedProps<span class="w"> </span><span class="k">[</span><span class="nv">calibrateMaterial</span><span class="w"> </span><span class="mi">30000</span><span class="w"> </span><span class="mf">0.2</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>finalE<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$calibratedProps</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>finalNu<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$calibratedProps</span><span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Calibrated material properties:&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;E = $finalE MPa&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;ν = $finalNu&quot;</span>
+
+<span class="c"># Now use calibrated material in structural model</span>
+<span class="nv">model</span><span class="w"> </span>BasicBuilder<span class="w"> </span><span class="o">-</span>ndm<span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-</span>ndf<span class="w"> </span><span class="mi">3</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">$finalE</span><span class="w"> </span><span class="nv">$finalNu</span>
+
+<span class="c"># ... continue with structural analysis ...</span>
+</pre></div>
+</div>
+<p>These examples demonstrate the versatility of NDTest commands for material testing, calibration, validation, and research applications.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

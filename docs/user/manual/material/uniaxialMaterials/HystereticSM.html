@@ -1,100 +1,52 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>3.1.5.17. HystereticSM Material &mdash; OpenSees Documentation  documentation</title>
-  
+  <title>3.1.5.20. HystereticSM Material &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
 
   
-  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/nbsphinx-gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-
-    
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Opensees uniaxialMaterial Demo: HystereticSM" href="examples/HystereticSM_materialDemo.html" />
-    <link rel="prev" title="3.1.5.16. Hysteretic Material" href="Hysteretic.html" /> 
+    <link rel="next" title="3.1.5.21. IMKBilin Material" href="IMKBilin.html" />
+    <link rel="prev" title="3.1.5.19. Hysteretic Material" href="Hysteretic.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../../../../index.html">
           
-
-          
+          <a href="../../../../index.html">
             
-            <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
-          
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
@@ -109,46 +61,51 @@
 <li class="toctree-l4"><a class="reference internal" href="Steel01.html">3.1.5.1. Steel01 Material</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Steel02.html">3.1.5.2. Steel02 Material</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Steel4.html">3.1.5.3. Steel4 Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ReinforcingSteel.html">3.1.5.4. Reinforcing Steel Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="DoddRestrepo.html">3.1.5.5. DoddRestrepo Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="RambergOsgoodSteel.html">3.1.5.6. Ramberg Osgood Steel Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SteelMPF.html">3.1.5.7. SteelMPF Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="UVCuniaxial.html">3.1.5.8. UVCUniaxial Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SteelFractureDI.html">3.1.5.9. SteelFractureDI Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="DuctileFracture.html">3.1.5.10. DuctileFracture Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Concrete01.html">3.1.5.11. Concrete01 Material – Zero Tensile Strength</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Concrete02.html">3.1.5.12. Concrete02 Material – Linear Tension Softening</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Concrete04.html">3.1.5.13. Concrete04 Material – Popovics Concrete Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ASDConcrete1D.html">3.1.5.14. ASDConcrete1D Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="GMG_CyclicReinforcedConcrete.html">3.1.5.15. GMG_CyclicReinforcedConcrete Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Hysteretic.html">3.1.5.16. Hysteretic Material</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">3.1.5.17. HystereticSM Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IMKBilin.html">3.1.5.18. IMKBilin Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IMKPeakOriented.html">3.1.5.19. IMKPeakOriented Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IMKPinching.html">3.1.5.20. IMKPinching Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SLModel.html">3.1.5.21. SLModel Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BoucWenInfill.html">3.1.5.22. BoucWenInfill Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HystereticPoly.html">3.1.5.23. HystereticPoly Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HystereticAsym.html">3.1.5.24. HystereticAsym Material (Smooth asymmetric hysteresis)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HystereticSmooth.html">3.1.5.25. HystereticSmooth Material (Smooth hysteretic material)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="DowelType.html">3.1.5.26. DowelType Timber Joint Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="CoulombDamper.html">3.1.5.27. CoulombDamper Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HertzDamp.html">3.1.5.28. Hertz Damp Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="JankowskiImpact.html">3.1.5.29. Jankowski Impact Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ViscoelasticGap.html">3.1.5.30. Viscoelastic Gap Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Ratchet.html">3.1.5.31. Ratchet Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PySimple1.html">3.1.5.32. PySimple1 Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TzSimple1.html">3.1.5.33. TzSimple1 Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="QzSimple1.html">3.1.5.34. QzSimple1 Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="PyLiq1.html">3.1.5.35. PyLiq1 Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TzLiq1.html">3.1.5.36. TzLiq1 Material</a></li>
-<li class="toctree-l4"><a class="reference internal" href="QzLiq1.html">3.1.5.37. QzLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDSteel1D.html">3.1.5.4. ASDSteel1D Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ReinforcingSteel.html">3.1.5.5. Reinforcing Steel Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DoddRestrepo.html">3.1.5.6. DoddRestrepo Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RambergOsgoodSteel.html">3.1.5.7. Ramberg Osgood Steel Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SteelMPF.html">3.1.5.8. SteelMPF Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UVCuniaxial.html">3.1.5.9. UVCUniaxial Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SteelFractureDI.html">3.1.5.10. SteelFractureDI Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuctileFracture.html">3.1.5.11. DuctileFracture Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Concrete01.html">3.1.5.12. Concrete01 Material – Zero Tensile Strength</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Concrete02.html">3.1.5.13. Concrete02 Material – Linear Tension Softening</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Concrete04.html">3.1.5.14. Concrete04 Material – Popovics Concrete Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ConcreteZBH_smoothed.html">3.1.5.15. ConcreteZBH_smoothed Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDConcrete1D.html">3.1.5.16. ASDConcrete1D Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GMG_CyclicReinforcedConcrete.html">3.1.5.17. GMG_CyclicReinforcedConcrete Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Creep.html">3.1.5.18. Creep Material – Wrapper Creep Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Hysteretic.html">3.1.5.19. Hysteretic Material</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.1.5.20. HystereticSM Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IMKBilin.html">3.1.5.21. IMKBilin Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IMKPeakOriented.html">3.1.5.22. IMKPeakOriented Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IMKPinching.html">3.1.5.23. IMKPinching Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SLModel.html">3.1.5.24. SLModel Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BoucWenInfill.html">3.1.5.25. BoucWenInfill Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticPoly.html">3.1.5.26. HystereticPoly Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticAsym.html">3.1.5.27. HystereticAsym Material (Smooth asymmetric hysteresis)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticSmooth.html">3.1.5.28. HystereticSmooth Material (Smooth hysteretic material)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DowelType.html">3.1.5.29. DowelType Timber Joint Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoulombDamper.html">3.1.5.30. CoulombDamper Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HertzDamp.html">3.1.5.31. Hertz Damp Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="JankowskiImpact.html">3.1.5.32. Jankowski Impact Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ViscoelasticGap.html">3.1.5.33. Viscoelastic Gap Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ratchet.html">3.1.5.34. Ratchet Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PySimple1.html">3.1.5.35. PySimple1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TzSimple1.html">3.1.5.36. TzSimple1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="QzSimple1.html">3.1.5.37. QzSimple1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PyLiq1.html">3.1.5.38. PyLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TzLiq1.html">3.1.5.39. TzLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="QzLiq1.html">3.1.5.40. QzLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TzSandCPT.html">3.1.5.41. TzSandCPT Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="QbSandCPT.html">3.1.5.42. QbSandCPT Material</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ndMaterial.html">3.1.6. nDMaterial Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../section.html">3.1.7. section Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../model/geomTransf.html">3.1.8. Geometric Transformation Command</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../model/beamIntegration.html">3.1.9. Beam integration Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/beamIntegration.html">3.1.9. Beam Integration Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../model/element.html">3.1.10. Element Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../model/timeSeries.html">3.1.11. Time Series Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../model/pattern.html">3.1.12. Pattern Command</a></li>
@@ -174,99 +131,121 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../../index.html">OpenSees Documentation</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a> &raquo;</li>
-        
-          <li><a href="../../modelCommands.html"><span class="section-number">3.1. </span>Model Commands</a> &raquo;</li>
-        
-          <li><a href="../uniaxialMaterial.html"><span class="section-number">3.1.5. </span>uniaxialMaterial Command</a> &raquo;</li>
-        
-      <li><span class="section-number">3.1.5.17. </span>HystereticSM Material</li>
-    
-    
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../modelCommands.html"><span class="section-number">3.1. </span>Model Commands</a></li>
+          <li class="breadcrumb-item"><a href="../uniaxialMaterial.html"><span class="section-number">3.1.5. </span>uniaxialMaterial Command</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.1.5.20. </span>HystereticSM Material</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../../../_sources/user/manual/material/uniaxialMaterials/HystereticSM.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="hystereticsm-material">
-<span id="hystereticsm"></span><h1><span class="section-number">3.1.5.17. </span>HystereticSM Material<a class="headerlink" href="#hystereticsm-material" title="Permalink to this heading">¶</a></h1>
-<p>This command is used to construct a uniaxial multilinear hysteretic material object with pinching of force and deformation, damage due to ductility and energy, and degraded unloading stiffness based on ductility. This material is an extension of the Hysteretic Material – the envelope can be defined 2,3, 4,5,6 or 7 points, while the original one only had 2 or 3.
-<a href="#id1"><span class="problematic" id="id2">*</span></a>The positive and negative backbone of this material do not need to have the same number of segments.
-<a href="#id3"><span class="problematic" id="id4">*</span></a>This material also has the option to degrade the envelope using the degEnv parameters. – this option will be available soon
-<a href="#id5"><span class="problematic" id="id6">*</span></a>This material also has additional DCR-type recorder output.</p>
-<dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">uniaxialMaterial</span> <span class="pre">HystereticSM</span> <span class="pre">$matTag</span> <span class="pre">-posEnv</span> <span class="pre">$s1p</span> <span class="pre">$e1p</span> <span class="pre">$s2p</span> <span class="pre">$e2p</span> <span class="pre">&lt;$s3p</span> <span class="pre">$e3p&gt;</span> <span class="pre">&lt;$s4p</span> <span class="pre">$e4p&gt;</span> <span class="pre">&lt;$s5p</span> <span class="pre">$e5p&gt;</span> <span class="pre">&lt;$s6p</span> <span class="pre">$e6p&gt;</span> <span class="pre">&lt;$s7p</span> <span class="pre">$e7p&gt;</span> <span class="pre">&lt;-negEnv</span> <span class="pre">$s1n</span> <span class="pre">$e1n</span> <span class="pre">$s2n</span> <span class="pre">$e2n</span> <span class="pre">&lt;$s3n</span> <span class="pre">$e3n&gt;</span> <span class="pre">&lt;$s4n</span> <span class="pre">$e4n&gt;</span> <span class="pre">&lt;$s5n</span> <span class="pre">$e5n&gt;</span> <span class="pre">&lt;$s6n</span> <span class="pre">$e6n&gt;</span> <span class="pre">&lt;$s7n</span> <span class="pre">$e7n&gt;&gt;</span> <span class="pre">&lt;-pinch</span> <span class="pre">$pinchX</span> <span class="pre">$pinchY&gt;</span> <span class="pre">&lt;-damage</span> <span class="pre">$damage1</span> <span class="pre">$damage2&gt;</span> <span class="pre">&lt;-beta</span> <span class="pre">$beta&gt;</span> <span class="pre">&lt;-degEnv</span> <span class="pre">degEnvP</span> <span class="pre">&lt;degEnvN&gt;&gt;</span> <span class="pre">&lt;-defoLimitStates</span> <span class="pre">$lsD1</span> <span class="pre">&lt;$lsD2&gt;...&gt;</span> <span class="pre">&lt;-forceLimitStates</span> <span class="pre">$lsF1</span> <span class="pre">&lt;$lsF2&gt;...&gt;</span> <span class="pre">&lt;-printInput&gt;</span> <span class="pre">&lt;-XYorder&gt;</span></span></dt>
-<dd></dd></dl>
-
-<p>The following input format is compatible with Hysteretic material. Note that in this case you must have the same number of positive and negative segments:</p>
-<dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">uniaxialMaterial</span> <span class="pre">HystereticSM</span> <span class="pre">$matTag</span> <span class="pre">$s1p</span> <span class="pre">$e1p</span> <span class="pre">$s2p</span> <span class="pre">$e2p</span> <span class="pre">&lt;$s3p</span> <span class="pre">$e3p&gt;</span> <span class="pre">&lt;$s4p</span> <span class="pre">$e4p&gt;</span> <span class="pre">&lt;$s5p</span> <span class="pre">$e5p&gt;</span> <span class="pre">&lt;$s6p</span> <span class="pre">$e6p&gt;</span> <span class="pre">&lt;$s7p</span> <span class="pre">$e7p&gt;</span> <span class="pre">$s1n</span> <span class="pre">$e1n</span> <span class="pre">$s2n</span> <span class="pre">$e2n</span> <span class="pre">&lt;$s3n</span> <span class="pre">$e3n&gt;</span> <span class="pre">&lt;$s4n</span> <span class="pre">$e4n&gt;</span> <span class="pre">&lt;$s5n</span> <span class="pre">$e5n&gt;</span> <span class="pre">&lt;$s6n</span> <span class="pre">$e6n&gt;</span> <span class="pre">&lt;$s7n</span> <span class="pre">$e7n&gt;</span> <span class="pre">$pinchX</span> <span class="pre">$pinchY</span> <span class="pre">$damage1</span> <span class="pre">$damage2</span> <span class="pre">&lt;$beta&gt;</span> <span class="pre">&lt;-degEnv</span> <span class="pre">degEnvP</span> <span class="pre">&lt;degEnvN&gt;&gt;</span> <span class="pre">&lt;-defoLimitStates</span> <span class="pre">lsD1?</span> <span class="pre">&lt;lsD2?&gt;...&gt;</span> <span class="pre">&lt;-forceLimitStates</span> <span class="pre">lsF1?</span> <span class="pre">&lt;lsF2?&gt;...&gt;</span> <span class="pre">&lt;-printInput&gt;</span> <span class="pre">&lt;-XYorder&gt;</span></span></dt>
-<dd></dd></dl>
-
-<table class="colwidths-given docutils align-default">
+             
+  <section id="hystereticsm-material">
+<span id="hystereticsm"></span><h1><span class="section-number">3.1.5.20. </span>HystereticSM Material<a class="headerlink" href="#hystereticsm-material" title="Link to this heading"></a></h1>
+<p>This command is used to construct a uniaxial multilinear hysteretic material object with pinching of force and deformation, damage due to ductility and energy, and degraded unloading stiffness based on ductility.
+- This material is an extension of the Hysteretic Material – the envelope can be defined 2,3,4,5,6 or 7 points, while the original one only had 2 or 3.
+- The positive and negative backbone of this material do not need to have the same number of segments.
+- This material also has the option to degrade the envelope using the degEnv parameters – these parameters must be used in combination with the damage parameters
+- This material also has additional DCR-type recorder output (this is still a work in progress).
+- Written by Silvia Mazzoni, 2022
+- Feb 2026 Update 1: I added a new input rotY to be used when the deformation represents platic-only deformation. The user-defined values of rotY is added to eps1 to compute the current ductility level (=current strain/(eps1+rotY)). You can define different values in positive and negative. This new argument affects the damage-parameter calcs as well as the unloading stiffness.
+- Feb 2026 Update 2: The second slope no longer needs to be positive, only the first stiffness does… in both directions.</p>
+<section id="input-command">
+<h2><span class="section-number">3.1.5.20.1. </span>Input Command:<a class="headerlink" href="#input-command" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="admonition-openseespy admonition">
+<p class="admonition-title">OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span><span class="n">matTag</span><span class="p">,</span>
+   <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span><span class="n">s1p</span><span class="p">,</span><span class="n">e1p</span><span class="p">,</span><span class="n">s2p</span><span class="p">,</span><span class="n">e2p</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s3p</span><span class="p">,</span><span class="n">e3p</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s4p</span><span class="p">,</span><span class="n">e4p</span><span class="o">&gt;&lt;</span><span class="p">,</span><span class="n">s5p</span><span class="p">,</span><span class="n">e5p</span><span class="o">&gt;&lt;</span><span class="p">,</span><span class="n">s6p</span><span class="p">,</span><span class="n">e6p</span><span class="o">&gt;&lt;</span><span class="p">,</span><span class="n">s7p</span><span class="p">,</span><span class="n">e7p</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span><span class="n">s1n</span><span class="p">,</span><span class="n">e1n</span><span class="p">,</span><span class="n">s2n</span><span class="p">,</span><span class="n">e2n</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s3n</span><span class="p">,</span><span class="n">e3n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s4n</span><span class="p">,</span><span class="n">e4n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s5n</span><span class="p">,</span><span class="n">e5n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s6n</span><span class="p">,</span><span class="n">e6n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s7n</span><span class="p">,</span><span class="n">e7n</span><span class="o">&gt;&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-pinch&#39;</span><span class="p">,</span><span class="n">pinchX</span><span class="p">,</span><span class="n">pinchY</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-damage&#39;</span><span class="p">,</span><span class="n">damage1</span><span class="p">,</span><span class="n">damage2</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-beta&#39;</span><span class="p">,</span><span class="n">beta</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-degEnv&#39;</span><span class="p">,</span><span class="n">degEnvP</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">degEnvN</span><span class="o">&gt;&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-rotY&#39;</span><span class="p">,</span><span class="n">rotYp</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">rotYn</span><span class="o">&gt;&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-defoLimitStates&#39;</span><span class="p">,</span><span class="n">lsD1</span> <span class="o">&lt;</span><span class="err">$</span><span class="n">lsD2</span><span class="o">&gt;...&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-forceLimitStates&#39;</span><span class="p">,</span><span class="n">lsF1</span> <span class="o">&lt;</span><span class="p">,</span><span class="err">$</span><span class="n">lsF2</span><span class="o">&gt;...&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-printInput&#39;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-XYorder&#39;</span><span class="o">&gt;</span>
+ <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-tcl-interpreter admonition">
+<p class="admonition-title">Tcl interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="nv">-posEnv</span><span class="w"> </span><span class="nv">$s1p</span><span class="w"> </span><span class="nv">$e1p</span><span class="w"> </span><span class="nv">$s2p</span><span class="w"> </span><span class="nv">$e2p</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s3p</span><span class="w"> </span><span class="nv">$e3p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s4p</span><span class="w"> </span><span class="nv">$e4p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s5p</span><span class="w"> </span><span class="nv">$e5p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s6p</span><span class="w"> </span><span class="nv">$e6p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s7p</span><span class="w"> </span><span class="nv">$e7p</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-negEnv</span><span class="w"> </span><span class="nv">$s1n</span><span class="w"> </span><span class="nv">$e1n</span><span class="w"> </span><span class="nv">$s2n</span><span class="w"> </span><span class="nv">$e2n</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s3n</span><span class="w"> </span><span class="nv">$e3n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s4n</span><span class="w"> </span><span class="nv">$e4n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s5n</span><span class="w"> </span><span class="nv">$e5n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s6n</span><span class="w"> </span><span class="nv">$e6n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s7n</span><span class="w"> </span><span class="nv">$e7n</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-pinch</span><span class="w"> </span><span class="nv">$pinchX</span><span class="w"> </span><span class="nv">$pinchY</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-damage</span><span class="w"> </span><span class="nv">$damage1</span><span class="w"> </span><span class="nv">$damage2</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-beta</span><span class="w"> </span><span class="nv">$beta</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-degEnv</span><span class="w"> </span>degEnvP<span class="w"> </span><span class="o">&lt;</span>degEnvN<span class="o">&gt;&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-rotY</span><span class="w"> </span>rotYp<span class="w"> </span><span class="o">&lt;</span>rotYn<span class="o">&gt;&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-defoLimitStates</span><span class="w"> </span><span class="nv">$lsD1</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$lsD2</span><span class="o">&gt;</span>...<span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-forceLimitStates</span><span class="w"> </span><span class="nv">$lsF1</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$lsF2</span><span class="o">&gt;</span>...<span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-printInput</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-XYorder</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>You can use the following input format as it is compatible with Hysteretic material. Note that in this case you must have the same number of positive and negative segments. I have made this format (make sure you test it) to make the transition from Hysteretic to HystereticSM easy:</p>
+<blockquote>
+<div><div class="admonition-openseespy admonition">
+<p class="admonition-title">OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span><span class="n">matTag</span><span class="p">,</span><span class="n">s1p</span><span class="p">,</span><span class="n">e1p</span><span class="p">,</span><span class="n">s2p</span><span class="p">,</span><span class="n">e2p</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s3p</span><span class="p">,</span><span class="n">e3p</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s4p</span><span class="p">,</span><span class="n">e4p</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s5p</span><span class="p">,</span><span class="n">e5p</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s6p</span><span class="p">,</span><span class="n">e6p</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s7p</span><span class="p">,</span><span class="n">e7p</span><span class="o">&gt;</span><span class="p">,</span>
+   <span class="n">s1n</span><span class="p">,</span><span class="n">e1n</span><span class="p">,</span><span class="n">s2n</span><span class="p">,</span><span class="n">e2n</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s3n</span><span class="p">,</span><span class="n">e3n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s4n</span><span class="p">,</span><span class="n">e4n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s5n</span><span class="p">,</span><span class="n">e5n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s6n</span><span class="p">,</span><span class="n">e6n</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">s7n</span><span class="p">,</span><span class="n">e7n</span><span class="o">&gt;</span><span class="p">,</span>
+   <span class="n">pinchX</span><span class="p">,</span><span class="n">pinchY</span><span class="p">,</span><span class="n">damage1</span><span class="p">,</span><span class="n">damage2</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">beta</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-degEnv&#39;</span><span class="p">,</span><span class="n">degEnvP</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">degEnvN</span><span class="o">&gt;&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-rotY&#39;</span><span class="p">,</span><span class="n">rotYp</span> <span class="o">&lt;</span><span class="p">,</span><span class="n">rotYn</span><span class="o">&gt;&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-defoLimitStates&#39;</span><span class="p">,</span><span class="n">lsD1</span> <span class="o">&lt;</span><span class="err">$</span><span class="n">lsD2</span><span class="o">&gt;...&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-forceLimitStates&#39;</span><span class="p">,</span><span class="n">lsF1</span> <span class="o">&lt;</span><span class="p">,</span><span class="err">$</span><span class="n">lsF2</span><span class="o">&gt;...&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-printInput&#39;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="p">,</span><span class="s1">&#39;-XYorder&#39;</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-tcl-interpreter admonition">
+<p class="admonition-title">Tcl interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="nv">$s1p</span><span class="w"> </span><span class="nv">$e1p</span><span class="w"> </span><span class="nv">$s2p</span><span class="w"> </span><span class="nv">$e2p</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s3p</span><span class="w"> </span><span class="nv">$e3p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s4p</span><span class="w"> </span><span class="nv">$e4p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s5p</span><span class="w"> </span><span class="nv">$e5p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s6p</span><span class="w"> </span><span class="nv">$e6p</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s7p</span><span class="w"> </span><span class="nv">$e7p</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="nv">$s1n</span><span class="w"> </span><span class="nv">$e1n</span><span class="w"> </span><span class="nv">$s2n</span><span class="w"> </span><span class="nv">$e2n</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s3n</span><span class="w"> </span><span class="nv">$e3n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s4n</span><span class="w"> </span><span class="nv">$e4n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s5n</span><span class="w"> </span><span class="nv">$e5n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s6n</span><span class="w"> </span><span class="nv">$e6n</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$s7n</span><span class="w"> </span><span class="nv">$e7n</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="nv">$pinchX</span><span class="w"> </span><span class="nv">$pinchY</span><span class="w"> </span><span class="nv">$damage1</span><span class="w"> </span><span class="nv">$damage2</span><span class="w"> </span><span class="o">&lt;</span><span class="nv">$beta</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-degEnv</span><span class="w"> </span>degEnvP<span class="w"> </span><span class="o">&lt;</span>degEnvN<span class="o">&gt;&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-rotY</span><span class="w"> </span>rotYp<span class="w"> </span><span class="o">&lt;</span>rotYn<span class="o">&gt;&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-defoLimitStates</span><span class="w"> </span>lsD1<span class="o">?</span><span class="w"> </span><span class="o">&lt;</span>lsD2<span class="o">?&gt;</span>...<span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-forceLimitStates</span><span class="w"> </span>lsF1<span class="o">?</span><span class="w"> </span><span class="o">&lt;</span>lsF2<span class="o">?&gt;</span>...<span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-printInput</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span>
+<span class="w">   </span><span class="o">&lt;</span><span class="nv">-XYorder</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</section>
+<section id="input-arguments">
+<h2><span class="section-number">3.1.5.20.2. </span>Input Arguments:<a class="headerlink" href="#input-arguments" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 67%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Argument</p></th>
@@ -333,11 +312,19 @@
 </tr>
 <tr class="row-even"><td><p>$degEnvP</p></td>
 <td><p><em>float</em></p></td>
-<td><p>envelope-degredation factor. This factor works with the damage parameters to degrade the POSITIVE envelope. A positive value degrades both strength and strain values, a negative values degrades only strength. The factor is applied to points 3+ (optional, default=0.0)</p></td>
+<td><p>envelope-degredation factor. This factor works with the damage parameters to degrade the POSITIVE envelope. A positive value degrades both strength and strain values, a negative values degrades only strength. The factor is applied to points 2+ (optional, default=0.0)</p></td>
 </tr>
 <tr class="row-odd"><td><p>$degEnvN</p></td>
 <td><p><em>float</em></p></td>
-<td><p>envelope-degredation factor. This factor works with the damage parameters to degrade the NEGATIVE envelope. A positive value degrades both strength and strain values, a negative values degrades only strength. The factor is applied to points 3+ (optional, default=degEnvP, if defined, =0. otherwise)</p></td>
+<td><p>envelope-degredation factor. This factor works with the damage parameters to degrade the NEGATIVE envelope. A positive value degrades both strength and strain values, a negative values degrades only strength. The factor is applied to points 2+ (optional, default=degEnvP, if defined, =0. otherwise)</p></td>
+</tr>
+<tr class="row-even"><td><p>$rotYp</p></td>
+<td><p><em>float</em></p></td>
+<td><p>This value is added to e1p anytime the algorithm needs to compute ductility or energy in POSITIVE direction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>$rotYn</p></td>
+<td><p><em>float</em></p></td>
+<td><p>This value is added to e1p anytime the algorithm needs to compute ductility or energy in NEGATIVE direction.</p></td>
 </tr>
 <tr class="row-even"><td><p>($lsD1,$lsD2..)</p></td>
 <td><p><em>float</em></p></td>
@@ -368,13 +355,14 @@
 <li><p>The values for damage and envelope-degradation factors depend on the amplitude of your input values, so you should calibrate them.</p></li>
 </ul>
 </div>
-<div class="section" id="recorder-options">
-<h2><span class="section-number">3.1.5.17.1. </span>Recorder Options:<a class="headerlink" href="#recorder-options" title="Permalink to this heading">¶</a></h2>
-<table class="colwidths-given docutils align-default">
+</section>
+<section id="recorder-options">
+<h2><span class="section-number">3.1.5.20.3. </span>Recorder Options:<a class="headerlink" href="#recorder-options" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 67%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Argument</p></th>
@@ -429,221 +417,580 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="example-input">
-<h2><span class="section-number">3.1.5.17.2. </span>Example Input:<a class="headerlink" href="#example-input" title="Permalink to this heading">¶</a></h2>
-<p>ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-pinch’, 1, 1,’-damage’, 0.1, 0.01, ‘-beta’, 0,’-defoLimitStates’, 0.01, -0.01, 0.02, -0.02, ‘-forceLimitStates’, 2772.0, -2772.0, 3104.6, -3104.6,’printInput’)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -pinch  1  1 -damage  0.1  0.01 -beta 0 -defoLimitStates 0.01 -0.01 0.02 -0.02 -forceLimitStates 2772.0 -2772.0 3104.6 -3104.6 -printInput</p>
-</div>
-<div class="section" id="jupyter-notebook">
-<h2><span class="section-number">3.1.5.17.3. </span>Jupyter Notebook:<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading">¶</a></h2>
-<p>Open or download Jupyter notebook with example of HystereticSM material, used generate the figures <a class="reference external" href="https://github.com/OpenSees/OpenSeesDocumentation/blob/master/source/user/manual/material/uniaxialMaterials/examples/HystereticSM_materialDemo.ipynb">HERE!</a></p>
-<div class="toctree-wrapper compound">
-<div class="nbsphinx-gallery">
-<a class="reference internal" href="examples/HystereticSM_materialDemo.html">
-  <div><img alt="" src="../../../../_images/user_manual_material_uniaxialMaterials_examples_HystereticSM_materialDemo_12_39.png"></div>
-  <div>Opensees uniaxialMaterial Demo: HystereticSM</div>
+</section>
+<hr class="docutils" />
+<section id="backbone-curve-for-material">
+<h2><span class="section-number">3.1.5.20.4. </span>Backbone Curve for material:<a class="headerlink" href="#backbone-curve-for-material" title="Link to this heading"></a></h2>
+<div class="admonition-backbone-curve-for-symmetric-material-behavior admonition">
+<p class="admonition-title">Backbone curve for <strong>Symmetric</strong> material behavior.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_backbone_Symm.jpg"><img alt="../../../../_images/HystereticSM_backbone_Symm.jpg" src="../../../../_images/HystereticSM_backbone_Symm.jpg" style="width: 35%;" />
 </a>
+</figure>
 </div>
+<div class="admonition-backbone-curve-for-unsymmetric-material-behavior admonition">
+<p class="admonition-title">Backbone curve for <strong>Unsymmetric</strong> material behavior.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_backbone_nonSymm.jpg"><img alt="../../../../_images/HystereticSM_backbone_nonSymm.jpg" src="../../../../_images/HystereticSM_backbone_nonSymm.jpg" style="width: 35%;" />
+</a>
+</figure>
 </div>
+</section>
+<hr class="docutils" />
+<section id="examples">
+<h2><span class="section-number">3.1.5.20.5. </span>Examples:<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<p>You have endless options with this material. Here are a few demos:</p>
+<hr class="docutils" />
+<div class="admonition-jupyter-notebook admonition">
+<p class="admonition-title">Jupyter Notebook</p>
+<p>Open or download Jupyter the notebook with example of HystereticSM material, used generate the figures <a class="reference external" href="https://github.com/OpenSees/OpenSeesDocumentation/blob/master/source/user/manual/material/uniaxialMaterials/examples/HystereticSM_materialDemo.ipynb">CLICK HERE!</a></p>
 </div>
-<div class="section" id="backbone-curve-for-material-7-points-in-each-direction">
-<h2><span class="section-number">3.1.5.17.4. </span>Backbone Curve for material (7 points in each direction)<a class="headerlink" href="#backbone-curve-for-material-7-points-in-each-direction" title="Permalink to this heading">¶</a></h2>
-<div class="align-center figure">
-<img alt="../../../../_images/HystereticSM_backbone_Symm.jpg" src="../../../../_images/HystereticSM_backbone_Symm.jpg" />
+<hr class="docutils" />
+<div class="admonition-example-input admonition">
+<p class="admonition-title">Example Input</p>
+<ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-pinch&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span>
+  <span class="s1">&#39;-beta&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s1">&#39;-defoLimitStates&#39;</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span>
+  <span class="s1">&#39;-forceLimitStates&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span>
+  <span class="s1">&#39;-printInput&#39;</span>
+<span class="p">)</span>
+</pre></div>
 </div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w"> </span><span class="mi">99</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w"> </span><span class="mf">2772.0</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="mf">3104.6</span><span class="w"> </span><span class="mf">0.02</span><span class="w"> </span><span class="mf">1663.2</span><span class="w"> </span><span class="mf">0.04</span><span class="w"> </span><span class="mf">1663.2</span><span class="w"> </span><span class="mf">0.06</span><span class="w"> </span><span class="mf">277.2</span><span class="w"> </span><span class="mf">0.08</span><span class="w"> </span><span class="mf">200.0</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.12</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w"> </span><span class="o">-</span><span class="mf">2772.0</span><span class="w"> </span><span class="o">-</span><span class="mf">0.01</span><span class="w"> </span><span class="o">-</span><span class="mf">3104.6</span><span class="w"> </span><span class="o">-</span><span class="mf">0.02</span><span class="w"> </span><span class="o">-</span><span class="mf">1663.2</span><span class="w"> </span><span class="o">-</span><span class="mf">0.04</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-pinch</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-damage</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-beta</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-defoLimitStates</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="o">-</span><span class="mf">0.01</span><span class="w"> </span><span class="mf">0.02</span><span class="w"> </span><span class="o">-</span><span class="mf">0.02</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-forceLimitStates</span><span class="w"> </span><span class="mf">2772.0</span><span class="w"> </span><span class="o">-</span><span class="mf">2772.0</span><span class="w"> </span><span class="mf">3104.6</span><span class="w"> </span><span class="o">-</span><span class="mf">3104.6</span><span class="w"> </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-printInput</span>
+</pre></div>
 </div>
-<div class="section" id="backbone-curve-for-material-non-symmetric-behavior">
-<h2><span class="section-number">3.1.5.17.5. </span>Backbone Curve for material (non-symmetric behavior)<a class="headerlink" href="#backbone-curve-for-material-non-symmetric-behavior" title="Permalink to this heading">¶</a></h2>
-<div class="align-center figure">
-<img alt="../../../../_images/HystereticSM_backbone_nonSymm.jpg" src="../../../../_images/HystereticSM_backbone_nonSymm.jpg" />
+</li>
+</ul>
 </div>
+</section>
+<hr class="docutils" />
+<section id="input-parameters-study">
+<h2><span class="section-number">3.1.5.20.6. </span>Input-Parameters Study:<a class="headerlink" href="#input-parameters-study" title="Link to this heading"></a></h2>
+<div class="admonition-pinching admonition">
+<p class="admonition-title">Pinching</p>
+<ol class="arabic simple">
+<li><p><strong>pinch=[1, 1]</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+    <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+    <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+    <span class="s1">&#39;-pinch&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="parameter-study-pinching">
-<h2><span class="section-number">3.1.5.17.6. </span>Parameter Study: Pinching<a class="headerlink" href="#parameter-study-pinching" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_pinch=[1, 1]</em></p>
-<p>ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-pinch’, 1, 1)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -pinch  1  1</p>
-<p><em>HystereticSM_pinch=[0.2, 0.8]</em></p>
-<p>ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-pinch’, 0.2, 0.8)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -pinch  0.2  0.8</p>
-<p><em>HystereticSM_pinch=[0.8, 0.2]</em></p>
-<p>ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-pinch’, 0.8, 0.2)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -pinch  0.8  0.2</p>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_pinch_strainDip.jpg" src="../../../../_images/HystereticSM_pinch_strainDip.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w"> </span><span class="mi">99</span><span class="w"> </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w"> </span><span class="mf">2772.0</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="mf">3104.6</span><span class="w"> </span><span class="mf">0.02</span><span class="w"> </span><span class="mf">1663.2</span><span class="w"> </span><span class="mf">0.04</span><span class="w"> </span><span class="mf">1663.2</span><span class="w"> </span><span class="mf">0.06</span><span class="w"> </span><span class="mf">277.2</span><span class="w"> </span><span class="mf">0.08</span><span class="w"> </span><span class="mf">200.0</span><span class="w"> </span><span class="mf">0.10</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.12</span><span class="w"> </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w"> </span><span class="o">-</span><span class="mf">2772.0</span><span class="w"> </span><span class="o">-</span><span class="mf">0.01</span><span class="w"> </span><span class="o">-</span><span class="mf">3104.6</span><span class="w"> </span><span class="o">-</span><span class="mf">0.02</span><span class="w"> </span><span class="o">-</span><span class="mf">1663.2</span><span class="w"> </span><span class="o">-</span><span class="mf">0.04</span><span class="w"> </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-pinch</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_pinch_symmCycles.jpg" src="../../../../_images/HystereticSM_pinch_symmCycles.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>pinch=[0.2, 0.8]</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-pinch&#39;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span>
+  <span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_pinch_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_pinch_strainOneSidedPush.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-pinch</span><span class="w">  </span><span class="mf">0.2</span><span class="w">  </span><span class="mf">0.8</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_pinch_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_pinch_strainOneSidedPull.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>pinch=[0.8, 0.2]</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+<span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+<span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+<span class="s1">&#39;-pinch&#39;</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.2</span>
+<span class="p">)</span>
+</pre></div>
 </div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-pinch</span><span class="w">  </span><span class="mf">0.8</span><span class="w">  </span><span class="mf">0.2</span>
+</pre></div>
 </div>
-<div class="section" id="parameter-study-damage1">
-<h2><span class="section-number">3.1.5.17.7. </span>Parameter Study: Damage1<a class="headerlink" href="#parameter-study-damage1" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_damage1=0</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0, 0)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0  0</p>
-<p><em>HystereticSM_damage1=0.01</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0.01, 0)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0.01  0</p>
-<p><em>HystereticSM_damage1=0.1</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0.1, 0)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0.1  0</p>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage1_strainDip.jpg" src="../../../../_images/HystereticSM_damage1_strainDip.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_pinch_strainDip.jpg"><img alt="../../../../_images/HystereticSM_pinch_strainDip.jpg" src="../../../../_images/HystereticSM_pinch_strainDip.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_pinch_symmCycles.jpg"><img alt="../../../../_images/HystereticSM_pinch_symmCycles.jpg" src="../../../../_images/HystereticSM_pinch_symmCycles.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_pinch_strainOneSidedPush.jpg"><img alt="../../../../_images/HystereticSM_pinch_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_pinch_strainOneSidedPush.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_pinch_strainOneSidedPull.jpg"><img alt="../../../../_images/HystereticSM_pinch_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_pinch_strainOneSidedPull.jpg" style="width: 35%;" />
+</a>
+</figure>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage1_symmCycles.jpg" src="../../../../_images/HystereticSM_damage1_symmCycles.jpg" />
+<hr class="docutils" />
+<div class="admonition-damage1 admonition">
+<p class="admonition-title">Damage1</p>
+<ol class="arabic simple">
+<li><p><strong>damage1=0</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage1_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_damage1_strainOneSidedPush.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-damage</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mi">0</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage1_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_damage1_strainOneSidedPull.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>damage1=0.01</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
 </div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-damage</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mi">0</span>
+</pre></div>
 </div>
-<div class="section" id="parameter-study-damage2">
-<h2><span class="section-number">3.1.5.17.8. </span>Parameter Study: Damage2<a class="headerlink" href="#parameter-study-damage2" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_damage2=0</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0, 0)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0  0</p>
-<p><em>HystereticSM_damage2=0.01</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0, 0.01)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0  0.01</p>
-<p><em>HystereticSM_damage2=0.1</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0, 0.1)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0  0.1</p>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage2_strainDip.jpg" src="../../../../_images/HystereticSM_damage2_strainDip.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>damage1=0.1</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage2_symmCycles.jpg" src="../../../../_images/HystereticSM_damage2_symmCycles.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-damage</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage2_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_damage2_strainOneSidedPush.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage1_strainDip.jpg"><img alt="../../../../_images/HystereticSM_damage1_strainDip.jpg" src="../../../../_images/HystereticSM_damage1_strainDip.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage1_symmCycles.jpg"><img alt="../../../../_images/HystereticSM_damage1_symmCycles.jpg" src="../../../../_images/HystereticSM_damage1_symmCycles.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage1_strainOneSidedPush.jpg"><img alt="../../../../_images/HystereticSM_damage1_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_damage1_strainOneSidedPush.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage1_strainOneSidedPull.jpg"><img alt="../../../../_images/HystereticSM_damage1_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_damage1_strainOneSidedPull.jpg" style="width: 35%;" />
+</a>
+</figure>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_damage2_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_damage2_strainOneSidedPull.jpg" />
+<hr class="docutils" />
+<div class="admonition-damage2 admonition">
+<p class="admonition-title">Damage2</p>
+<ol class="arabic simple">
+<li><p><strong>damage2=0</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
 </div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-damage</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mi">0</span>
+</pre></div>
 </div>
-<div class="section" id="parameter-study-beta">
-<h2><span class="section-number">3.1.5.17.9. </span>Parameter Study: beta<a class="headerlink" href="#parameter-study-beta" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_beta=0</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-beta’, 0)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -beta  0</p>
-<p><em>HystereticSM_beta=0.5</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-beta’, 0.5)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -beta  0.5</p>
-<p><em>HystereticSM_beta=1</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-beta’, 1)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -beta  1</p>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_beta_strainDip.jpg" src="../../../../_images/HystereticSM_beta_strainDip.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>damage2=0.01</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_beta_symmCycles.jpg" src="../../../../_images/HystereticSM_beta_symmCycles.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-damage</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.01</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_beta_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_beta_strainOneSidedPush.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>damage2=0.1</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_beta_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_beta_strainOneSidedPull.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">    </span><span class="nv">-damage</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.1</span>
+</pre></div>
 </div>
+</li>
+</ul>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage2_strainDip.jpg"><img alt="../../../../_images/HystereticSM_damage2_strainDip.jpg" src="../../../../_images/HystereticSM_damage2_strainDip.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage2_symmCycles.jpg"><img alt="../../../../_images/HystereticSM_damage2_symmCycles.jpg" src="../../../../_images/HystereticSM_damage2_symmCycles.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage2_strainOneSidedPush.jpg"><img alt="../../../../_images/HystereticSM_damage2_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_damage2_strainOneSidedPush.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_damage2_strainOneSidedPull.jpg"><img alt="../../../../_images/HystereticSM_damage2_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_damage2_strainOneSidedPull.jpg" style="width: 35%;" />
+</a>
+</figure>
 </div>
-<div class="section" id="parameter-study-degeng">
-<h2><span class="section-number">3.1.5.17.10. </span>Parameter Study: degEng<a class="headerlink" href="#parameter-study-degeng" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_degEnv=0</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0.005, 0.002, ‘-degEnv’, 0, 0)</p>
+<hr class="docutils" />
+<div class="admonition-beta admonition">
+<p class="admonition-title">beta</p>
+<ol class="arabic simple">
+<li><p><strong>beta=0</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-beta&#39;</span><span class="p">,</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="uniaxialmaterial-hystereticsm-99-posenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-1663-2-0-06-277-2-0-08-200-0-0-1-0-0-12-negenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-damage-0-005-0-002-degenv-0-0">
-<h2><span class="section-number">3.1.5.17.11. </span>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0.005  0.002  -degEnv  0  0<a class="headerlink" href="#uniaxialmaterial-hystereticsm-99-posenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-1663-2-0-06-277-2-0-08-200-0-0-1-0-0-12-negenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-damage-0-005-0-002-degenv-0-0" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_degEnv=1</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0.005, 0.002, ‘-degEnv’, 1, -1)</p>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-beta</span><span class="w">  </span><span class="mi">0</span>
+</pre></div>
 </div>
-<div class="section" id="uniaxialmaterial-hystereticsm-99-posenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-1663-2-0-06-277-2-0-08-200-0-0-1-0-0-12-negenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-damage-0-005-0-002-degenv-1-1">
-<h2><span class="section-number">3.1.5.17.12. </span>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0.005  0.002  -degEnv  1  -1<a class="headerlink" href="#uniaxialmaterial-hystereticsm-99-posenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-1663-2-0-06-277-2-0-08-200-0-0-1-0-0-12-negenv-2772-0-0-01-3104-6-0-02-1663-2-0-04-damage-0-005-0-002-degenv-1-1" title="Permalink to this heading">¶</a></h2>
-<p><em>HystereticSM_degEnv=5</em>
-ops.uniaxialMaterial(‘HystereticSM’, 99, ‘-posEnv’, 2772.0, 0.01, 3104.6, 0.02, 1663.2, 0.04, 1663.2, 0.06, 277.2, 0.08, 200.0, 0.1, 0, 0.12, ‘-negEnv’, -2772.0, -0.01, -3104.6, -0.02, -1663.2, -0.04, ‘-damage’, 0.005, 0.002, ‘-degEnv’, 5, -5)</p>
-<p>uniaxialMaterial HystereticSM  99  -posEnv  2772.0  0.01  3104.6  0.02  1663.2  0.04  1663.2  0.06  277.2  0.08  200.0  0.1  0  0.12  -negEnv  -2772.0  -0.01  -3104.6  -0.02  -1663.2  -0.04  -damage  0.005  0.002  -degEnv  5  -5</p>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_degEnv_strainDip.jpg" src="../../../../_images/HystereticSM_degEnv_strainDip.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>beta=0.5</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-beta&#39;</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_degEnv_symmCycles.jpg" src="../../../../_images/HystereticSM_degEnv_symmCycles.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-beta</span><span class="w">  </span><span class="mf">0.5</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_degEnv_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_degEnv_strainOneSidedPush.jpg" />
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>beta=1</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-beta&#39;</span><span class="p">,</span> <span class="mi">1</span>
+<span class="p">)</span>
+</pre></div>
 </div>
-<div class="figure align-default">
-<img alt="../../../../_images/HystereticSM_degEnv_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_degEnv_strainOneSidedPull.jpg" />
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-beta</span><span class="w">  </span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_beta_strainDip.jpg"><img alt="../../../../_images/HystereticSM_beta_strainDip.jpg" src="../../../../_images/HystereticSM_beta_strainDip.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_beta_symmCycles.jpg"><img alt="../../../../_images/HystereticSM_beta_symmCycles.jpg" src="../../../../_images/HystereticSM_beta_symmCycles.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_beta_strainOneSidedPush.jpg"><img alt="../../../../_images/HystereticSM_beta_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_beta_strainOneSidedPush.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_beta_strainOneSidedPull.jpg"><img alt="../../../../_images/HystereticSM_beta_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_beta_strainOneSidedPull.jpg" style="width: 35%;" />
+</a>
+</figure>
+</div>
+<hr class="docutils" />
+<div class="admonition-degenv admonition">
+<p class="admonition-title">degEnv</p>
+<ol class="arabic simple">
+<li><p><strong>degEnv=0</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span>
+  <span class="s1">&#39;-degEnv&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-damage</span><span class="w">  </span><span class="mf">0.005</span><span class="w">  </span><span class="mf">0.002</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-degEnv</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>degEnv=1</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span>
+  <span class="s1">&#39;-degEnv&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-damage</span><span class="w">  </span><span class="mf">0.005</span><span class="w">  </span><span class="mf">0.002</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-degEnv</span><span class="w">  </span><span class="mi">1</span><span class="w">  </span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>degEnv=5</strong></p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p>OpenSeesPy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;HystereticSM&#39;</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="s1">&#39;-posEnv&#39;</span><span class="p">,</span> <span class="mf">2772.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">3104.6</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1663.2</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">277.2</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span>
+  <span class="s1">&#39;-negEnv&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mf">2772.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">3104.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="o">-</span><span class="mf">1663.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.04</span><span class="p">,</span>
+  <span class="s1">&#39;-damage&#39;</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span>
+  <span class="s1">&#39;-degEnv&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Tcl Interpreter</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">uniaxialMaterial</span><span class="w"> </span>HystereticSM<span class="w">  </span><span class="mi">99</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-posEnv</span><span class="w">  </span><span class="mf">2772.0</span><span class="w">  </span><span class="mf">0.01</span><span class="w">  </span><span class="mf">3104.6</span><span class="w">  </span><span class="mf">0.02</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.04</span><span class="w">  </span><span class="mf">1663.2</span><span class="w">  </span><span class="mf">0.06</span><span class="w">  </span><span class="mf">277.2</span><span class="w">  </span><span class="mf">0.08</span><span class="w">  </span><span class="mf">200.0</span><span class="w">  </span><span class="mf">0.1</span><span class="w">  </span><span class="mi">0</span><span class="w">  </span><span class="mf">0.12</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-negEnv</span><span class="w">  </span><span class="o">-</span><span class="mf">2772.0</span><span class="w">  </span><span class="o">-</span><span class="mf">0.01</span><span class="w">  </span><span class="o">-</span><span class="mf">3104.6</span><span class="w">  </span><span class="o">-</span><span class="mf">0.02</span><span class="w">  </span><span class="o">-</span><span class="mf">1663.2</span><span class="w">  </span><span class="o">-</span><span class="mf">0.04</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-damage</span><span class="w">  </span><span class="mf">0.005</span><span class="w">  </span><span class="mf">0.002</span><span class="w">  </span><span class="err">\</span>
+<span class="w">  </span><span class="nv">-degEnv</span><span class="w">  </span><span class="mi">5</span><span class="w">  </span><span class="o">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_degEnv_strainDip.jpg"><img alt="../../../../_images/HystereticSM_degEnv_strainDip.jpg" src="../../../../_images/HystereticSM_degEnv_strainDip.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_degEnv_symmCycles.jpg"><img alt="../../../../_images/HystereticSM_degEnv_symmCycles.jpg" src="../../../../_images/HystereticSM_degEnv_symmCycles.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_degEnv_strainOneSidedPush.jpg"><img alt="../../../../_images/HystereticSM_degEnv_strainOneSidedPush.jpg" src="../../../../_images/HystereticSM_degEnv_strainOneSidedPush.jpg" style="width: 35%;" />
+</a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../../_images/HystereticSM_degEnv_strainOneSidedPull.jpg"><img alt="../../../../_images/HystereticSM_degEnv_strainOneSidedPull.jpg" src="../../../../_images/HystereticSM_degEnv_strainOneSidedPull.jpg" style="width: 35%;" />
+</a>
+</figure>
 </div>
 <div class="line-block">
-<div class="line">Modified Code Developed by: <a class="reference external" href="https://www.silviasbrainery.com/">Silvia Mazzoni</a></div>
+<div class="line">HystereticSM Code Developed (2022) by: <a href="#id1"><span class="problematic" id="id2">|Silvia Mazzoni|</span></a> (Silvia’s Brainery)</div>
 <div class="line">Original Hysteretic-Material Code Developed by: <a class="reference external" href="https://cce.oregonstate.edu/scott">Michael H. Scott</a> &amp; Filip Filippou (UC Berkeley)</div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, The Regents of the University of California.
-
-    </p>
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-2431545-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-    
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
 
   <style>
          .wy-nav-content { max-width: none; }

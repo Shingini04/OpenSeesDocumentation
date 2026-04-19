@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.1.4.4. Equation Constraint &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3.1.5. uniaxialMaterial Command" href="../../material/uniaxialMaterial.html" />
+    <link rel="prev" title="3.1.4.3. Rigid Link" href="rigidLink.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">2. Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../userManual.html">3. Command Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../modelCommands.html">3.1. Model Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../model.html">3.1.1. model Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node.html">3.1.2. node Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spConstraints.html">3.1.3. SP_Constraint Commands</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../mpConstraints.html">3.1.4. MP_Constraint Commands</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="equalDOF.html">3.1.4.1. EqualDOF Constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rigidDiaphragm.html">3.1.4.2. Rigid Diaphragm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rigidLink.html">3.1.4.3. Rigid Link</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.1.4.4. Equation Constraint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../material/uniaxialMaterial.html">3.1.5. uniaxialMaterial Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../material/ndMaterial.html">3.1.6. nDMaterial Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../section.html">3.1.7. section Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geomTransf.html">3.1.8. Geometric Transformation Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../beamIntegration.html">3.1.9. Beam Integration Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../element.html">3.1.10. Element Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../timeSeries.html">3.1.11. Time Series Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pattern.html">3.1.12. Pattern Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../damping.html">3.1.13. Damping Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysisCommands.html">3.2. Analysis Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputCommands.html">3.3. Output Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../miscCommands.html">3.4. Misc. Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userExamples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messageBoard.html">5. Questions, Bugs &amp; Feature Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/license.html">6. Copyright and License</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework for Developer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/sourceCode.html">1. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/build.html">2. Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/references.html">3. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/extend.html">4. Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/contribute.html">5. Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OpenSees Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../modelCommands.html"><span class="section-number">3.1. </span>Model Commands</a></li>
+          <li class="breadcrumb-item"><a href="../mpConstraints.html"><span class="section-number">3.1.4. </span>MP_Constraint Commands</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.1.4.4. </span>Equation Constraint</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/user/manual/model/mp_constraint/equationConstraint.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="equation-constraint">
+<h1><span class="section-number">3.1.4.4. </span>Equation Constraint<a class="headerlink" href="#equation-constraint" title="Link to this heading"></a></h1>
+<p>An equation constraint relates a certain dof at a constrained node to certain dofs at retained nodes by the linear equation of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">cCoef</span> <span class="o">*</span> <span class="n">cDOF</span><span class="p">(</span><span class="n">cNode</span><span class="p">)</span>
+<span class="o">+</span> <span class="n">rCoef1</span> <span class="o">*</span> <span class="n">rDOF1</span><span class="p">(</span><span class="n">rNode1</span><span class="p">)</span>
+<span class="o">+</span> <span class="n">rCoef2</span> <span class="o">*</span> <span class="n">rDOF2</span><span class="p">(</span><span class="n">rNode2</span><span class="p">)</span>
+<span class="o">+</span> <span class="o">...</span>
+<span class="o">+</span> <span class="n">rCoefn</span> <span class="o">*</span> <span class="n">rDOFn</span><span class="p">(</span><span class="n">rNoden</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">equationConstraint</span> <span class="pre">$cNodeTag</span> <span class="pre">$cDOF</span> <span class="pre">$cCoef</span> <span class="pre">$rNodeTag1</span> <span class="pre">$rDOF1</span> <span class="pre">$rCoef1</span> <span class="pre">$rNodeTag2</span> <span class="pre">$rDOF2</span> <span class="pre">$rCoef2</span> <span class="pre">...</span> <span class="pre">$rNodeTagn</span> <span class="pre">$rDOFn</span> <span class="pre">$rCoefn</span></span></dt>
+<dd></dd></dl>
+
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$cNodeTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>integer tag identifying the constrained node (cNode)</p></td>
+</tr>
+<tr class="row-odd"><td><p>$cDOF</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>nodal degrees-of-freedom that is constrained at the cNode</p></td>
+</tr>
+<tr class="row-even"><td><p>$cCoef</p></td>
+<td><p><em>float</em></p></td>
+<td><p>coefficient associated with cNode</p></td>
+</tr>
+<tr class="row-odd"><td><p>$rNodeTag1</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>integer tag identifying the 1st retained node (rNode1)</p></td>
+</tr>
+<tr class="row-even"><td><p>$rDOF1</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>nodal degrees-of-freedom that is retained at the rNode1</p></td>
+</tr>
+<tr class="row-odd"><td><p>$rCoef1</p></td>
+<td><p><em>float</em></p></td>
+<td><p>coefficient associated with rNode1</p></td>
+</tr>
+<tr class="row-even"><td><p>$rNodeTag2</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>integer tag identifying the 2nd retained node (rNode2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>$rDOF2</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>nodal degrees-of-freedom that is retained at the rNode2</p></td>
+</tr>
+<tr class="row-even"><td><p>$rCoef2</p></td>
+<td><p><em>float</em></p></td>
+<td><p>coefficient associated with rNode2</p></td>
+</tr>
+<tr class="row-odd"><td><p>$rNodeTagn</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>integer tag identifying the nth retained node (rNoden)</p></td>
+</tr>
+<tr class="row-even"><td><p>$rDOFn</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>nodal degrees-of-freedom that is retained at the rNoden</p></td>
+</tr>
+<tr class="row-odd"><td><p>$rCoefn</p></td>
+<td><p><em>float</em></p></td>
+<td><p>coefficient associated with rNoden</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-example-1-representative-volume-element-rve-analysis admonition">
+<p class="admonition-title">Example 1, Representative Volume Element (RVE) analysis</p>
+<p>Periodic constraints are implemented via <cite>equationConstraint</cite> to model the behavior of a bulk material by simulating only a representative volume.
+The constraints create a repeating pattern, as if the RVE is a repeating unit cell within a larger, infinite structure.
+By applying the periodic constraints, the simulation can focus on a smaller, manageable RVE and accurately represent the behavior of the entire material.</p>
+<figure class="align-center">
+<img alt="../../../../_images/equationConstraint_RVE.png" src="../../../../_images/equationConstraint_RVE.png" />
+</figure>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">vfo.vfo</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">vfo</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;-ndm&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;-ndf&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">nrow</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="n">ncol</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+   <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+      <span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s1">&#39;ElasticIsotropic&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s1">&#39;ElasticIsotropic&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nrow</span><span class="p">):</span>
+   <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncol</span><span class="p">):</span>
+      <span class="n">i1</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j1</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;quad&#39;</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j1</span><span class="p">,</span> <span class="n">i1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j1</span><span class="p">,</span> <span class="n">i1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;PlaneStress&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="k">else</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nrow</span><span class="p">):</span>
+   <span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ncol</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+   <span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ncol</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="n">nrow</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ncol</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncol</span><span class="p">):</span>
+   <span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="n">nrow</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+   <span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="n">nrow</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="n">nrow</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ncol</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ncol</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">vfo</span><span class="o">.</span><span class="n">createODB</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;RVE&quot;</span><span class="p">,</span> <span class="n">loadcase</span><span class="o">=</span><span class="s2">&quot;stretch&quot;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">timeSeries</span><span class="p">(</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">pattern</span><span class="p">(</span><span class="s1">&#39;Plain&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">constraints</span><span class="p">(</span><span class="s1">&#39;Penalty&#39;</span><span class="p">,</span> <span class="mf">1.0e6</span><span class="p">,</span> <span class="mf">1.0e6</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">analysis</span><span class="p">(</span><span class="s1">&#39;Static&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
+<span class="n">vfo</span><span class="o">.</span><span class="n">plot_deformedshape</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;RVE&quot;</span><span class="p">,</span> <span class="n">loadcase</span><span class="o">=</span><span class="s2">&quot;stretch&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">contour</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-example-2-control-of-specific-interstory-deformation-in-pushover-analysis admonition">
+<p class="admonition-title">Example 2, Control of specific interstory deformation in pushover analysis</p>
+<p>A DOF representing the shear deformation of Story 2 is introduced by <cite>equationConstraint</cite>, which is controlled by the <cite>DisplacementControl</cite> integrator with a 0.005 increment.</p>
+<figure class="align-center">
+<img alt="../../../../_images/equationConstraint_pushover.png" src="../../../../_images/equationConstraint_pushover.png" />
+</figure>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;-ndm&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;-ndf&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">geomTransf</span><span class="p">(</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;Steel01&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3e2</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s1">&#39;WFSection2d&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">beamIntegration</span><span class="p">(</span><span class="s1">&#39;Lobatto&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;Steel01&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">5e2</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s1">&#39;WFSection2d&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">beamIntegration</span><span class="p">(</span><span class="s1">&#39;Lobatto&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;elasticBeamColumn&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;elasticBeamColumn&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># link interstory deformation to Node 1</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">timeSeries</span><span class="p">(</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">pattern</span><span class="p">(</span><span class="s1">&#39;Plain&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">constraints</span><span class="p">(</span><span class="s1">&#39;Penalty&#39;</span><span class="p">,</span> <span class="mf">1.0e6</span><span class="p">,</span> <span class="mf">1.0e6</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">integrator</span><span class="p">(</span><span class="s1">&#39;DisplacementControl&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">5e-3</span><span class="p">)</span> <span class="c1"># 0.005 increment in interstory deformation of Story 2</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">analysis</span><span class="p">(</span><span class="s1">&#39;Static&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">recorder</span><span class="p">(</span><span class="s1">&#39;Node&#39;</span><span class="p">,</span> <span class="s1">&#39;-file&#39;</span><span class="p">,</span> <span class="s1">&#39;disp.out&#39;</span><span class="p">,</span> <span class="s1">&#39;-time&#39;</span><span class="p">,</span> <span class="s1">&#39;-node&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="s1">&#39;-dof&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;disp&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">recorder</span><span class="p">(</span><span class="s1">&#39;Element&#39;</span><span class="p">,</span> <span class="s1">&#39;-file&#39;</span><span class="p">,</span> <span class="s1">&#39;force1.out&#39;</span><span class="p">,</span> <span class="s1">&#39;-time&#39;</span><span class="p">,</span> <span class="s1">&#39;-ele&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;force&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">recorder</span><span class="p">(</span><span class="s1">&#39;Element&#39;</span><span class="p">,</span> <span class="s1">&#39;-file&#39;</span><span class="p">,</span> <span class="s1">&#39;force2.out&#39;</span><span class="p">,</span> <span class="s1">&#39;-time&#39;</span><span class="p">,</span> <span class="s1">&#39;-ele&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;force&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
+
+<span class="n">disp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;disp.out&#39;</span><span class="p">)</span>
+<span class="n">force1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;force1.out&#39;</span><span class="p">);</span> <span class="n">force2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;force2.out&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">disp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">force1</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">force1</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Story 1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">disp</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">disp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">force2</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">force2</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;o-&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Story 2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Deformation&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Shear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-example-3-cyclic-pushover-analysis-by-a-non-homogeneous-constraint admonition">
+<p class="admonition-title">Example 3, Cyclic pushover analysis by a non-homogeneous constraint</p>
+<p>It is sometimes necessary to impose a non-homogeneous constraint where the RHS is not zero but a prescribed value that may vary with time. The non-homogeneous constraint can easily transform into a homogeneous one by moving the time-varying term from the RHS to the LHS and associating it with a new node and DOF.</p>
+<p>The cyclic pushover analysis leverages a non-homogeneous constraint through <cite>equationConstraint</cite> to apply 1:2 lateral loads to the first and second floors, respectively. The resulting 3:2 story shears are verified in the shear versus time plot.</p>
+<figure class="align-center">
+<img alt="../../../../_images/equationConstraint_pushover2.png" src="../../../../_images/equationConstraint_pushover2.png" />
+</figure>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;-ndm&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;-ndf&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">geomTransf</span><span class="p">(</span><span class="s1">&#39;Linear&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;Steel01&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3e2</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s1">&#39;WFSection2d&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">beamIntegration</span><span class="p">(</span><span class="s1">&#39;Lobatto&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">uniaxialMaterial</span><span class="p">(</span><span class="s1">&#39;Steel01&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">5e2</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="s1">&#39;WFSection2d&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">beamIntegration</span><span class="p">(</span><span class="s1">&#39;Lobatto&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;elasticBeamColumn&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;forceBeamColumn&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">element</span><span class="p">(</span><span class="s1">&#39;elasticBeamColumn&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">equationConstraint</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">)</span> <span class="c1"># 1.0:2.0 lateral loads on Nodes 21 and 31</span>
+
+<span class="n">ops</span><span class="o">.</span><span class="n">timeSeries</span><span class="p">(</span><span class="s1">&#39;Path&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;-time&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;-values&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">pattern</span><span class="p">(</span><span class="s1">&#39;Plain&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">sp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">constraints</span><span class="p">(</span><span class="s1">&#39;Penalty&#39;</span><span class="p">,</span> <span class="mf">1.0e6</span><span class="p">,</span> <span class="mf">1.0e6</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">integrator</span><span class="p">(</span><span class="s1">&#39;LoadControl&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">analysis</span><span class="p">(</span><span class="s1">&#39;Static&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">recorder</span><span class="p">(</span><span class="s1">&#39;Element&#39;</span><span class="p">,</span> <span class="s1">&#39;-file&#39;</span><span class="p">,</span> <span class="s1">&#39;force1.out&#39;</span><span class="p">,</span> <span class="s1">&#39;-time&#39;</span><span class="p">,</span> <span class="s1">&#39;-ele&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;force&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">recorder</span><span class="p">(</span><span class="s1">&#39;Element&#39;</span><span class="p">,</span> <span class="s1">&#39;-file&#39;</span><span class="p">,</span> <span class="s1">&#39;force2.out&#39;</span><span class="p">,</span> <span class="s1">&#39;-time&#39;</span><span class="p">,</span> <span class="s1">&#39;-ele&#39;</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;force&#39;</span><span class="p">)</span>
+<span class="n">ops</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span> <span class="n">ops</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
+
+<span class="n">force1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;force1.out&#39;</span><span class="p">);</span> <span class="n">force2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;force2.out&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">force1</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">force1</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">force1</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Story 1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">force2</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">force2</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">force2</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Story 2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Shear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>Code developed by: Yuli Huang</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

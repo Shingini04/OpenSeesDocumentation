@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.1.6.21. NDTest Command &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3.1.7. section Command" href="../../section.html" />
+    <link rel="prev" title="3.1.6.20. SmearedSteelDoubleLayer Material" href="SmearedSteelDoubleLayer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">2. Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../userManual.html">3. Command Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../modelCommands.html">3.1. Model Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../model/model.html">3.1.1. model Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/node.html">3.1.2. node Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/spConstraints.html">3.1.3. SP_Constraint Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/mpConstraints.html">3.1.4. MP_Constraint Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uniaxialMaterial.html">3.1.5. uniaxialMaterial Command</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ndMaterial.html">3.1.6. nDMaterial Command</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ElasticIsotropic.html">3.1.6.1. Elastic Isotropic Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ElasticOrthotropic.html">3.1.6.2. Elastic Orthotropic Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="J2Plasticity.html">3.1.6.3. J2 Plasticity Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DruckerPrager.html">3.1.6.4. Drucker Prager Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ManzariDafalias.html">3.1.6.5. Manzari Dafalias Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BoundingCamClay.html">3.1.6.6. Bounding Cam Clay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PM4Sand.html">3.1.6.7. PM4Sand Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PM4Silt.html">3.1.6.8. PM4Silt Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PressureIndependentMultiYield.html">3.1.6.9. Pressure Independent Multi Yield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PressureDependentMultiYield.html">3.1.6.10. Pressure Dependent Multi Yield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PressureDependentMultiYield02.html">3.1.6.11. Pressure Dependent Multi Yield 02</a></li>
+<li class="toctree-l4"><a class="reference internal" href="J2CyclicBoundingSurface.html">3.1.6.12. J2CyclicBoundingSurface Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SAniSandMS.html">3.1.6.13. SANISAND-MS Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Orthotropic.html">3.1.6.14. Orthotropic Material Wrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Series3D.html">3.1.6.15. Series3D Material Wrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Parallel3D.html">3.1.6.16. Parallel3D Material Wrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="InitStrain.html">3.1.6.17. InitStrain Material Wrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDConcrete3D.html">3.1.6.18. ASDConcrete3D Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OrthotropicRAConcrete.html">3.1.6.19. OrthotropicRAConcrete Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SmearedSteelDoubleLayer.html">3.1.6.20. SmearedSteelDoubleLayer Material</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.1.6.21. NDTest Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../section.html">3.1.7. section Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/geomTransf.html">3.1.8. Geometric Transformation Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/beamIntegration.html">3.1.9. Beam Integration Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/element.html">3.1.10. Element Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/timeSeries.html">3.1.11. Time Series Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/pattern.html">3.1.12. Pattern Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/damping.html">3.1.13. Damping Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysisCommands.html">3.2. Analysis Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputCommands.html">3.3. Output Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../miscCommands.html">3.4. Misc. Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userExamples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messageBoard.html">5. Questions, Bugs &amp; Feature Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/license.html">6. Copyright and License</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework for Developer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/sourceCode.html">1. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/build.html">2. Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/references.html">3. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/extend.html">4. Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/contribute.html">5. Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OpenSees Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../modelCommands.html"><span class="section-number">3.1. </span>Model Commands</a></li>
+          <li class="breadcrumb-item"><a href="../ndMaterial.html"><span class="section-number">3.1.6. </span>nDMaterial Command</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.1.6.21. </span>NDTest Command</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/user/manual/material/ndMaterials/NDTest.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ndtest-command">
+<h1><span class="section-number">3.1.6.21. </span>NDTest Command<a class="headerlink" href="#ndtest-command" title="Link to this heading"></a></h1>
+<p>The NDTest command provides a comprehensive suite of testing functions for nDMaterial objects, allowing users to directly manipulate and query material states for testing, validation, and educational purposes. This functionality is particularly useful for material model development, verification, and understanding material behavior under controlled loading conditions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These commands are intended for material testing and debugging purposes. They should not be used in regular structural analysis models where materials should be tested through elements.</p>
+</div>
+<section id="command-syntax">
+<h2><span class="section-number">3.1.6.21.1. </span>Command Syntax<a class="headerlink" href="#command-syntax" title="Link to this heading"></a></h2>
+<p>The general syntax for NDTest commands is:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span><span class="nv">$command</span><span class="w"> </span><span class="nv">$arguments</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">$command</span></code> specifies the specific operation to perform on the material, and <code class="docutils literal notranslate"><span class="pre">$arguments</span></code> are the command-specific parameters.</p>
+</section>
+<section id="available-commands">
+<h2><span class="section-number">3.1.6.21.2. </span>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<p>The following commands are available within the NDTest framework:</p>
+<section id="setstrain">
+<h3>SetStrain<a class="headerlink" href="#setstrain" title="Link to this heading"></a></h3>
+<p>Sets trial strain components on a specified nDMaterial.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="nv">$eps11</span><span class="w"> </span><span class="nv">$eps22</span><span class="w"> </span><span class="nv">$eps33</span><span class="w"> </span><span class="nv">$gamma12</span><span class="w"> </span><span class="nv">$gamma23</span><span class="w"> </span><span class="nv">$gamma31</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+<tr class="row-odd"><td><p>$eps11</p></td>
+<td><p><a href="#id1"><span class="problematic" id="id2">|double|</span></a></p></td>
+<td><p>Normal strain in direction 1 (ε₁₁)</p></td>
+</tr>
+<tr class="row-even"><td><p>$eps22</p></td>
+<td><p><a href="#id3"><span class="problematic" id="id4">|double|</span></a></p></td>
+<td><p>Normal strain in direction 2 (ε₂₂)</p></td>
+</tr>
+<tr class="row-odd"><td><p>$eps33</p></td>
+<td><p><a href="#id5"><span class="problematic" id="id6">|double|</span></a></p></td>
+<td><p>Normal strain in direction 3 (ε₃₃)</p></td>
+</tr>
+<tr class="row-even"><td><p>$gamma12</p></td>
+<td><p><a href="#id7"><span class="problematic" id="id8">|double|</span></a></p></td>
+<td><p>Engineering shear strain γ₁₂</p></td>
+</tr>
+<tr class="row-odd"><td><p>$gamma23</p></td>
+<td><p><a href="#id9"><span class="problematic" id="id10">|double|</span></a></p></td>
+<td><p>Engineering shear strain γ₂₃</p></td>
+</tr>
+<tr class="row-even"><td><p>$gamma31</p></td>
+<td><p><a href="#id11"><span class="problematic" id="id12">|double|</span></a></p></td>
+<td><p>Engineering shear strain γ₃₁</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Set a uniaxial strain state</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set a uniaxial strain state</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="commitstate">
+<h3>CommitState<a class="headerlink" href="#commitstate" title="Link to this heading"></a></h3>
+<p>Commits the current trial state of the material, making it the converged state.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="nv">$matTag</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="printstrain">
+<h3>PrintStrain<a class="headerlink" href="#printstrain" title="Link to this heading"></a></h3>
+<p>Prints the current strain state of the material to the OpenSees output stream.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>PrintStrain<span class="w"> </span><span class="nv">$matTag</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="printstress">
+<h3>PrintStress<a class="headerlink" href="#printstress" title="Link to this heading"></a></h3>
+<p>Prints the current stress state of the material to the OpenSees output stream.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>PrintStress<span class="w"> </span><span class="nv">$matTag</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="getstrain">
+<h3>GetStrain<a class="headerlink" href="#getstrain" title="Link to this heading"></a></h3>
+<p>Returns the current strain components as a list that can be assigned to a Tcl variable.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>strainList<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> A list of 6 double values [ε₁₁, ε₂₂, ε₃₃, γ₁₂, γ₂₃, γ₃₁]</p>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>strains<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Strain components: $strains&quot;</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">strains</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Strain components:&quot;</span><span class="p">,</span> <span class="n">strains</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="getstress">
+<h3>GetStress<a class="headerlink" href="#getstress" title="Link to this heading"></a></h3>
+<p>Returns the current stress components as a list that can be assigned to a Tcl variable.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>stressList<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> A list of 6 double values [σ₁₁, σ₂₂, σ₃₃, τ₁₂, τ₂₃, τ₃₁]</p>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Stress components: $stresses&quot;</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stress components:&quot;</span><span class="p">,</span> <span class="n">stresses</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="gettangentstiffness">
+<h3>GetTangentStiffness<a class="headerlink" href="#gettangentstiffness" title="Link to this heading"></a></h3>
+<p>Returns the current tangent stiffness matrix as a flat list of 36 values.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>stiffnessList<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetTangentStiffness<span class="w"> </span><span class="nv">$matTag</span><span class="k">]</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> A list of 36 double values representing the 6×6 tangent stiffness matrix in row-major order:
+[C₁₁, C₁₂, C₁₃, C₁₄, C₁₅, C₁₆, C₂₁, C₂₂, …, C₆₆]</p>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>tangent<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetTangentStiffness<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="c"># Access C11 component</span>
+<span class="k">set</span><span class="w"> </span>C11<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$tangent</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="c"># Access C26 component</span>
+<span class="k">set</span><span class="w"> </span>C26<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$tangent</span><span class="w"> </span><span class="mi">17</span><span class="k">]</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tangent</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetTangentStiffness&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Access C11 component</span>
+<span class="n">C11</span> <span class="o">=</span> <span class="n">tangent</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># Access C26 component</span>
+<span class="n">C26</span> <span class="o">=</span> <span class="n">tangent</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="getresponse">
+<h3>GetResponse<a class="headerlink" href="#getresponse" title="Link to this heading"></a></h3>
+<p>Queries the material for custom responses specific to the material type.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="k">set</span><span class="w"> </span>responseList<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="nv">$responseType</span><span class="k">]</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+<tr class="row-odd"><td><p>$responseType</p></td>
+<td><p><em>string</em></p></td>
+<td><p>Type of response to query (material-dependent)</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> A list of double values containing the requested response data.</p>
+<p><strong>Common Response Types:</strong> (varies by material type)
+- “stress” - stress components
+- “strain” - strain components
+- “tangent” - tangent stiffness
+- “plasticStrain” - plastic strain components
+- “backstress” - backstress tensor components
+- Custom material-specific responses</p>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Get plastic strain from a plasticity model</span>
+<span class="k">set</span><span class="w"> </span>plasticStrain<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s2">&quot;plasticStrain&quot;</span><span class="k">]</span>
+
+<span class="c"># Get damage variable from a damage model</span>
+<span class="k">set</span><span class="w"> </span>damage<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetResponse<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s2">&quot;damage&quot;</span><span class="k">]</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get plastic strain from a plasticity model</span>
+<span class="n">plastic_strain</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetResponse&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;plasticStrain&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get damage variable from a damage model</span>
+<span class="n">damage</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetResponse&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;damage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="updateintegerparameter">
+<h3>UpdateIntegerParameter<a class="headerlink" href="#updateintegerparameter" title="Link to this heading"></a></h3>
+<p>Updates an integer parameter in the material during runtime.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>UpdateIntegerParameter<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="nv">$paramID</span><span class="w"> </span><span class="nv">$newValue</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+<tr class="row-odd"><td><p>$paramID</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Integer parameter identifier (material-specific)</p></td>
+</tr>
+<tr class="row-even"><td><p>$newValue</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>New integer value for the parameter</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>UpdateIntegerParameter<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;UpdateIntegerParameter&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="updatedoubleparameter">
+<h3>UpdateDoubleParameter<a class="headerlink" href="#updatedoubleparameter" title="Link to this heading"></a></h3>
+<p>Updates a double-precision parameter in the material during runtime.</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>UpdateDoubleParameter<span class="w"> </span><span class="nv">$matTag</span><span class="w"> </span><span class="nv">$paramID</span><span class="w"> </span><span class="nv">$newValue</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$matTag</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Unique tag identifying the nDMaterial object</p></td>
+</tr>
+<tr class="row-odd"><td><p>$paramID</p></td>
+<td><p><em>integer</em></p></td>
+<td><p>Integer parameter identifier (material-specific)</p></td>
+</tr>
+<tr class="row-even"><td><p>$newValue</p></td>
+<td><p><a href="#id13"><span class="problematic" id="id14">|double|</span></a></p></td>
+<td><p>New double value for the parameter</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">NDTest</span><span class="w"> </span>UpdateDoubleParameter<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mf">2.1</span>e-5
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;UpdateDoubleParameter&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.1e-5</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="usage-examples">
+<h2><span class="section-number">3.1.6.21.3. </span>Usage Examples<a class="headerlink" href="#usage-examples" title="Link to this heading"></a></h2>
+<section id="complete-material-test-procedure">
+<h3>Complete Material Test Procedure<a class="headerlink" href="#complete-material-test-procedure" title="Link to this heading"></a></h3>
+<p>Here’s a complete example of how to use NDTest commands to test a material:</p>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Create a simple elastic material</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span>
+
+<span class="c"># Test procedure 1: Uniaxial tension</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Uniaxial Tension Test ===&quot;</span>
+
+<span class="c"># Apply strain increment</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="c"># Get and display results</span>
+<span class="k">set</span><span class="w"> </span>strains<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Strain: $strains&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Stress: $stresses&quot;</span>
+
+<span class="c"># Commit the state</span>
+<span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+
+<span class="c"># Test procedure 2: Shear test</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Pure Shear Test ===&quot;</span>
+<span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.002</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="k">set</span><span class="w"> </span>stresses<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Shear stress: $stresses&quot;</span>
+<span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+
+<span class="c"># Test procedure 3: Get tangent stiffness</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;=== Tangent Stiffness ===&quot;</span>
+<span class="k">set</span><span class="w"> </span>tangent<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetTangentStiffness<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;C11 = [lindex $tangent 0]&quot;</span>
+<span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;C12 = [lindex $tangent 1]&quot;</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+
+<span class="c1"># Create a simple elastic material</span>
+<span class="n">op</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s2">&quot;ElasticIsotropic&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Test procedure 1: Uniaxial tension</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Uniaxial Tension Test ===&quot;</span><span class="p">)</span>
+
+<span class="c1"># Apply strain increment</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+<span class="c1"># Get and display results</span>
+<span class="n">strains</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Strain:&quot;</span><span class="p">,</span> <span class="n">strains</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stress:&quot;</span><span class="p">,</span> <span class="n">stresses</span><span class="p">)</span>
+
+<span class="c1"># Commit the state</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Test procedure 2: Shear test</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Pure Shear Test ===&quot;</span><span class="p">)</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.002</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">stresses</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shear stress:&quot;</span><span class="p">,</span> <span class="n">stresses</span><span class="p">)</span>
+<span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Test procedure 3: Get tangent stiffness</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Tangent Stiffness ===&quot;</span><span class="p">)</span>
+<span class="n">tangent</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetTangentStiffness&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C11 =&quot;</span><span class="p">,</span> <span class="n">tangent</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C12 =&quot;</span><span class="p">,</span> <span class="n">tangent</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="cyclic-loading-test">
+<h3>Cyclic Loading Test<a class="headerlink" href="#cyclic-loading-test" title="Link to this heading"></a></h3>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Create a material with cyclic behavior</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>J2Plasticity<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">27</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mf">20.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="c"># Cyclic loading parameters</span>
+<span class="k">set</span><span class="w"> </span>cycles<span class="w"> </span><span class="mi">5</span>
+<span class="k">set</span><span class="w"> </span>maxStrain<span class="w"> </span><span class="mf">0.01</span>
+<span class="k">set</span><span class="w"> </span>strainIncrement<span class="w"> </span><span class="mf">0.001</span>
+
+<span class="c"># Apply cyclic loading</span>
+<span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>cycle<span class="w"> </span><span class="mi">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$cycle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">$cycles</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>cycle<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Cycle $cycle&quot;</span>
+
+<span class="w">    </span><span class="c"># Loading</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>i<span class="w"> </span><span class="mi">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">$maxStrain</span><span class="o">/</span><span class="nv">$strainIncrement</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>i<span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$strainIncrement</span><span class="k">}]</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">$strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">1</span><span class="k">]</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;$strain $stress&quot;</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">}</span>
+
+<span class="w">    </span><span class="c"># Unloading</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">{set</span><span class="w"> </span>i<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$maxStrain</span><span class="o">/</span><span class="nv">$strainIncrement</span><span class="k">}]}</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nv">0</span><span class="k">}</span><span class="w"> </span><span class="k">{</span><span class="nb">incr</span><span class="w"> </span>i<span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="k">}</span><span class="w"> </span><span class="k">{</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>strain<span class="w"> </span><span class="k">[expr</span><span class="w"> </span><span class="k">{</span><span class="nv">$i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">$strainIncrement</span><span class="k">}]</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">$strain</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">        </span><span class="k">set</span><span class="w"> </span>stress<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStress<span class="w"> </span><span class="mi">1</span><span class="k">]</span><span class="w"> </span><span class="mi">0</span><span class="k">]</span>
+<span class="w">        </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;$strain $stress&quot;</span>
+<span class="w">        </span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">}</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+
+<span class="c1"># Create a material with cyclic behavior</span>
+<span class="n">op</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s2">&quot;J2Plasticity&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+<span class="c1"># Cyclic loading parameters</span>
+<span class="n">cycles</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">max_strain</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">strain_increment</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="c1"># Apply cyclic loading</span>
+<span class="k">for</span> <span class="n">cycle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cycles</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cycle </span><span class="si">{</span><span class="n">cycle</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Loading</span>
+    <span class="n">num_steps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_strain</span> <span class="o">/</span> <span class="n">strain_increment</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">strain</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">strain_increment</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">stress</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">strain</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">stress</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Unloading</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">strain</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">strain_increment</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">strain</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">stress</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStress&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">strain</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">stress</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="parameter-study">
+<h3>Parameter Study<a class="headerlink" href="#parameter-study" title="Link to this heading"></a></h3>
+<p>TCL:</p>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="c"># Create material</span>
+<span class="nv">nDMaterial</span><span class="w"> </span>ElasticIsotropic<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="mf">0.3</span>
+
+<span class="c"># Study effect of Poisson&#39;s ratio</span>
+<span class="k">set</span><span class="w"> </span>poissons<span class="w"> </span><span class="k">{</span><span class="nv">0.15</span><span class="w"> </span><span class="mf">0.20</span><span class="w"> </span><span class="mf">0.25</span><span class="w"> </span><span class="mf">0.30</span><span class="w"> </span><span class="mf">0.35</span><span class="w"> </span><span class="mf">0.40</span><span class="k">}</span>
+
+<span class="k">foreach</span><span class="w"> </span>nu<span class="w"> </span><span class="nv">$poissons</span><span class="w"> </span><span class="k">{</span>
+<span class="w">    </span><span class="c"># Update Poisson&#39;s ratio</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>UpdateDoubleParameter<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="nv">$nu</span>
+
+<span class="w">    </span><span class="c"># Apply uniaxial strain</span>
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>SetStrain<span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mf">0.001</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span>
+
+<span class="w">    </span><span class="c"># Get lateral strain (should be -nu*axial_strain for elastic material)</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>strains<span class="w"> </span><span class="k">[</span><span class="nv">NDTest</span><span class="w"> </span>GetStrain<span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span>lateralStrain<span class="w"> </span><span class="k">[</span><span class="nb">lindex</span><span class="w"> </span><span class="nv">$strains</span><span class="w"> </span><span class="mi">1</span><span class="k">]</span>
+
+<span class="w">    </span><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Poisson&#39;s ratio: $nu, Lateral strain: $lateralStrain&quot;</span>
+
+<span class="w">    </span><span class="nv">NDTest</span><span class="w"> </span>CommitState<span class="w"> </span><span class="mi">1</span>
+<span class="k">}</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
+
+<span class="c1"># Create material</span>
+<span class="n">op</span><span class="o">.</span><span class="n">nDMaterial</span><span class="p">(</span><span class="s2">&quot;ElasticIsotropic&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Study effect of Poisson&#39;s ratio</span>
+<span class="n">poissons</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.40</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">nu</span> <span class="ow">in</span> <span class="n">poissons</span><span class="p">:</span>
+    <span class="c1"># Update Poisson&#39;s ratio</span>
+    <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;UpdateDoubleParameter&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nu</span><span class="p">)</span>
+
+    <span class="c1"># Apply uniaxial strain</span>
+    <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;SetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="c1"># Get lateral strain (should be -nu*axial_strain for elastic material)</span>
+    <span class="n">strains</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;GetStrain&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">lateral_strain</span> <span class="o">=</span> <span class="n">strains</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Poisson&#39;s ratio: </span><span class="si">{</span><span class="n">nu</span><span class="si">}</span><span class="s2">, Lateral strain: </span><span class="si">{</span><span class="n">lateral_strain</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">op</span><span class="o">.</span><span class="n">NDTest</span><span class="p">(</span><span class="s2">&quot;CommitState&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="implementation-details">
+<h2><span class="section-number">3.1.6.21.4. </span>Implementation Details<a class="headerlink" href="#implementation-details" title="Link to this heading"></a></h2>
+<p>The NDTest command framework is implemented in <code class="docutils literal notranslate"><span class="pre">OpenSeesNDTestCommands.cpp</span></code> and consists of:</p>
+<section id="core-components">
+<h3>Core Components<a class="headerlink" href="#core-components" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Command Registration System</strong>: Uses a function map to associate command strings with their corresponding handler functions</p></li>
+<li><p><strong>Material Interface</strong>: Interfaces directly with the NDMaterial class hierarchy</p></li>
+<li><p><strong>Error Handling</strong>: Comprehensive error checking and reporting through the OpenSees opserr stream</p></li>
+<li><p><strong>Data Conversion</strong>: Handles conversion between OpenSees internal data structures and Tcl variables</p></li>
+</ol>
+</section>
+<section id="technical-specifications">
+<h3>Technical Specifications<a class="headerlink" href="#technical-specifications" title="Link to this heading"></a></h3>
+<p><strong>Strain/Stress Ordering</strong>: All 6-component vectors follow the engineering convention:
+- Normal components: (ε₁₁, ε₂₂, ε₃₃) or (σ₁₁, σ₂₂, σ₃₃)
+- Shear components: (γ₁₂, γ₂₃, γ₃₁) or (τ₁₂, τ₂₃, τ₃₁)</p>
+<p><strong>Tangent Stiffness Matrix</strong>: Returned as a flat array in row-major order for the 6×6 matrix C where:
+dσ = C : dε (using tensor notation)</p>
+<p><strong>Parameter Updates</strong>: Parameter IDs are material-specific and typically defined in the material’s documentation or source code.</p>
+</section>
+</section>
+<section id="error-handling">
+<h2><span class="section-number">3.1.6.21.5. </span>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading"></a></h2>
+<p>The NDTest commands include comprehensive error checking:</p>
+<ul class="simple">
+<li><p><strong>Material Existence</strong>: Verifies the material tag exists before operations</p></li>
+<li><p><strong>Input Validation</strong>: Checks for correct number and type of arguments</p></li>
+<li><p><strong>Parameter Validation</strong>: Validates parameter ranges where applicable</p></li>
+<li><p><strong>Memory Management</strong>: Ensures proper handling of temporary data structures</p></li>
+</ul>
+<p>Common error messages and their meanings:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>WARNING too few arguments: NDTest cmd?
+# Command requires additional arguments
+
+WARNING NDTest type UnknownCommand is unknown
+# Command not recognized
+
+material with tag X does not exist
+# Material tag not found in model
+
+need 6 components of floating-point strains
+# SetStrain requires exactly 6 strain components
+</pre></div>
+</div>
+</section>
+<section id="best-practices">
+<h2><span class="section-number">3.1.6.21.6. </span>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<p>When using NDTest commands, consider these best practices:</p>
+<ol class="arabic simple">
+<li><p><strong>Material Testing</strong>: Use for isolated material testing, not in structural analyses</p></li>
+<li><p><strong>State Management</strong>: Always commit states when appropriate to maintain material history</p></li>
+<li><p><strong>Error Checking</strong>: Wrap commands in try-catch blocks when possible</p></li>
+<li><p><strong>Documentation</strong>: Document parameter IDs and response types for custom materials</p></li>
+<li><p><strong>Performance</strong>: Consider performance implications when using in loops</p></li>
+</ol>
+</section>
+<section id="integration-with-analysis">
+<h2><span class="section-number">3.1.6.21.7. </span>Integration with Analysis<a class="headerlink" href="#integration-with-analysis" title="Link to this heading"></a></h2>
+<p>While NDTest commands are primarily for material testing, they can be integrated with analysis workflows:</p>
+<ul class="simple">
+<li><p><strong>Pre-analysis Calibration</strong>: Calibrate material parameters before main analysis</p></li>
+<li><p><strong>Post-analysis Verification</strong>: Verify material states after analysis completion</p></li>
+<li><p><strong>Batch Testing</strong>: Automate material testing procedures</p></li>
+<li><p><strong>Educational Use</strong>: Demonstrate material behavior concepts</p></li>
+</ul>
+<p>For detailed examples and advanced usage patterns, see <span class="xref std std-ref">NDTest_examples</span>.</p>
+</section>
+<section id="see-also">
+<h2><span class="section-number">3.1.6.21.8. </span>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../ndMaterial.html#ndmaterial"><span class="std std-ref">nDMaterial Command</span></a> - Main nDMaterial command documentation</p></li>
+<li><p><a class="reference internal" href="../matTestCommands.html#mattestcommands"><span class="std std-ref">Material Testing Commands</span></a> - Basic material testing commands</p></li>
+<li><p><span class="xref std std-ref">NDTest_examples</span> - Comprehensive usage examples</p></li>
+<li><p>Material-specific documentation for available response types and parameter IDs</p></li>
+<li><p>OpenSees examples repository for complete testing procedures</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

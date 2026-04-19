@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2.6.11. ExplicitBathe &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3.2.6.12. ExplicitDifferenceStatic" href="ExplicitDifferenceStatic.html" />
+    <link rel="prev" title="3.2.6.10. Explicit Difference" href="ExplicitDifference.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">2. Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../userManual.html">3. Command Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../modelCommands.html">3.1. Model Commands</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../analysisCommands.html">3.2. Analysis Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../constraints.html">3.2.1. constraints Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../numberer.html">3.2.2. numberer Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system.html">3.2.3. system Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../test.html">3.2.4. test Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../algorithm.html">3.2.5. algorithm Command</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../integrator.html">3.2.6. integrator Command</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="LoadControl.html">3.2.6.1. LoadControl Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DisplacementControl.html">3.2.6.2. DisplacementControl Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MinimumUnbalancedDisplacementNorm.html">3.2.6.3. MinimumUnbalancedDisplacementNorm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ArcLength.html">3.2.6.4. Arc-Length Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CentralDifference.html">3.2.6.5. Central Difference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Newmark.html">3.2.6.6. Newmark Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HHT.html">3.2.6.7. Hilber-Hughes-Taylor Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GeneralizedAlpha.html">3.2.6.8. Generalized Alpha Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TRBDF2.html">3.2.6.9. TRBDF2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExplicitDifference.html">3.2.6.10. Explicit Difference</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.2.6.11. ExplicitBathe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ExplicitDifferenceStatic.html">3.2.6.12. ExplicitDifferenceStatic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gimmeMCK.html">3.2.6.13. GimmeMCK Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis.html">3.2.7. analysis Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analyze.html">3.2.8. analyze Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../eigen.html">3.2.9. eigen Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modalProperties.html">3.2.10. modalProperties Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../responseSpectrumAnalysis.html">3.2.11. responseSpectrumAnalysis Command</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputCommands.html">3.3. Output Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../miscCommands.html">3.4. Misc. Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userExamples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messageBoard.html">5. Questions, Bugs &amp; Feature Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/license.html">6. Copyright and License</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework for Developer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/sourceCode.html">1. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/build.html">2. Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/references.html">3. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/extend.html">4. Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/contribute.html">5. Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OpenSees Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../analysisCommands.html"><span class="section-number">3.2. </span>Analysis Commands</a></li>
+          <li class="breadcrumb-item"><a href="../integrator.html"><span class="section-number">3.2.6. </span>integrator Command</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2.6.11. </span>ExplicitBathe</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/user/manual/analysis/integrator/ExplicitBathe.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="explicitbathe">
+<span id="id1"></span><h1><span class="section-number">3.2.6.11. </span>ExplicitBathe<a class="headerlink" href="#explicitbathe" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">integrator</span> <span class="pre">ExplicitBathe</span> <span class="pre">$p</span> <span class="pre">$compute_critical_timestep?</span></span></dt>
+<dd></dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The method is second-order accurate and explicit.</p></li>
+<li><p>Only mass matrix is assembled on RHS (no tangent matrix required).</p></li>
+<li><p>Critical time step is approximately 2× larger than central difference method.</p></li>
+<li><p>For stability: <span class="math notranslate nohighlight">\(\Delta t \leq \frac{2}{\omega_{max}}\)</span></p></li>
+<li><p>Typical p values: 0.54-0.95 for optimal numerical damping.</p></li>
+</ul>
+</div>
+<section id="theory">
+<h2><span class="section-number">3.2.6.11.1. </span>Theory<a class="headerlink" href="#theory" title="Link to this heading"></a></h2>
+<p>The ExplicitBathe method is a two-step explicit integration scheme with built-in numerical damping. The method performs two sub-steps per time step:</p>
+<ol class="arabic simple">
+<li><p>First step: <span class="math notranslate nohighlight">\(t \rightarrow t + p\Delta t\)</span></p></li>
+<li><p>Second step: <span class="math notranslate nohighlight">\(t + p\Delta t \rightarrow t + \Delta t\)</span></p></li>
+</ol>
+<p>The integration coefficients are computed from the damping parameter p:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}q_1 = \frac{1 - 2p}{2p(1-p)}\\q_2 = 0.5 - p \cdot q_1\\q_0 = -q_1 - q_2 + 0.5\end{aligned}\end{align} \]</div>
+<p>The method offers enhanced stability compared to standard central difference, with a critical time step approximately twice as large. The parameter p controls numerical damping, with higher values providing more damping but reduced accuracy.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<ol class="arabic simple">
+<li><p><strong>Tcl Code</strong></p></li>
+</ol>
+<div class="highlight-tcl notranslate"><div class="highlight"><pre><span></span><span class="nv">integrator</span><span class="w"> </span>ExplicitBathe<span class="w"> </span><span class="mf">0.54</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Python Code</strong></p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">integrator</span><span class="p">(</span><span class="s1">&#39;ExplicitBathe&#39;</span><span class="p">,</span> <span class="mf">0.54</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div role="list" class="citation-list">
+<div class="citation" id="noh2013" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Noh2013<span class="fn-bracket">]</span></span>
+<p>Noh, G., &amp; Bathe, K.J. (2013). “An explicit time integration scheme for the analysis of wave propagations.” Computers &amp; Structures, 129, 178-193.</p>
+</div>
+</div>
+<p>Code Developed by: <a href="#id2"><span class="problematic" id="id3">|jaabell|</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

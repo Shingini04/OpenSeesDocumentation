@@ -1,101 +1,53 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>3.2.9. eigen Command &mdash; OpenSees Documentation  documentation</title>
-  
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=224b24c6" />
 
   
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/sg_gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3.2.10. modalProperties Command" href="modalProperties.html" />
     <link rel="prev" title="3.2.8. analyze Command" href="analyze.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../../../index.html">
           
-
-          
+          <a href="../../../index.html">
             
-            <img src="../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
-          
+              <img src="../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../interpreters.html">1. OpenSees Interpreters</a></li>
@@ -113,6 +65,7 @@
 <li class="toctree-l3"><a class="reference internal" href="analyze.html">3.2.8. analyze Command</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.9. eigen Command</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#theory">3.2.9.1. Theory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pythonsparse-eigenvalue-solver">3.2.9.2. PythonSparse Eigenvalue Solver</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modalProperties.html">3.2.10. modalProperties Command</a></li>
@@ -137,88 +90,45 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../developer/issues.html">6. Issues</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">OpenSees Documentation</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="../../userManual.html"><span class="section-number">3. </span>Command Manual</a> &raquo;</li>
-        
-          <li><a href="../analysisCommands.html"><span class="section-number">3.2. </span>Analysis Commands</a> &raquo;</li>
-        
-      <li><span class="section-number">3.2.9. </span>eigen Command</li>
-    
-    
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../analysisCommands.html"><span class="section-number">3.2. </span>Analysis Commands</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2.9. </span>eigen Command</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../../_sources/user/manual/analysis/eigen.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="eigen-command">
-<span id="eigen"></span><h1><span class="section-number">3.2.9. </span>eigen Command<a class="headerlink" href="#eigen-command" title="Permalink to this heading">¶</a></h1>
+             
+  <section id="eigen-command">
+<span id="eigen"></span><h1><span class="section-number">3.2.9. </span>eigen Command<a class="headerlink" href="#eigen-command" title="Link to this heading"></a></h1>
 <p>This command is used to perform the eigenvalue analysis.</p>
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">eigen</span> <span class="pre">&lt;$solver&gt;</span> <span class="pre">$numEigenvalues</span></span></dt>
+<span class="sig-name descname"><span class="pre">eigen</span> <span class="pre">&lt;type&gt;</span> <span class="pre">&lt;$solver&gt;</span> <span class="pre">$numEigenvalues</span></span></dt>
 <dd></dd></dl>
 
-<table class="colwidths-given docutils align-default">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 67%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Argument</p></th>
@@ -233,7 +143,11 @@
 </tr>
 <tr class="row-odd"><td><p>$solver</p></td>
 <td><p><em>string</em></p></td>
-<td><p>optional string detailing type of solver: -genBandArpack, -symmBandLapack, -fullGenLapack (default: -genBandArpack).</p></td>
+<td><p>optional string detailing type of solver: -genBandArpack (default), -fullGenLapack, -symmBandLapack. Python users may also use the <a class="reference internal" href="#eigenpythonsparse"><span class="std std-ref">PythonSparse eigenvalue solver</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>$type</p></td>
+<td><p><em>string</em></p></td>
+<td><p>optional string indicating type of eigenvalue problem to solve: ‘general’ (default) or ‘standard’</p></td>
 </tr>
 </tbody>
 </table>
@@ -246,10 +160,76 @@
 <ol class="arabic simple">
 <li><p>The eigenvectors are stored at the nodes and can be printed out using a Node Recorder, the nodeEigenvector command, or the Print command.</p></li>
 <li><p>The default eigensolver is able to solve only for N-1 eigenvalues, where N is the number of inertial DOFs. When running into this limitation the -fullGenLapack solver can be used instead of the default Arpack solver.</p></li>
+<li><p>The -symmBandLapack option works only standard eigenvalue analysis of the stiffness matrix, i.e., K*x = lam*x</p></li>
+<li><p><strong>Python users:</strong> A <a class="reference internal" href="#eigenpythonsparse"><span class="std std-ref">PythonSparse eigenvalue solver</span></a> is available as well (OpenSeesPy only).</p></li>
 </ol>
 </div>
-<div class="section" id="theory">
-<h2><span class="section-number">3.2.9.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The default eigen solver utilizes <strong>ARPACK</strong>, an iterative eigenvalue solver. Like other iterative methods, ARPACK can struggle to accurately compute eigenvectors when the model contains repeated (degenerate) eigenvalues or clusters of very closely spaced eigenvalues. The issue arises from difficulties in forming an orthonormal basis for the eigenspace numerically.</p>
+<p>In such cases, ARPACK may fail to find all of the requested eigenvalues, or it may return correct eigenvalues but incorrect eigenvectors. When <strong>modal</strong> damping is used, inaccurate eigenvectors may cause issues with the damping forces calculated. If you are unsure if this is an issue with your model, switch the <strong>solver</strong> used and check the reslts again – this check works as the eigenvectors will vary greatly with the chosen solver when this issue exists.</p>
+<p>Fortunately, small adjustments to the <strong>model</strong> can prevent this numerical issue. In actuality, as material properties (e.g., Young’s modulus) or nodal masses are rarely identical and by introducing slight variations in your model, ARPACK is more likely to form the basis correctly.</p>
+<p>As an illustration of the problem, consider the following script (provided by mhscott):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>model Basic -ndm 1 -ndf 1
+node 0 0; fix 0 1
+node 1 0; mass 1 1.0
+node 2 0; mass 2 1.0
+node 3 0; mass 3 1.0
+node 4 0; mass 4 1.0
+
+set k 610
+uniaxialMaterial Elastic 1 $k
+
+element zeroLength 1 0 1 -mat 1 -dir 1
+element zeroLength 2 1 2 -mat 1 -dir 1
+element zeroLength 3 0 3 -mat 1 -dir 1
+element zeroLength 4 3 4 -mat 1 -dir 1
+
+systetm ProfileSPD
+numberer RCM
+
+set nModes 2
+set eigV [eigen $nModes]
+puts &quot;Eigenvalues: $eigV&quot;
+
+# print eigenvectors
+for {set i 1} {$i &lt;= 4} {incr i 1}  {
+   puts &quot;$i [nodeEigenvector $i 1] [nodeEigenvector $i 2]&quot;
+}
+</pre></div>
+</div>
+<p>will produce:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eigenvalues</span><span class="p">:</span>  <span class="mf">232.99926686256409880116</span>   <span class="mf">232.99926686256412722287</span>
+<span class="mi">1</span>    <span class="mf">0.50235827201282656773</span>    <span class="mf">0.15501409223134476889</span>
+<span class="mi">2</span>    <span class="mf">0.81283275864641846287</span>    <span class="mf">0.25081806996552691302</span>
+<span class="mi">3</span>    <span class="mf">0.15501409223134465787</span>   <span class="o">-</span><span class="mf">0.50235827201282667875</span>
+<span class="mi">4</span>    <span class="mf">0.25081806996552685751</span>   <span class="o">-</span><span class="mf">0.81283275864641857389</span>
+</pre></div>
+</div>
+<p>wheras if I change the mass at node <strong>4</strong> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="mi">4</span> <span class="mi">0</span><span class="p">;</span> <span class="n">mass</span> <span class="mi">4</span> <span class="mf">1.0000000001</span>
+</pre></div>
+</div>
+<p>I would get:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eigenvalues</span><span class="p">:</span>  <span class="mf">232.99926679816474006657</span>   <span class="mf">232.99926686256424090971</span>
+<span class="mi">1</span>   <span class="o">-</span><span class="mf">0.00000004574590262152</span>    <span class="mf">0.52573111211913170493</span>
+<span class="mi">2</span>   <span class="o">-</span><span class="mf">0.00000007401842538890</span>    <span class="mf">0.85065080835203654708</span>
+<span class="mi">3</span>    <span class="mf">0.52573111211146139610</span>    <span class="mf">0.00000004574590273254</span>
+<span class="mi">4</span>    <span class="mf">0.85065080819431726500</span>    <span class="mf">0.00000007401842544441</span>
+</pre></div>
+</div>
+<p>For this in an academic setting dealing with small problems, the <strong>-fullGenLapack</strong> option will provide correct eigenvalues and eigenvectors to the original problem:</p>
+<p>will produce:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eigenvalues</span><span class="p">:</span>   <span class="mf">232.99926684570411339337</span>   <span class="mf">232.99926686256412722287</span>
+<span class="mi">1</span>    <span class="mf">0.00000000000000000000</span>   <span class="o">-</span><span class="mf">0.52573111211913370333</span>
+<span class="mi">2</span>    <span class="mf">0.00000000000000000000</span>   <span class="o">-</span><span class="mf">0.85065080835203987775</span>
+<span class="mi">3</span>    <span class="mf">0.52573111209361389484</span>    <span class="mf">0.00000000000000000000</span>
+<span class="mi">4</span>    <span class="mf">0.85065080832527950605</span>   <span class="o">-</span><span class="mf">0.00000000000000000000</span>
+</pre></div>
+</div>
+</div>
+<section id="theory">
+<h2><span class="section-number">3.2.9.1. </span>Theory<a class="headerlink" href="#theory" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">A <em>generalized eigenvalue problem</em> for two symmetric matrices <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(M\)</span> of size <span class="math notranslate nohighlight">\(n \times n\)</span> is given by:</div>
 </div>
@@ -277,6 +257,9 @@
 
 <span class="c"># or, obtain 10 eigenvalues explicitly specifying the solver</span>
 <span class="k">set</span><span class="w"> </span>eigenvalues<span class="w"> </span><span class="k">[</span><span class="nv">eigen</span><span class="w"> </span><span class="o">-</span>fullGenLapack<span class="w"> </span><span class="mi">10</span><span class="k">]</span>
+
+<span class="c"># obtain 10 eigenvalues of the stiffness matrix</span>
+<span class="k">set</span><span class="w"> </span>eigenvalues<span class="w"> </span><span class="k">[</span><span class="nv">eigen</span><span class="w"> </span>standard<span class="w"> </span><span class="o">-</span>symmBandLapack<span class="w"> </span><span class="mi">10</span><span class="k">]</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
@@ -287,68 +270,336 @@
 
 <span class="c1"># or, obtain 10 eigenvalues explicitly specifying the solver</span>
 <span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">eigen</span><span class="p">(</span><span class="s1">&#39;-fullGenLapack&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># obtain 10 eigenvalues of the stiffness matrix</span>
+<span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">eigen</span><span class="p">(</span><span class="s1">&#39;standard&#39;</span><span class="p">,</span><span class="s1">&#39;-symmBandLapack&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># PythonSparse: use a custom Python solver (e.g., SciPy eigsh)</span>
+<span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">eigen</span><span class="p">(</span><span class="s1">&#39;PythonSparse&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;solver&#39;</span><span class="p">:</span> <span class="n">solver</span><span class="p">,</span> <span class="s1">&#39;scheme&#39;</span><span class="p">:</span> <span class="s1">&#39;CSR&#39;</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
+</section>
+<section id="pythonsparse-eigenvalue-solver">
+<h2><span class="section-number">3.2.9.2. </span>PythonSparse Eigenvalue Solver<a class="headerlink" href="#pythonsparse-eigenvalue-solver" title="Link to this heading"></a></h2>
+<p id="eigenpythonsparse">The <strong>PythonSparse</strong> eigen solver delegates the generalized eigenvalue problem <span class="math notranslate nohighlight">\(\mathbf{K}\phi = \lambda \mathbf{M}\phi\)</span> to user-defined Python objects. Sparse stiffness (K) and mass (M) matrix buffers are exposed via zero-copy memoryviews, enabling the use of SciPy, CuPy, or custom eigensolvers without recompiling OpenSees. See <a class="reference internal" href="#eigenpythonsparseexample"><span class="std std-ref">example below</span></a> for a SciPy eigsh implementation.</p>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">eigen</span> <span class="pre">PythonSparse</span> <span class="pre">$numEigenvalues</span> <span class="pre">&lt;dict&gt;?</span></span></dt>
+<dd><p>Perform eigenvalue analysis using a user-defined Python solver. The dict is the solver configuration; keys below.</p>
+</dd></dl>
+
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 18.8%" />
+<col style="width: 66.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$numEigenvalues</p></td>
+<td><p>int</p></td>
+<td><p>Number of eigenvalues (and eigenvectors) to compute.</p></td>
+</tr>
+<tr class="row-odd"><td><p>dict</p></td>
+<td><p>dict</p></td>
+<td><p>Solver configuration; see dict options table below.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 18.8%" />
+<col style="width: 66.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>solver</p></td>
+<td><p>Python object</p></td>
+<td><p>A Python object with a <code class="docutils literal notranslate"><span class="pre">solve(**kwargs)</span></code> method. Required.</p></td>
+</tr>
+<tr class="row-odd"><td><p>scheme</p></td>
+<td><p>string</p></td>
+<td><p>Sparse format: <code class="docutils literal notranslate"><span class="pre">'CSR'</span></code>, <code class="docutils literal notranslate"><span class="pre">'CSC'</span></code>, <code class="docutils literal notranslate"><span class="pre">'COO'</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">'CSR'</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The PythonSparse eigen interface is available only when using the Python interpreter (OpenSeesPy).</p>
+</div>
+<p>The solver object must implement a <code class="docutils literal notranslate"><span class="pre">solve(**kwargs)</span></code> method. OpenSees passes the matrix data as keyword arguments: memoryviews (buffer-like objects) for arrays, and scalars for metadata. Use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.frombuffer.html">numpy.frombuffer</a> to interpret memoryviews as NumPy arrays without copying. The structure format depends on <code class="docutils literal notranslate"><span class="pre">scheme</span></code>:</p>
+<p><strong>CSR/CSC format</strong> — compressed storage uses <code class="docutils literal notranslate"><span class="pre">index_ptr</span></code> and <code class="docutils literal notranslate"><span class="pre">indices</span></code>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.5%" />
+<col style="width: 18.8%" />
+<col style="width: 58.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>index_ptr</p></td>
+<td><p>memoryview</p></td>
+<td><p>Row pointers (CSR) or column pointers (CSC), int32.</p></td>
+</tr>
+<tr class="row-odd"><td><p>indices</p></td>
+<td><p>memoryview</p></td>
+<td><p>Column indices (CSR) or row indices (CSC), int32.</p></td>
+</tr>
+<tr class="row-even"><td><p>k_values</p></td>
+<td><p>memoryview</p></td>
+<td><p>Stiffness matrix K coefficients (float64).</p></td>
+</tr>
+<tr class="row-odd"><td><p>m_values</p></td>
+<td><p>memoryview</p></td>
+<td><p>Mass matrix M coefficients (float64).</p></td>
+</tr>
+<tr class="row-even"><td><p>eigenvalues</p></td>
+<td><p>memoryview</p></td>
+<td><p>Output buffer for eigenvalues (float64, writable). Write <em>in place</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>eigenvectors</p></td>
+<td><p>memoryview</p></td>
+<td><p>Output buffer for eigenvectors (float64, writable). Write <em>in place</em>, row-major: mode 0, mode 1, …</p></td>
+</tr>
+<tr class="row-even"><td><p>num_eqn</p></td>
+<td><p>int</p></td>
+<td><p>Number of equations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>nnz</p></td>
+<td><p>int</p></td>
+<td><p>Number of nonzeros (K and M share sparsity pattern).</p></td>
+</tr>
+<tr class="row-even"><td><p>matrix_status</p></td>
+<td><p>string</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'UNCHANGED'</span></code>, <code class="docutils literal notranslate"><span class="pre">'COEFFICIENTS_CHANGED'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'STRUCTURE_CHANGED'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>storage_scheme</p></td>
+<td><p>string</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'CSR'</span></code>, <code class="docutils literal notranslate"><span class="pre">'CSC'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'COO'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>num_modes</p></td>
+<td><p>int</p></td>
+<td><p>Number of modes requested.</p></td>
+</tr>
+<tr class="row-odd"><td><p>generalized</p></td>
+<td><p>bool</p></td>
+<td><p>True for generalized (K, M); False for standard (K only).</p></td>
+</tr>
+<tr class="row-even"><td><p>find_smallest</p></td>
+<td><p>bool</p></td>
+<td><p>True: smallest eigenvalues (e.g., frequency); False: largest.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>COO format</strong> — coordinate storage uses <code class="docutils literal notranslate"><span class="pre">row_indices</span></code> and <code class="docutils literal notranslate"><span class="pre">col_indices</span></code> instead of <code class="docutils literal notranslate"><span class="pre">index_ptr</span></code>/<code class="docutils literal notranslate"><span class="pre">indices</span></code>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.5%" />
+<col style="width: 18.8%" />
+<col style="width: 58.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>row_indices</p></td>
+<td><p>memoryview</p></td>
+<td><p>Row indices for each nonzero, int32 (COO only).</p></td>
+</tr>
+<tr class="row-odd"><td><p>col_indices</p></td>
+<td><p>memoryview</p></td>
+<td><p>Column indices for each nonzero, int32 (COO only).</p></td>
+</tr>
+<tr class="row-even"><td><p>k_values</p></td>
+<td><p>memoryview</p></td>
+<td><p>Stiffness matrix K coefficients (float64).</p></td>
+</tr>
+<tr class="row-odd"><td><p>m_values</p></td>
+<td><p>memoryview</p></td>
+<td><p>Mass matrix M coefficients (float64).</p></td>
+</tr>
+<tr class="row-even"><td><p>eigenvalues</p></td>
+<td><p>memoryview</p></td>
+<td><p>Output buffer for eigenvalues (float64, writable). Write <em>in place</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>eigenvectors</p></td>
+<td><p>memoryview</p></td>
+<td><p>Output buffer for eigenvectors (float64, writable). Write <em>in place</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p>num_eqn</p></td>
+<td><p>int</p></td>
+<td><p>Number of equations.</p></td>
+</tr>
+<tr class="row-odd"><td><p>nnz</p></td>
+<td><p>int</p></td>
+<td><p>Number of nonzeros.</p></td>
+</tr>
+<tr class="row-even"><td><p>matrix_status</p></td>
+<td><p>string</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'UNCHANGED'</span></code>, <code class="docutils literal notranslate"><span class="pre">'COEFFICIENTS_CHANGED'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'STRUCTURE_CHANGED'</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>storage_scheme</p></td>
+<td><p>string</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">'COO'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>num_modes</p></td>
+<td><p>int</p></td>
+<td><p>Number of modes requested.</p></td>
+</tr>
+<tr class="row-odd"><td><p>generalized</p></td>
+<td><p>bool</p></td>
+<td><p>True for generalized (K, M); False for standard (K only).</p></td>
+</tr>
+<tr class="row-even"><td><p>find_smallest</p></td>
+<td><p>bool</p></td>
+<td><p>True: smallest eigenvalues; False: largest.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">solve</span></code> method should return <code class="docutils literal notranslate"><span class="pre">None</span></code> on success, or raise an exception on failure.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>In-place output required</strong></p>
+<p>You <strong>must</strong> write eigenvalues and eigenvectors directly into the <code class="docutils literal notranslate"><span class="pre">eigenvalues</span></code> and <code class="docutils literal notranslate"><span class="pre">eigenvectors</span></code> buffers. OpenSees reads from these buffers; it does <strong>not</strong> use return values.</p>
+<p><strong>Do:</strong> Use in-place assignment, e.g. <code class="docutils literal notranslate"><span class="pre">np.frombuffer(eigenvalues,</span> <span class="pre">...)[:]</span> <span class="pre">=</span> <span class="pre">eigvals</span></code> and <code class="docutils literal notranslate"><span class="pre">np.frombuffer(eigenvectors,</span> <span class="pre">...)[:]</span> <span class="pre">=</span> <span class="pre">eigvecs.T.flatten()</span></code></p>
+<p><strong>Do not:</strong> Return the results or assign to new arrays without copying back into the buffers. OpenSees will use uninitialized or stale data.</p>
+</div>
+<div class="admonition-example-scipy-generalized-eigenvalue-solver admonition" id="eigenpythonsparseexample">
+<p class="admonition-title">Example — SciPy Generalized Eigenvalue Solver</p>
+<p>This example uses <a class="reference external" href="https://scipy.org/">SciPy</a> and its <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.linalg.eigsh.html">eigsh</a> (ARPACK symmetric eigensolver) to solve the generalized eigenvalue problem:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.sparse</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.sparse.linalg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp_linalg</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openseespy.opensees</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ops</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SciPyGeneralizedEigenSolver</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span> <span class="o">=</span> <span class="n">maxiter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tol</span> <span class="o">=</span> <span class="n">tol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_k_matrix</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_m_matrix</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">index_ptr</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;index_ptr&#39;</span><span class="p">]</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span>
+        <span class="n">k_values</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;k_values&#39;</span><span class="p">]</span>
+        <span class="n">m_values</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;m_values&#39;</span><span class="p">]</span>
+        <span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;eigenvalues&#39;</span><span class="p">]</span>
+        <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;eigenvectors&#39;</span><span class="p">]</span>
+        <span class="n">num_eqn</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;num_eqn&#39;</span><span class="p">]</span>
+        <span class="n">nnz</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;nnz&#39;</span><span class="p">]</span>
+        <span class="n">matrix_status</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;matrix_status&#39;</span><span class="p">]</span>
+        <span class="n">num_modes</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;num_modes&#39;</span><span class="p">]</span>
+        <span class="n">find_smallest</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;find_smallest&#39;</span><span class="p">]</span>
+
+        <span class="n">indptr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">index_ptr</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">num_eqn</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">nnz</span><span class="p">)</span>
+        <span class="n">k_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">k_values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">nnz</span><span class="p">)</span>
+        <span class="n">m_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">m_values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">nnz</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">matrix_status</span> <span class="o">==</span> <span class="s1">&#39;STRUCTURE_CHANGED&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_k_matrix</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_k_matrix</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">((</span><span class="n">k_data</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">indptr</span><span class="p">),</span>
+                                          <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_eqn</span><span class="p">,</span> <span class="n">num_eqn</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_m_matrix</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">((</span><span class="n">m_data</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">indptr</span><span class="p">),</span>
+                                          <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_eqn</span><span class="p">,</span> <span class="n">num_eqn</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">matrix_status</span> <span class="o">==</span> <span class="s1">&#39;COEFFICIENTS_CHANGED&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_k_matrix</span><span class="o">.</span><span class="n">data</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">k_data</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_m_matrix</span><span class="o">.</span><span class="n">data</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">m_data</span>
+
+        <span class="n">eigsh_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;k&#39;</span><span class="p">:</span> <span class="n">num_modes</span><span class="p">,</span>
+            <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_m_matrix</span><span class="p">,</span>
+            <span class="s1">&#39;which&#39;</span><span class="p">:</span> <span class="s1">&#39;LM&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">find_smallest</span><span class="p">:</span>
+            <span class="n">eigsh_kwargs</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">eigsh_kwargs</span><span class="p">[</span><span class="s1">&#39;maxiter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxiter</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tol</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">eigsh_kwargs</span><span class="p">[</span><span class="s1">&#39;tol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tol</span>
+
+        <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">sp_linalg</span><span class="o">.</span><span class="n">eigsh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_k_matrix</span><span class="p">,</span> <span class="o">**</span><span class="n">eigsh_kwargs</span><span class="p">)</span>
+
+        <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                      <span class="n">count</span><span class="o">=</span><span class="n">num_modes</span><span class="p">)[:]</span> <span class="o">=</span> <span class="n">eigvals</span><span class="p">[:</span><span class="n">num_modes</span><span class="p">]</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
+                      <span class="n">count</span><span class="o">=</span><span class="n">num_modes</span> <span class="o">*</span> <span class="n">num_eqn</span><span class="p">)[:]</span> <span class="o">=</span> <span class="n">eigvecs</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="n">solver</span> <span class="o">=</span> <span class="n">SciPyGeneralizedEigenSolver</span><span class="p">()</span>
+<span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">ops</span><span class="o">.</span><span class="n">eigen</span><span class="p">(</span><span class="s1">&#39;PythonSparse&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;solver&#39;</span><span class="p">:</span> <span class="n">solver</span><span class="p">,</span> <span class="s1">&#39;scheme&#39;</span><span class="p">:</span> <span class="s1">&#39;CSR&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="system/PythonSparse.html#systempythonsparse"><span class="std std-ref">PythonSparse System</span></a> — PythonSparse interface for linear systems</p></li>
+<li><p>The <a class="reference external" href="https://github.com/OpenSees/OpenSees/blob/master/EXAMPLES/SolverBenchmark/benchmark_python_sparse_eigen.py">EXAMPLES/SolverBenchmark</a> script demonstrates the PythonSparse eigen solver.</p></li>
+</ul>
+</div>
 <p>Code Developed by: <strong>fmk</strong></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, The Regents of the University of California.
-
-    </p>
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
     <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    ga('create', 'UA-2431545-1', 'auto');
-    
-    ga('send', 'pageview');
-    </script>
-
-    
-    
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
 
   <style>
          .wy-nav-content { max-width: none; }

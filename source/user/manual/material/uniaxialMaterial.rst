@@ -45,6 +45,7 @@ The following subsections contain information about **$matType**
       uniaxialMaterials/Concrete01
       uniaxialMaterials/Concrete02
       uniaxialMaterials/Concrete04
+      uniaxialMaterials/ConcreteZBH_smoothed
       uniaxialMaterials/ASDConcrete1D
       uniaxialMaterials/GMG_CyclicReinforcedConcrete
       uniaxialMaterials/Creep
@@ -154,4 +155,3 @@ The following subsections contain information about **$matType**
    uniaxialMaterials/CFSSSWP
    uniaxialMaterials/PySimple1Gen
    uniaxialMaterials/TzSimple1Gen
-

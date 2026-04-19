@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.1.5.4. ASDSteel1D Material &mdash; OpenSees Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=224b24c6" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="3.1.5.5. Reinforcing Steel Material" href="ReinforcingSteel.html" />
+    <link rel="prev" title="3.1.5.3. Steel4 Material" href="Steel4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+              <img src="../../../../_static/OpenSeesLogo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Applications for Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interpreters.html">1. OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">2. Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../userManual.html">3. Command Manual</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../modelCommands.html">3.1. Model Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../model/model.html">3.1.1. model Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/node.html">3.1.2. node Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/spConstraints.html">3.1.3. SP_Constraint Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/mpConstraints.html">3.1.4. MP_Constraint Commands</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../uniaxialMaterial.html">3.1.5. uniaxialMaterial Command</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="Steel01.html">3.1.5.1. Steel01 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Steel02.html">3.1.5.2. Steel02 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Steel4.html">3.1.5.3. Steel4 Material</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.1.5.4. ASDSteel1D Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ReinforcingSteel.html">3.1.5.5. Reinforcing Steel Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DoddRestrepo.html">3.1.5.6. DoddRestrepo Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RambergOsgoodSteel.html">3.1.5.7. Ramberg Osgood Steel Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SteelMPF.html">3.1.5.8. SteelMPF Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UVCuniaxial.html">3.1.5.9. UVCUniaxial Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SteelFractureDI.html">3.1.5.10. SteelFractureDI Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DuctileFracture.html">3.1.5.11. DuctileFracture Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Concrete01.html">3.1.5.12. Concrete01 Material – Zero Tensile Strength</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Concrete02.html">3.1.5.13. Concrete02 Material – Linear Tension Softening</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Concrete04.html">3.1.5.14. Concrete04 Material – Popovics Concrete Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ConcreteZBH_smoothed.html">3.1.5.15. ConcreteZBH_smoothed Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ASDConcrete1D.html">3.1.5.16. ASDConcrete1D Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GMG_CyclicReinforcedConcrete.html">3.1.5.17. GMG_CyclicReinforcedConcrete Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Creep.html">3.1.5.18. Creep Material – Wrapper Creep Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Hysteretic.html">3.1.5.19. Hysteretic Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticSM.html">3.1.5.20. HystereticSM Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IMKBilin.html">3.1.5.21. IMKBilin Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IMKPeakOriented.html">3.1.5.22. IMKPeakOriented Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IMKPinching.html">3.1.5.23. IMKPinching Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SLModel.html">3.1.5.24. SLModel Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BoucWenInfill.html">3.1.5.25. BoucWenInfill Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticPoly.html">3.1.5.26. HystereticPoly Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticAsym.html">3.1.5.27. HystereticAsym Material (Smooth asymmetric hysteresis)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HystereticSmooth.html">3.1.5.28. HystereticSmooth Material (Smooth hysteretic material)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DowelType.html">3.1.5.29. DowelType Timber Joint Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CoulombDamper.html">3.1.5.30. CoulombDamper Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HertzDamp.html">3.1.5.31. Hertz Damp Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="JankowskiImpact.html">3.1.5.32. Jankowski Impact Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ViscoelasticGap.html">3.1.5.33. Viscoelastic Gap Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ratchet.html">3.1.5.34. Ratchet Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PySimple1.html">3.1.5.35. PySimple1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TzSimple1.html">3.1.5.36. TzSimple1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="QzSimple1.html">3.1.5.37. QzSimple1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PyLiq1.html">3.1.5.38. PyLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TzLiq1.html">3.1.5.39. TzLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="QzLiq1.html">3.1.5.40. QzLiq1 Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TzSandCPT.html">3.1.5.41. TzSandCPT Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="QbSandCPT.html">3.1.5.42. QbSandCPT Material</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ndMaterial.html">3.1.6. nDMaterial Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../section.html">3.1.7. section Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/geomTransf.html">3.1.8. Geometric Transformation Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/beamIntegration.html">3.1.9. Beam Integration Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/element.html">3.1.10. Element Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/timeSeries.html">3.1.11. Time Series Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/pattern.html">3.1.12. Pattern Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../model/damping.html">3.1.13. Damping Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../analysisCommands.html">3.2. Analysis Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputCommands.html">3.3. Output Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../miscCommands.html">3.4. Misc. Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../userExamples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../messageBoard.html">5. Questions, Bugs &amp; Feature Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/license.html">6. Copyright and License</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Framework for Developer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/sourceCode.html">1. Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/build.html">2. Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/references.html">3. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/extend.html">4. Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/contribute.html">5. Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developer/issues.html">6. Issues</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OpenSees Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../userManual.html"><span class="section-number">3. </span>Command Manual</a></li>
+          <li class="breadcrumb-item"><a href="../../modelCommands.html"><span class="section-number">3.1. </span>Model Commands</a></li>
+          <li class="breadcrumb-item"><a href="../uniaxialMaterial.html"><span class="section-number">3.1.5. </span>uniaxialMaterial Command</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.1.5.4. </span>ASDSteel1D Material</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/user/manual/material/uniaxialMaterials/ASDSteel1D.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="asdsteel1d"></span><section id="asdsteel1d-material">
+<h1><span class="section-number">3.1.5.4. </span>ASDSteel1D Material<a class="headerlink" href="#asdsteel1d-material" title="Link to this heading"></a></h1>
+<img alt="../../../../_images/ASDSteel1D_Ex_numerical_vs_experimental.gif" class="align-center" src="../../../../_images/ASDSteel1D_Ex_numerical_vs_experimental.gif" />
+<div class="line-block">
+<div class="line">The ASDSteel1D command is used to create a uniaxial material object that models the nonlinear response of reinforcing steel bars under monotonic and cyclic loading.</div>
+<div class="line">The formulation integrates kinematic hardening plasticity, damage mechanics, buckling behavior and bond-slip mechanism.</div>
+<div class="line">To improve numerical robustness and computational performance under severe nonlinearities  an optional IMPL-EX integration scheme is available.</div>
+<div class="line">Additionally, the entire model is regularized using the element’s characteristic length to guarantee mesh-independent results.</div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">uniaxialMaterial</span> <span class="pre">ASDSteel1D</span> <span class="pre">$tag</span> <span class="pre">$E</span> <span class="pre">$sy</span> <span class="pre">$su</span> <span class="pre">$eu</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-implex&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-auto_regularization&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-buckling</span> <span class="pre">$lch</span> <span class="pre">&lt;$r&gt;&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-fracture</span> <span class="pre">&lt;$r&gt;&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-slip</span> <span class="pre">$matTag</span> <span class="pre">&lt;$r&gt;&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-K_alpha</span> <span class="pre">$K_alpha&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-max_iter</span> <span class="pre">$max_iter&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-tolU</span> <span class="pre">$tolU&gt;</span></span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&lt;-tolR</span> <span class="pre">$tolR&gt;</span></span></dt>
+<dd></dd></dl>
+
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$tag</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Unique tag identifying this material.</p></td>
+</tr>
+<tr class="row-odd"><td><p>$E $sy $su $eu</p></td>
+<td><p>4 <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Mandatory. Young’s modulus, Yield stress, Ultimate stress and Ultimate strain.</p></td>
+</tr>
+<tr class="row-even"><td><p>-implex</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Optional. If defined, the IMPL-EX integration will be used, otherwise the standard implicit integration will be used (default).</p></td>
+</tr>
+<tr class="row-odd"><td><p>-auto_regularization</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Optional. Activates automatic regularization based on the characteristic length of the finite element.</p></td>
+</tr>
+<tr class="row-even"><td><p>-buckling $lch &lt;$r&gt;</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> + <code class="docutils literal notranslate"><span class="pre">float</span></code> &lt;+ <code class="docutils literal notranslate"><span class="pre">float</span></code>&gt;</p></td>
+<td><p>Optional. Enables buckling simulation using an RVE-based approach. Requires characteristic length $lch and optionally a section radius $r.</p></td>
+</tr>
+<tr class="row-odd"><td><p>-fracture &lt;$r&gt;</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> &lt;+ <code class="docutils literal notranslate"><span class="pre">float</span></code>&gt;</p></td>
+<td><p>Optional. Activates fracture modeling. Optionally specify the section radius $r.</p></td>
+</tr>
+<tr class="row-even"><td><p>-slip $matTag &lt;$r&gt;</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> + <code class="docutils literal notranslate"><span class="pre">integer</span></code> &lt;+ <code class="docutils literal notranslate"><span class="pre">float</span></code>&gt;</p></td>
+<td><p>Optional. Activates slip modeling with a secondary uniaxial material ($matTag). Optionally specify the section radius $r.</p></td>
+</tr>
+<tr class="row-odd"><td><p>-K_alpha $K_alpha</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> + <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Optional.  Defines the weight between the consistent elastoplastic tangent modulus and the purely elastic modulus (default = 0.5). Set to 1.0 for full consistent tangent, or 0.0 to use only the elastic modulus.</p></td>
+</tr>
+<tr class="row-even"><td><p>-max_iter $max_iter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> + <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Optional. Maximum number of iterations for the global Newton-Raphson loop used in the RVE (default = 100).</p></td>
+</tr>
+<tr class="row-odd"><td><p>-tolU $tolU</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> + <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Optional. Tolerance on displacement increment convergence (default = 1e-6).</p></td>
+</tr>
+<tr class="row-even"><td><p>-tolR $tolR</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code> + <code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Optional. Tolerance on residual force convergence (default = 1e-6).</p></td>
+</tr>
+</tbody>
+</table>
+<section id="theory">
+<h2><span class="section-number">3.1.5.4.1. </span>Theory<a class="headerlink" href="#theory" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">The ASDSteel1D material is formulated within an elasto-plastic framework enriched with damage, buckling, and slip mechanisms, specifically tailored to model the nonlinear behavior of reinforcing steel bars.</div>
+</div>
+</section>
+<section id="plasticity">
+<h2><span class="section-number">3.1.5.4.2. </span>Plasticity<a class="headerlink" href="#plasticity" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">The plasticity model employs a two-term Chaboche kinematic hardening law.</div>
+</div>
+<div class="line-block">
+<div class="line">The trial stress is computed as:</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\sigma_{trial} = \sigma_n + E \Delta \varepsilon\]</div>
+<div class="line-block">
+<div class="line">The yield function is defined as:</div>
+</div>
+<div class="math notranslate nohighlight">
+\[f = | \sigma - \alpha_1 - \alpha_2 | - \sigma_y\]</div>
+<div class="line-block">
+<div class="line">The evolution of the backstresses follows:</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\dot{\alpha}_i = H_i n - \gamma_i \alpha_i, \quad i=1,2\]</div>
+<div class="math notranslate nohighlight">
+\[n = \text{sign}(\sigma - \alpha_1 - \alpha_2)\]</div>
+<div class="line-block">
+<div class="line">The parameters <span class="math notranslate nohighlight">\(H_1, \gamma_1\)</span> and <span class="math notranslate nohighlight">\(H_2, \gamma_2\)</span> are calibrated to fit the target values of yield stress (<span class="math notranslate nohighlight">\(\sigma_y\)</span>), ultimate stress (<span class="math notranslate nohighlight">\(\sigma_u\)</span>), and ultimate strain (<span class="math notranslate nohighlight">\(\varepsilon_u\)</span>).</div>
+</div>
+</section>
+<section id="damage">
+<h2><span class="section-number">3.1.5.4.3. </span>Damage<a class="headerlink" href="#damage" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Fracture is controlled by a scalar damage variable <span class="math notranslate nohighlight">\(d \in [0, 1]\)</span>, which progressively reduces the effective stress:</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\sigma = (1-d) \sigma_{eff}\]</div>
+<div class="line-block">
+<div class="line">Damage initiates once the equivalent plastic strain <span class="math notranslate nohighlight">\(\varepsilon_{pl}\)</span> ​exceeds the ultimate plastic strain <span class="math notranslate nohighlight">\(\varepsilon_{upl}\)</span>, and evolves as:</div>
+</div>
+<div class="math notranslate nohighlight">
+\[d = 1 - \frac{\sigma_d}{\sigma_y}, \quad \sigma_d = \sigma_y \exp \left( -\frac{\sigma_y (\varepsilon_{pl} - \varepsilon_{upl})}{G_f} \right)\]</div>
+</section>
+<section id="buckling">
+<h2><span class="section-number">3.1.5.4.4. </span>Buckling<a class="headerlink" href="#buckling" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Buckling is modeled using a homogenization-inspired multiscale approach, in which the macroscopic behavior of the material is enriched by the nonlinear response of a localized Representative Volume Element (RVE).</div>
+<div class="line">The RVE is defined at a lower scale and incorporates the minimal microstructural features required to represent local instability phenomena without modeling them explicitly across the entire structure.</div>
+<div class="line">At this scale, we employ a generic configuration of corotational beam elements with geometric imperfections, capable of autonomously developing buckling patterns under increasing compressive loads.</div>
+<div class="line">The multiscale coupling is carried out through a two-way exchange of information between the macroscopic and microscopic scales.</div>
+<div class="line">In the downscaling step, the strain computed at the macroscopic level is transferred to the RVE and applied as a boundary condition.</div>
+<div class="line">Once the RVE problem is solved, the upscaling step follows. The resulting stress field, stiffness degradation, or other internal variables obtained from the RVE are fed back into the macroscopic model.</div>
+<div class="line">This bidirectional process ensures that the influence of microstructural effects is consistently reflected at the structural scale.</div>
+</div>
+<img alt="../../../../_images/disegnohomog.png" class="align-center" src="../../../../_images/disegnohomog.png" />
+</section>
+<section id="bond-slip">
+<h2><span class="section-number">3.1.5.4.5. </span>Bond-Slip<a class="headerlink" href="#bond-slip" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">A bond–slip material can be inserted in series with the steel to simulate anchor slip phenomena. The following conditions apply:</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\sigma_{\text{steel}} = \sigma_{\text{slip}}\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{\text{total}} = \varepsilon_{\text{steel}} + \varepsilon_{\text{slip}}\]</div>
+<div class="line-block">
+<div class="line">The slip law (e.g., <span class="math notranslate nohighlight">\(\tau–slip\)</span> curve) is defined by the user via an external uniaxial material and internally converted into a stress–strain relationship.</div>
+</div>
+</section>
+<section id="regularization">
+<h2><span class="section-number">3.1.5.4.6. </span>Regularization<a class="headerlink" href="#regularization" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Three of the four nonlinear mechanisms included in the model, damage, buckling, and bond-slip, can exhibit strain-softening behavior, which leads to mesh sensitivity when modeled without proper regularization.</div>
+<div class="line">To ensure that the material response remains objective and independent of the element size, each of these mechanisms is regularized through tailored strategies based on the characteristic length of the finite element.</div>
+</div>
+<div class="line-block">
+<div class="line">For the bond–slip mechanism, regularization must be handled by the secondary material used in series. At present, the only uniaxial material that supports this form of regularization is the <a class="reference internal" href="ASDConcrete1D.html#asdconcrete1d"><span class="std std-ref">ASDConcrete1D Material</span></a>.</div>
+</div>
+</section>
+<section id="impl-ex-scheme">
+<h2><span class="section-number">3.1.5.4.7. </span>IMPL-EX scheme<a class="headerlink" href="#impl-ex-scheme" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">An optional IMPL-EX integration scheme can be activated to improve convergence behavior.</div>
+<div class="line">This scheme combines the efficiency of explicit integration with the stability of implicit correction, offering improved robustness in simulations involving highly nonlinear material behavior, such as softening or large strain evolution.</div>
+<div class="line">At each time step, the algorithm first executes an explicit predictor step, estimating the evolution of internal variables without solving a full nonlinear system.</div>
+<div class="line">This is followed by an implicit corrector step, which refines the predicted state to ensure consistency and numerical stability.</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\Delta \lambda_n \approx \frac{\Delta t_n}{\Delta t_{n-1}} (\lambda_n - \lambda_{n-1})\]</div>
+</section>
+<section id="usage-notes">
+<h2><span class="section-number">3.1.5.4.8. </span>Usage Notes<a class="headerlink" href="#usage-notes" title="Link to this heading"></a></h2>
+<div class="admonition-responses admonition">
+<p class="admonition-title">Responses</p>
+<ul class="simple">
+<li><p>All standard responses for a uniaxialMaterial object: <strong>stress</strong>, <strong>strain</strong>, <strong>tangent</strong>.</p></li>
+<li><p><strong>BucklingIndicator</strong> or <strong>BI</strong>: The lateral displacement caused by buckling (available with the <strong>-buckling</strong> option).</p></li>
+<li><p><strong>EquivalentPlasticStrain</strong> or <strong>PLE</strong>:  The equivalent plastic strain.</p></li>
+<li><p><strong>Damage</strong> or <strong>D</strong>: Current damage variable (available with the <strong>-fracture</strong> option).</p></li>
+<li><p><strong>SlipResponse</strong>: 2 components (<span class="math notranslate nohighlight">\(slip\)</span>, <span class="math notranslate nohighlight">\(\tau\)</span>). Current bond-slip response (available with the <strong>-slip</strong> option).</p></li>
+</ul>
+</div>
+<div class="admonition-example-1-fracture admonition">
+<p class="admonition-title">Example 1 - Fracture</p>
+<p>A Python example to simulate tensile fracture: <a class="reference download internal" download="" href="../../../../_downloads/1f142ef092541babc0a4c76b21ddc612/ASDSteel1D_Ex_Damage.py"><code class="xref download docutils literal notranslate"><span class="pre">ASDSteel1D_Ex_Damage.py</span></code></a></p>
+<img alt="../../../../_images/ASDSteel1D_Ex_Damage_Output.gif" src="../../../../_images/ASDSteel1D_Ex_Damage_Output.gif" />
+</div>
+<div class="admonition-example-2-buckling admonition">
+<p class="admonition-title">Example 2 - Buckling</p>
+<p>A Python example to simulate buckling: <a class="reference download internal" download="" href="../../../../_downloads/5a4b5c077b85f842bb90c2df9a15fc88/ASDSteel1D_Ex_Buckling.py"><code class="xref download docutils literal notranslate"><span class="pre">ASDSteel1D_Ex_Buckling.py</span></code></a></p>
+<img alt="../../../../_images/ASDSteel1D_Ex_Buckling_Output.gif" src="../../../../_images/ASDSteel1D_Ex_Buckling_Output.gif" />
+</div>
+<div class="admonition-example-3-bond-slip admonition">
+<p class="admonition-title">Example 3 - Bond-Slip</p>
+<p>A Python example to simulate rebars bond-slip: <a class="reference download internal" download="" href="../../../../_downloads/b4fb58a221f024dc25dbb721ee9eb67c/ASDSteel1D_Ex_Bond_Slip.py"><code class="xref download docutils literal notranslate"><span class="pre">ASDSteel1D_Ex_Bond_Slip.py</span></code></a></p>
+<img alt="../../../../_images/ASDSteel1D_Ex_Bond_Slip_Output.gif" src="../../../../_images/ASDSteel1D_Ex_Bond_Slip_Output.gif" />
+</div>
+<p>Code Developed by: <strong>Alessia Casalucci</strong> at ASDEA Software, Italy.</p>
+</section>
+<section id="references">
+<h2><span class="section-number">3.1.5.4.9. </span>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="kashani2015" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kashani2015<span class="fn-bracket">]</span></span>
+<p>Kashani, M. M., Lowes, L. N., Crewe, A. J., &amp; Alexander, N. A. (2015). “Phenomenological hysteretic model for corroded reinforcing bars including inelastic buckling and low-cycle fatigue degradation” Computers &amp; Structures, 156, 58-71 (<a class="reference external" href="https://www.researchgate.net/publication/275652031_Phenomenological_hysteretic_model_for_corroded_reinforcing_bars_including_inelastic_buckling_and_low-cycle_fatigue_degradation">Link to article</a>)</p>
+</div>
+<div class="citation" id="oliver2008" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Oliver2008<span class="fn-bracket">]</span></span>
+<p>Oliver, J., Huespe, A. E., &amp; Cante, J. C. (2008). “An implicit/explicit integration scheme to increase computability of non-linear material and contact/friction problems” Computer Methods in Applied Mechanics and Engineering, 197(21-24), 1865-1889 (<a class="reference external" href="https://core.ac.uk/download/pdf/325948712.pdf">Link to article</a>)</p>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, The Regents of the University of California.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
