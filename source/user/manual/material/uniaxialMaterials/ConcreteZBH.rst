@@ -1,4 +1,4 @@
-.. _ConcreteZBH_smoothed:
+.. _ConcreteZBH:
 
 ConcreteZBH - FRP- and steel-confined concrete Material
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -40,7 +40,7 @@ a nonlinear compression envelope, and tension cut-off behavior.
    * Tension stress is set to zero for positive strain (tension cut-off).
    * Confinement pressure is solved iteratively with a maximum of 20 iterations.
 
-.. figure:: figures/ConcreteZBH_smoothed/stress_strain_models.png
+.. figure:: figures/ConcreteZBH/stress_strain_models.png
    :align: center
    :width: 550
 

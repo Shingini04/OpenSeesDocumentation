@@ -52,7 +52,7 @@ The following subsections contain information about **$matType**
       uniaxialMaterials/TDConcreteEXP
       uniaxialMaterials/TDConcreteMC10
       uniaxialMaterials/TDConcreteMC10NL
-      uniaxialMaterials/ConcreteZBH_smoothed
+      uniaxialMaterials/ConcreteZBH
 
 ..    uniaxialMaterials/Concrete06
 ..    uniaxialMaterials/Concrete07
