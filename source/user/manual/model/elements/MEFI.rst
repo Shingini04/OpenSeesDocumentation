@@ -3,7 +3,7 @@
 MEFI Element
 ^^^^^^^^^^^^^^^^^^^^
 
-The Membrane Fiber (MEFI) element, is described by four nodes, each containing three degrees of freedom (DOFs), two translations, and one in-plane rotation (drilling) DOF, 
+The two dimensional Membrane Fiber element (MEFI_2D), is described by four nodes, each containing three degrees of freedom (DOFs), two translations, and one in-plane rotation (drilling) DOF, 
 which incorporates a blended interpolation function for the displacements over the element. The element formulation accommodates the quadrature points and weights of the 
 classical finite element formulation of membrane elements to resemble strips (fibers), similarly to macroscopic elements.
   
@@ -13,26 +13,90 @@ classical finite element formulation of membrane elements to resemble strips (fi
 	:width: 1000px
 	:name: MEFI_FIG
 	
-	MEFI Element: (a) Element idealization; (b) Interpolation function at bottom and top edges; (c) Interpolation function at left and right edges.
+	MEFI_2D Element: (a) Element idealization; (b) Interpolation function at bottom and top edges; (c) Interpolation function at left and right edges.
+
+This command is used to construct a MEFI element object for two-dimensional problems (``-ndm 2 -ndf 3``).
+  
+.. tabs::
+
+  .. tab:: Tcl
+
+     .. function:: element MEFI $eleTag $iNode $jNode $kNode $lNode $numFib -width $widths -sec $secTags
+
+     .. csv-table::
+		:header: "Argument", "Type", "Description"
+		:widths: 25, 10, 40
+
+		 "$eleTag",     						"*integer*", 	"unique element object tag"
+		 "$iNode $jNode $kNode $lNode", 		"*integer*", 	"element node tags defined in counterclockwise direction"
+		 "$numFib",								"*integer*", 	"number of element macro-fibers"
+		 "$widths",								"*list float*", "a list of *numFib* macro-fiber widths"
+		 "$secTags",    						"*list int*", 	"a list of *numFib* macro-fiber section tags"
+		    
+  .. tab:: OpenSeesPy
+
+   .. function:: element('MEFI', eleTag, *eleNodes, numFib, '-width', *widths, '-sec', *secTags)
+
+   .. csv-table::
+      :header: "Argument", "Type", "Description"
+      :widths: 25, 10, 40
+
+      "``eleTag``",     "*integer*",      "unique element object tag"
+      "``eleNodes``",   "*list(int)*",    "list of four node tags defined in counterclockwise direction"
+      "``numFib``",     "*integer*",      "number of element macro-fibers"
+      "``widths``",     "*list(float)*",  "a list of *numFib* macro-fiber widths"
+      "``secTags``",    "*list(int)*",    "a list of *numFib* macro-fiber section tags"
+
+
+The three-dimensional Membrane Fiber element (MEFI_3D) is a four-node element with six degrees of freedom (DOFs) per node: three translational DOFs and three rotational DOFs.
+The in-plane response is based on the MEFI_2D formulation, whereas the out-of-plane response is based on Kirchhoff plate theory with four integration points per element. 
+Both behaviors are formulated independently, providing an uncoupled representation of membrane and bending actions in reinforced concrete walls.
+
+.. figure:: figures/MEFI/MEFI3D_Element.JPG
+	:align: center
+	:figclass: align-center
+	:width: 1000px
+	:name: MEFI3D_FIG
 	
-	
-This command is used to construct a MEFI element object.
+	MEFI_3D Element: (a) Element idealization; (b) In-plane behavior based on the MEFI_2D formulation; (c) Out-of-plane behavior based on Kirchhoff plate theory.
 
-.. admonition:: Command
 
-   element MEFI $eleTag $iNode $jNode $kNode $lNode $numFib -width $widths -sec $secTags
+This command is used to construct a MEFI element object for three-dimensional problems (``-ndm 3 -ndf 6``).
+  
+.. tabs::
 
-.. csv-table:: 
-   :header: "Parameter", "Type", "Description"
-   :widths: 10, 10, 40
+  .. tab:: Tcl
 
-   $eleTag, integer, unique element object tag
-   $iNode $jNode $kNode $lNode, 4 integer, tags of element nodes defined in counterclockwise direction
-   $numFib, integer, number of element macro-fibers
-   $widths, list float, a list of *numFib* macro-fiber widths
-   $secTags,  list int, a list of *numFib* macro-fiber section tags
-   
-   
+     .. function:: element MEFI $eleTag $iNode $jNode $kNode $lNode $numFib -width $widths -sec $secTags <-thickMod $thickMod> <-poisson $poisson>
+
+     .. csv-table::
+		:header: "Argument", "Type", "Description"
+		:widths: 25, 10, 40
+
+		 "$eleTag",     						"*integer*", 	"unique element object tag"
+		 "$iNode $jNode $kNode $lNode", 		"*integer*", 	"element node tags defined in counterclockwise direction"
+		 "$numFib",								"*integer*", 	"number of element macro-fibers"
+		 "$widths",								"*list float*", "a list of *numFib* macro-fiber widths"
+		 "$secTags",    						"*list int*", 	"a list of *numFib* macro-fiber section tags"
+		 "$thickMod",    						"*float*", 		"thickness modification factor for out-of-plane bending (optional, default = 0.63)"
+		 "$poisson",    						"*float*", 		"Poisson's ratio for out-of-plane bending (optional; default = 0.25)"
+		    
+  .. tab:: OpenSeesPy
+
+   .. function:: element('MEFI', eleTag, *eleNodes, numFib, '-width', *widths, '-sec', *secTags, '-thickMod', thickMod, '-poisson', poisson)
+
+   .. csv-table::
+      :header: "Argument", "Type", "Description"
+      :widths: 25, 10, 40
+
+      "``eleTag``",     "*integer*",      "unique element object tag"
+      "``eleNodes``",   "*list(int)*",    "list of four node tags defined in counterclockwise direction"
+      "``numFib``",     "*integer*",      "number of element macro-fibers"
+      "``widths``",     "*list(float)*",  "a list of *numFib* macro-fiber widths"
+      "``secTags``",    "*list(int)*",    "a list of *numFib* macro-fiber section tags"
+      "``thickMod``",   "*float*",         "thickness modification factor for out-of-plane bending (optional, default = 0.63)"
+      "``poisson``",    "*float*",         "Poisson's ratio for out-of-plane bending (optional; default = 0.25)"
+
    
 The following recorders are available with the MEFI element.
 
@@ -47,8 +111,11 @@ The following recorders are available with the MEFI element.
    
 .. admonition:: Notes
 
-   | 1. This element shall be used in domain defined with **-ndm 2 -ndf 3**
-   | 2. For additional information please visit `MEFI GitHub Page <https://github.com/carloslopezolea/MEFI>`_
+   | 1. The MEFI element shall be used in domain defined with ``-ndm 2 -ndf 3`` or ``-ndm 3 -ndf 6``.
+   | 2. ``widths`` and ``secTags`` must have length ``numFib``.
+   | 3. Nodes must be defined in counterclockwise order.
+   | 4. The sum of ``widths`` should equal the element width.
+   | 5. For additional information please visit `MEFI GitHub Page <https://github.com/carloslopezolea/MEFI>`_
    
 .. admonition:: Command Example
 
@@ -234,6 +301,6 @@ The following recorders are available with the MEFI element.
 **REFERENCES:**
 
 #. López, C. N., Rojas, F., & Massone, L. M. (2022). Membrane fiber element for reinforced concrete walls – the benefits of macro and micro modeling approaches. Engineering Structures, 254, 113819. (`link <https://www.sciencedirect.com/science/article/abs/pii/S0141029621018897>`_).
-
+#. Suquillo, B., Rojas, F., López, C. et al. MEFI-3D: a membrane fiber element for non-planar reinforced concrete structural walls. Bull Earthquake Eng 24, 211–238 (2026). (`link <https://link.springer.com/article/10.1007/s10518-025-02204-y>`_).
 
 **Code Developed by:** `C. N. López <mailto:carloslopezolea@ug.uchile.cl>`_
