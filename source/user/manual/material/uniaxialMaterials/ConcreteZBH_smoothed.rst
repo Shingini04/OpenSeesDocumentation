@@ -1,7 +1,7 @@
 .. _ConcreteZBH_smoothed:
 
-ConcreteZBH_smoothed Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConcreteZBH - FRP- and steel-confined concrete Material
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This command constructs a uniaxial confined concrete material with cyclic unloading and reloading rules.
 The model includes confinement from transverse steel and FRP, iterative confinement pressure calculation,
