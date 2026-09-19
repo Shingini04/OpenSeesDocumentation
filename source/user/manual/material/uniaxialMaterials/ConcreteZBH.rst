@@ -3,10 +3,12 @@
 ConcreteZBH - FRP- and Steel-Confined Concrete Material
 =======================================================
 
-This command constructs a uniaxial confined concrete material that accounts for the simultaneous confining effects of transverse steel reinforcement and external FRP jackets. The model incorporates cyclic hysteretic unloading and reloading rules, confinement pressure calculations, a nonlinear compression envelope, and tension cut-off behavior. This material is experimental; validate against your own benchmark before production use.
+This command constructs a uniaxial confined concrete material that accounts for the simultaneous confining effects of transverse steel reinforcement and external FRP jackets. The model incorporates cyclic hysteretic unloading and reloading rules, confinement pressure calculations, a nonlinear compression envelope, and tension cut-off behavior. This material is experimental; validate against your own benchmark before production use. 
 
 Material Variants
 -----------------
+
+Three implementations are available: **ConcreteZBH_smoothed**, **ConcreteZBH_original**, and **ConcreteZBH_fitted**.
 
 ConcreteZBH_smoothed
 ^^^^^^^^^^^^^^^^^^^^
@@ -71,6 +73,19 @@ Parameters
    "$eps_ccus", |float|, "Ultimate compressive strain at transverse steel rupture", "", "", "✓", "[-]"
    "$sig_ccus", |float|, "Compressive stress at ultimate transverse steel rupture", "", "", "✓", "[F/L²]"
 
+.. note::
+   **Important Usage Notes**
+
+   * Concrete compressive strength must be specified as **negative**.
+   * Tension stress is automatically set to zero for positive strain.
+   * Cyclic unloading and reloading follow Mander confinement pressure rules.
+   * Crack opening and closing are detected automatically during unloading.
+   * For confined concretes, confinement pressure is solved iteratively (max 20 iterations).
+   * All three variants produce identical results for configurations with no FRP.
+   * **Smoothed variant:** Better numerical stability; recommended for most analyses.
+   * **Original variant:** Direct formulation; useful for validation against literature.
+   * **Fitted variant:** Maximum flexibility for custom stress-strain curves from experiments.
+
 Behavior
 --------
 
@@ -91,6 +106,8 @@ Code Examples
 
 Example 1: ConcreteZBH_smoothed Material Definition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Smoothed variant with both steel and FRP confinement.
 
 .. code-block:: tcl
 
@@ -132,6 +149,8 @@ Example 1: ConcreteZBH_smoothed Material Definition
 Example 2: ConcreteZBH_original Material Definition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Original variant with direct conﬁ nement pressure calculation.
+
 .. code-block:: tcl
 
    # =========================================================================
@@ -172,6 +191,8 @@ Example 2: ConcreteZBH_original Material Definition
 Example 3: ConcreteZBH_fitted Material Definition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Fitted variant with polynomial envelope from experimental data.
+
 .. code-block:: tcl
 
    # =========================================================================
@@ -211,6 +232,8 @@ Example 3: ConcreteZBH_fitted Material Definition
 
 Example 4: Full-Scale Column Simulation (Specimen DB450-C)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Simulation of a Circular RC Column Confined with Steel and FRP.
 
 .. code-block:: tcl
 
@@ -378,7 +401,9 @@ Execution Output from OpenSees:
 Credits & Contact
 -----------------
 
-Shingini Lahiri (Department of Civil Engineering, Indian Institute of Technology Madras), Prakash Singh Badal (Department of Civil Engineering, Indian Institute of Technology Madras), Michele Barbato (Department of Civil & Environmental Engineering, University of California, Davis)
+| Shingini Lahiri (Department of Civil Engineering, Indian Institute of Technology Madras)
+| Prakash Singh Badal (Department of Civil Engineering, Indian Institute of Technology Madras)
+| Michele Barbato (Department of Civil & Environmental Engineering, University of California, Davis) `mbarbato@ucdavis.edu <mailto:mbarbato@ucdavis.edu>`_
 
 References
 ----------
