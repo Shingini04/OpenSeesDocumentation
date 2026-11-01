@@ -17,7 +17,7 @@ The smoothed variant uses iterative confinement pressure calculation with smooth
 
 .. code-block:: tcl
 
-   uniaxialMaterial ConcreteZBH_smoothed $matTag $fc0 $ec0 $Ec $Es $fy $eults $s $As_t $Ef $eultf $tf $D $Ds $As_l $kg_f $ks_s $ks_f $type_reinf
+   uniaxialMaterial ConcreteZBH_smoothed $matTag $fc0 $ec0 $Ec $Es $fy $eults $s $As_t $Ef $eultf $tf $D $Ds $As_l $kg_f $ks_s $ks_f $type_reinf <$beta>
 
 ConcreteZBH_original
 ^^^^^^^^^^^^^^^^^^^^
@@ -26,7 +26,7 @@ The original variant uses direct confinement pressure calculation with standard 
 
 .. code-block:: tcl
 
-   uniaxialMaterial ConcreteZBH_original $matTag $fc0 $ec0 $Ec $Es $fy $eults $s $As_t $Ef $eultf $tf $D $Ds $As_l $kg_f $ks_s $ks_f $type_reinf
+   uniaxialMaterial ConcreteZBH_original $matTag $fc0 $ec0 $Ec $Es $fy $eults $s $As_t $Ef $eultf $tf $D $Ds $As_l $kg_f $ks_s $ks_f $type_reinf <$beta>
 
 ConcreteZBH_fitted
 ^^^^^^^^^^^^^^^^^^
@@ -35,7 +35,7 @@ The fitted variant uses polynomial coefficients to define the compression envelo
 
 .. code-block:: tcl
 
-   uniaxialMaterial ConcreteZBH_fitted $matTag $fc0 $ec0 $Ec $fccs $eccs $rs $e1 $e2 $e3 $e4 $e5 $e6 $e7 $e8 $e9 $eps_cy $eps_ccuf $sig_ccuf $eps_ccus $sig_ccus
+   uniaxialMaterial ConcreteZBH_fitted $matTag $fc0 $ec0 $Ec $fccs $eccs $rs $e1 $e2 $e3 $e4 $e5 $e6 $e7 $e8 $e9 $eps_cy $eps_ccuf $sig_ccuf $eps_ccus $sig_ccus <$beta>
 
 Parameters
 ----------
@@ -72,6 +72,7 @@ Parameters
    "$sig_ccuf", |float|, "Compressive concrete stress at FRP jacket rupture", "", "", "✓", "[F/L²]"
    "$eps_ccus", |float|, "Ultimate compressive strain at transverse steel rupture", "", "", "✓", "[-]"
    "$sig_ccus", |float|, "Compressive stress at ultimate transverse steel rupture", "", "", "✓", "[F/L²]"
+   "$beta", |float|, "Dilation constant relating lateral strain to axial strain (optional: default = Ec/\|fc0\| -1/ \|ec0\|). See note below.", "✓", "✓", "✓", "[-]"
 
 .. note::
    **Important Usage Notes**
@@ -85,6 +86,17 @@ Parameters
    * **Smoothed variant:** Better numerical stability; recommended for most analyses.
    * **Original variant:** Direct formulation; useful for validation against literature.
    * **Fitted variant:** Maximum flexibility for custom stress-strain curves from experiments.
+
+.. note::
+   **Optional dilation constant** :math:`\beta`
+
+   :math:`\beta` controls the lateral strain computed from the axial response. If $beta is omitted, it is computed from the unconfined concrete properties following Eq. (5) of Spoelstra and Monti (1999):
+
+   .. math::
+
+      \beta = \frac{E_c}{|f_{c0}|} - \frac{1}{|\varepsilon_{c0}|}
+
+   All three variants accept $beta, and when supplied it must be the last argument on the command line.
 
 Behavior
 --------
@@ -149,7 +161,7 @@ Smoothed variant with both steel and FRP confinement.
 Example 2: ConcreteZBH_original Material Definition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Original variant with direct conﬁ nement pressure calculation.
+Original variant with direct confinement pressure calculation.
 
 .. code-block:: tcl
 
@@ -407,6 +419,8 @@ Credits & Contact
 
 References
 ----------
+
+* Spoelstra, M. R., and Monti, G. (1999). "FRP-Confined Concrete Model." *Journal of Composites for Construction*, 3(3), 143-150. `https://doi.org/10.1061/(ASCE)1090-0268(1999)3:3(143) <https://doi.org/10.1061/(ASCE)1090-0268(1999)3:3(143)>`_
 
 * Parretti, R., and Nanni, A. (2002). "Axial Testing of RC Columns Confined with FRP." *Center for Infrastructure Engineering Studies (CIES) Report 02-33*, University of Missouri-Rolla, Rolla, MO.
 
